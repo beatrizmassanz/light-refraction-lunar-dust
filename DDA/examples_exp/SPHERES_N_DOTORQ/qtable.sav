@@ -1,0 +1,15 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- Multisphere cluster containing   4663 dipoles                     
+ GPFAFT --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ SPHERES_N --- shape 
+   4663 = NAT0 = number of dipoles
+ ../diel/m1.33_0.01                                          
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+   0.000   0.000 = theta_min, theta_max; NTHETA= 1
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+ 0.5000 = ETASCA (param. controlling # of scatt. dirs used to calculate <cos> etc.
+ Results averaged over    1 target orientations
+                   and  2 incident polarizations
+   aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
+ 2.5198E-01 6.0000E-01 9.2588E-01 7.9525E-02 8.4636E-01  7.6342E-01 7.1420E-01 2.1263E-02   769

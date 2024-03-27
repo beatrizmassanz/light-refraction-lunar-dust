@@ -1,0 +1,16 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- Slab+disk                                                         
+ GPFAFT --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ DSKRCTPBC --- shape 
+   9312 = NAT0 = number of dipoles
+ ../diel/Au_evap                                             
+ ../diel/Si3N4                                               
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+  60.000  60.000 = theta_min, theta_max; NTHETA= 1
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+ 1.0000 = ETASCA (param. controlling # of scatt. dirs used to calculate <cos> etc.
+ Results averaged over    1 target orientations
+                   and  2 incident polarizations
+   aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
+ 1.7406E-01 6.0000E-01 1.5929E+00 2.6219E-01 1.3307E+00  0.0000E+00 0.0000E+00 0.0000E+00******

@@ -1,0 +1,42 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- Rectangular prism; NX,NY,NZ=  20   1   1                          
+ GKDLDR --- DDA method
+ PBCGS2 --- CCG method
+ RCTGL_PBC --- shape
+   3 = JPBC
+   0 = JTRQ (= 1 if torques are calculated)
+   1 = NCOMP = number of compositions
+      20     = NAT0 = number of dipoles
+  0.59386289 = d/aeff for this target [d=dipole spacing]
+    0.005000 = d (physical units)
+----- physical extent of target volume in Target Frame ------
+     -0.100001      0.000000 = xmin,xmax (physical units)
+     -0.002500      0.002500 = ymin,ymax (physical units)
+     -0.002500      0.002500 = zmin,zmax (physical units)
+  AEFF=      0.008419 = effective radius (physical units)
+  WAVE=      0.500000 = wavelength (in vacuo, physical units)
+K*AEFF=      0.105803 = 2*pi*aeff/lambda
+NAMBIENT=    1.000000 = refractive index of ambient medium
+n= ( 1.5000 ,  0.0200),  eps.= (  2.2496 ,  0.0600)  |m|kd=  0.0943 for subs. 1
+   TOL= 1.000E-05 = error tolerance for CCG method
+( 1.00000  0.00000  0.00000 ) = target axis A1 in Target Frame
+( 0.00000  1.00000  0.00000 ) = target axis A2 in Target Frame
+( 0.04813 -0.04039  0.00000 ) = k vector (latt. units) in TF
+( 0.64279, 0.00000 )( 0.76604, 0.00000 )( 0.00000, 0.00000 )=inc.pol.vec. 1 in TF
+( 0.00000, 0.00000 )( 0.00000, 0.00000 )( 1.00000, 0.00000 )=inc.pol.vec. 2 in TF
+( 0.76604  0.64279  0.00000 ) = target axis A1 in Lab Frame
+(-0.64279  0.76604  0.00000 ) = target axis A2 in Lab Frame
+( 0.06283  0.00000  0.00000 ) = k vector (latt. units) in Lab Frame
+( 0.00000, 0.00000 )( 1.00000, 0.00000 )( 0.00000, 0.00000 )=inc.pol.vec. 1 in LF
+( 0.00000, 0.00000 )( 0.00000, 0.00000 )( 1.00000, 0.00000 )=inc.pol.vec. 2 in LF
+BETA =   0.000 = rotation of target around A1
+THETA=  40.000 = angle between A1 and k
+ PHI =   0.000 = rotation of A1 around k
+ absorption coeff.  iter  mxiter
+ JO=1:  5.2129E-02     2   100
+ JO=2:  4.4780E-02     2   100
+ mean:  4.8455E-02
+            Mueller matrix elements for selected scattering directions in Target Frame
+ theta    phi    Pol.    S_11        S_12        S_21       S_22       S_31       S_41
+ 40.00 180.00  0.11831  8.0202E-01  9.4887E-02  9.489E-02  8.020E-01  3.532E-10 -3.525E-10
+140.00 180.00  0.65699  1.5173E-01 -9.9687E-02 -9.969E-02  1.517E-01  7.647E-10 -1.701E-10

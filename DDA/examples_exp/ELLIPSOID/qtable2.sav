@@ -1,0 +1,14 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- Sphere,  59728 dipoles, 1.000 1.000 1.000=x,y,z lattice spacing   
+ GPFAFT --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ ELLIPSOID --- shape 
+  59728 = NAT0 = number of dipoles
+ ../diel/m0.96_1.01                                          
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+   0.000   0.000 = theta_min, theta_max; NTHETA= 1
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+ Results averaged over    1 target orientations
+                   and  2 incident polarizations
+   aeff       wave       Q_pha       Q_pol       Q_cpol
+ 3.9789E-01 5.0000E-01 -2.7530E-01 -9.2983E-06 -4.1723E-07

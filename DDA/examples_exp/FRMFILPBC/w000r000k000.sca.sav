@@ -1,0 +1,43 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- >TARPBXN : slab+disk; XS2,XS3,YS,ZS= 15.0000  0.0000 24.0000 24.00
+ GKDLDR --- DDA method
+ PBCGS2 --- CCG method
+ FRMFILPBC --- shape
+   3 = JPBC
+   0 = JTRQ (= 1 if torques are calculated)
+   2 = NCOMP = number of compositions
+    9312     = NAT0 = number of dipoles
+  0.07662113 = d/aeff for this target [d=dipole spacing]
+    0.013337 = d (physical units)
+----- physical extent of target volume in Target Frame ------
+     -0.200050      0.080020 = xmin,xmax (physical units)
+     -0.160040      0.160040 = ymin,ymax (physical units)
+     -0.160040      0.160040 = zmin,zmax (physical units)
+  AEFF=      0.174060 = effective radius (physical units)
+  WAVE=      0.532000 = wavelength (in vacuo, physical units)
+K*AEFF=      2.055736 = 2*pi*aeff/lambda
+NAMBIENT=    1.000000 = refractive index of ambient medium
+n= ( 0.5280 ,  2.2300),  eps.= ( -4.6942 ,  2.3549)  |m|kd=  0.3610 for subs. 1
+n= ( 2.0446 ,  0.0140),  eps.= (  4.1802 ,  0.0572)  |m|kd=  0.3221 for subs. 2
+   TOL= 1.000E-05 = error tolerance for CCG method
+( 1.00000  0.00000  0.00000 ) = target axis A1 in Target Frame
+( 0.00000  1.00000  0.00000 ) = target axis A2 in Target Frame
+( 0.07876 -0.13641  0.00000 ) = k vector (latt. units) in TF
+( 0.86603, 0.00000 )( 0.50000, 0.00000 )( 0.00000, 0.00000 )=inc.pol.vec. 1 in TF
+( 0.00000, 0.00000 )( 0.00000, 0.00000 )( 1.00000, 0.00000 )=inc.pol.vec. 2 in TF
+( 0.50000  0.86603  0.00000 ) = target axis A1 in Lab Frame
+(-0.86603  0.50000  0.00000 ) = target axis A2 in Lab Frame
+( 0.15751  0.00000  0.00000 ) = k vector (latt. units) in Lab Frame
+( 0.00000, 0.00000 )( 1.00000, 0.00000 )( 0.00000, 0.00000 )=inc.pol.vec. 1 in LF
+( 0.00000, 0.00000 )( 0.00000, 0.00000 )( 1.00000, 0.00000 )=inc.pol.vec. 2 in LF
+BETA =   0.000 = rotation of target around A1
+THETA=  60.000 = angle between A1 and k
+ PHI =   0.000 = rotation of A1 around k
+ absorption coeff.  iter  mxiter
+ JO=1:  5.2111E-01   104   500
+ JO=2:  2.9620E-01    98   500
+ mean:  4.0866E-01
+            Mueller matrix elements for selected scattering directions in Target Frame
+ theta    phi    Pol.    S_11        S_12        S_21       S_22       S_31       S_41
+ 60.00 180.00  0.08384  2.1463E-01  1.7994E-02  1.799E-02  2.146E-01 -1.062E-06 -6.977E-07
+120.00 180.00  0.47536  3.2091E-01 -1.5255E-01 -1.525E-01  3.209E-01 -6.270E-07 -9.796E-07

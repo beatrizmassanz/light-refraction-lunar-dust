@@ -1,0 +1,38 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- >TARPBXN : slab+disk; XS2,XS3,YS,ZS= 15.0000  0.0000 24.0000 24.00
+ GKDLDR --- DDA method
+ PBCGS2 --- CCG method
+ FRMFILPBC --- shape
+   3 = JPBC
+   0 = JTRQ (= 1 if torques are calculated)
+   2 = NCOMP = number of compositions
+    9312     = NAT0 = number of dipoles
+  0.07662113 = d/aeff for this target [d=dipole spacing]
+    0.013337 = d (physical units)
+  AEFF=      0.174060 = effective radius (physical units)
+  WAVE=      0.532000 = wavelength (in vacuo, physical units)
+K*AEFF=      2.055736 = 2*pi*aeff/lambda
+NAMBIENT=    1.000000 = refractive index of ambient medium
+n= ( 0.5280 ,  2.2300),  eps.= ( -4.6942 ,  2.3549)  |m|kd=  0.3610 for subs. 1
+n= ( 2.0446 ,  0.0140),  eps.= (  4.1802 ,  0.0572)  |m|kd=  0.3221 for subs. 2
+   TOL= 1.000E-05 = error tolerance for CCG method
+( 1.00000  0.00000  0.00000 ) = target axis A1 in Target Frame
+( 0.00000  1.00000  0.00000 ) = target axis A2 in Target Frame
+( 0.15751  0.00000  0.00000 ) = k vector (latt. units) in Lab Frame
+( 0.00000, 0.00000 )( 1.00000, 0.00000 )( 0.00000, 0.00000 )=inc.pol.vec. 1 in LF
+( 0.00000, 0.00000 )( 0.00000, 0.00000 )( 1.00000, 0.00000 )=inc.pol.vec. 2 in LF
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+  60.000  60.000 = theta_min, theta_max; NTHETA= 1
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+
+ Results averaged over    1 target orientations
+                   and    2 incident polarizations
+         Qext       Qabs       Qsca
+JO=1:  1.5649E+00  2.8046E-01  1.2844E+00
+JO=2:  1.5138E+00  1.5941E-01  1.3543E+00
+ mean:  1.5393E+00  2.1994E-01  1.3194E+00
+Qpol=  5.1137E-02
+            Mueller matrix elements for selected scattering directions in Target Frame
+ theta    phi    Pol.    S_11        S_12        S_21       S_22       S_31       S_41
+ 60.00 180.00  0.08384  2.1463E-01  1.7994E-02  1.799E-02  2.146E-01 -1.062E-06 -6.977E-07
+120.00 180.00  0.47536  3.2091E-01 -1.5255E-01 -1.525E-01  3.209E-01 -6.270E-07 -9.796E-07

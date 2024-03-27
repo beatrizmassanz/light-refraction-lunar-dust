@@ -1,0 +1,9 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- >TARREC   rectangular prism; AX,AY,AZ= 16.0000 32.0000 32.0000    
+ PBCGS2 --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ FROM_FILE --- shape 
+  16384 = NAT0 = number of dipoles
+ ../diel/Au_evap                                             
+  wave(um)   f(cm-1)     Re(m)     Im(m)    Re(eps)   Im(eps)
+ 5.0000E-01 2.0000E+04 9.656E-01 1.863E+00-2.537E+00 3.598E+00

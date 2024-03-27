@@ -1,0 +1,89 @@
+#! /bin/bash
+
+# shell script to execute a set of example calculations using DDSCAT
+# to run this in a unix/linux environment, simply type 
+#    ./runexamples
+# on a 2.53 GHz Mac laptop, with ifort used for compilation,
+# the ddscat timings ("real" time reported by the "time" utility)
+# are as follows:
+#             ANIRCTNGL :   0.24 cpusec
+#             CYLNDRPBC :  32.   cpusec
+#             DSKRCTPBC : 122.   cpusec
+#             ELLIPSOID :  40.   cpusec
+#             FRMFILPBC : 122.   cpusec
+#             FROM_FILE :   6.6  cpusec
+#             LYRSLBPBC :
+#             RCTGLPRSM :   6.6  cpusec
+#             RCTGL_PBC : 136.   cpusec
+#             SPHERES_N :   1.1  cpusec
+#             SPH_ANI_N :  82.   cpusec
+#             SPHRN_PBC :  60.   cpusec
+#   ELLIPSOID_NEARFIELD :  52.   cpusec
+#   ELLIPSOID_NEARFLD_B :  61.
+#   RCTGLPRSM_NEARFIELD :   8.7  cpusec
+#   RCTGL_PBC_NEARFIELD : 551.   cpusec
+#   RCTGL_PBC_NEARFLD_B : 936.   cpusec
+
+Mkfil=Makefile
+ddscat=ddscat
+
+hostname
+date
+pwd
+
+(cd ../src; make clean; make -f ${Mkfil} ${ddscat} ddpostprocess vtrconvert)
+date
+
+echo 'all calculations are done in single precision'
+echo 'examples without nearfield calculation'
+
+for example in \
+   ANIRCTNGL \
+   CYLNDRPBC \
+   DSKRCTPBC \
+   ELLIPSOID \
+   FRMFILPBC \
+   FROM_FILE \
+   LYRSLBPBC \
+   ONIONSHEL \
+   RCTGLPRSM \
+   RCTGL_PBC \
+   SPHERES_N \
+   SPH_ANI_N \
+   SPHRN_PBC
+do
+   echo beginning ${example}
+   echo run ddscat:
+   (cd ${example}; time ../../src/${ddscat} >& ddscat.log)
+   echo run vtrconvert:
+   (cd ${example}; time ../../src/vtrconvert target.out target)
+   echo completed ${example}
+   echo '------------------------------------------'
+   date
+done
+
+echo 'examples that include nearfield calculations:'
+for example in \
+   ELLIPSOID_NEARFIELD \
+   ELLIPSOID_NEARFLD_B \
+   RCTGLPRSM_NEARFIELD \
+   RCTGL_PBC_NEARFIELD \
+   RCTGL_PBC_NEARFLD_B
+do
+   echo beginning ${example}
+   date
+   echo run ddscat:
+   (cd ${example}; time ../../src/${ddscat} >& ddscat.log)
+   echo run ddpostprocess with ddpostprocess.par2:
+   (cd ${example}; time ../../src/ddpostprocess ddpostprocess.par2 >& ddpostprocess.log2)
+   (cd ${example}; mv ddpostprocess.out ddpostprocess.out2)
+   echo run ddpostprocess with ddpostprocess.par:
+   (cd ${example}; time ../../src/ddpostprocess ddpostprocess.par >& ddpostprocess.log)
+   echo run vtrconvert:
+   (cd ${example}; time ../../src/vtrconvert target.out target)
+   echo completed ${example}
+   echo '------------------------------------------'
+done
+
+date
+echo 'runexamples: completed all examples'
