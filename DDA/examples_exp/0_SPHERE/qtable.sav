@@ -1,10 +1,10 @@
- DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
- TARGET --- Rectangular prism; NX,NY,NZ=  16  16  16                          
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- Sphere,  59728 dipoles, 1.000 1.000 1.000=x,y,z lattice spacing   
  GPFAFT --- method of solution 
  GKDLDR --- prescription for polarizabilities
- RCTGLPRSM --- shape 
-    4096 = NAT0 = number of dipoles
- ../diel/astrosil                                            
+ ELLIPSOID --- shape 
+  4189 = NAT0 = number of dipoles
+ ../diel/astrosil                                          
    0.000   0.000 = beta_min, beta_max ;  NBETA = 1
    0.000   0.000 = theta_min, theta_max; NTHETA= 1
    0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
@@ -12,4 +12,4 @@
  Results averaged over    1 target orientations
                    and  2 incident polarizations
    aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
- 1.0000E-01 5.6000E-01 6.9988E-01 1.0995E-01 5.8993E-01  3.0198E-01 4.1667E-01 2.5646E-02   408
+ 3.9789E-01 5.0000E-01 2.5312E+00 1.1619E+00 1.3694E+00  7.8084E-01 7.8588E-01 1.5458E-02  1644

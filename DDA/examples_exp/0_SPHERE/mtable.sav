@@ -1,0 +1,9 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- Sphere,  4189 dipoles, 1.000 1.000 1.000=x,y,z lattice spacing   
+ PBCGS2 --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ ELLIPSOID --- shape 
+  4189 = NAT0 = number of dipoles
+ ../diel/astrosil                                          
+  wave(um)   f(cm-1)     Re(m)     Im(m)    Re(eps)   Im(eps)
+ 5.0000E-01 2.0000E+04 9.600E-01 1.010E+00-9.850E-02 1.939E+00
