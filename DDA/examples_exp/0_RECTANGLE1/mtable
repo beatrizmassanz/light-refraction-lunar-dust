@@ -1,0 +1,9 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --- Rectangular prism; NX,NY,NZ=  42  10  10                          
+ PBCGS2 --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ RCTGLPRSM --- shape 
+    4200 = NAT0 = number of dipoles
+ ../diel/astrosil                                            
+  wave(um)   f(cm-1)     Re(m)     Im(m)     Re(eps)   Im(eps)
+ 5.6000E-01 1.7857E+04 1.690E+00 2.988E-02  2.855E+00 1.010E-01

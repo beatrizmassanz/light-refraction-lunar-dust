@@ -1,0 +1,3 @@
+Warning: In vtkPVRenderView.cxx, line 3438
+vtkPVRenderView (0x7fce8c71ad60): Refusing to enable OSPRay because it is not supported running in this configuration.
+

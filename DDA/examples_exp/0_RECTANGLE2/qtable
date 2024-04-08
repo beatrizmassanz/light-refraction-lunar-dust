@@ -1,0 +1,15 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --- Rectangular prism; NX,NY,NZ=  10  10  42                          
+ GPFAFT --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ RCTGLPRSM --- shape 
+    4200 = NAT0 = number of dipoles
+ ../diel/astrosil                                            
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+   0.000   0.000 = theta_min, theta_max; NTHETA= 1
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+ 0.5000 = ETASCA (param. controlling # of scatt. dirs used to calculate <cos> etc.
+ Results averaged over    1 target orientations
+                   and  2 incident polarizations
+   aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
+ 1.0000E-01 5.6000E-01 8.1763E-01 1.1896E-01 6.9867E-01  1.0767E-01 4.5171E-01 9.0931E-02   408
