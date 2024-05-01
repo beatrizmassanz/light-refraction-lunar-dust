@@ -1,0 +1,14 @@
+ DDSCAT --- DDSCAT 7.3.1 [14.11.28]   
+ TARGET --- Cyl.prism, NAT=   3260 NFAC=   3260 NLAY=      1 asp.ratio= 0.0155
+ GPFAFT --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ CYLNDRPBC --- shape 
+   3260 = NAT0 = number of dipoles
+ ../diel/m1.33_0.01                                          
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+  30.000  30.000 = theta_min, theta_max; NTHETA= 1
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+ Results averaged over    1 target orientations
+                   and  2 incident polarizations
+   aeff       wave       Q_pha       Q_pol       Q_cpol
+ 2.8555E+00 6.2832E+00 -2.0465E-02  1.6219E-02 -4.7989E-03

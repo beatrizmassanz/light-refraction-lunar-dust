@@ -50,8 +50,8 @@
 >  **** Select Elements of S_ij Matrix to Print ****                     
 >REAPAR CMDFRM=LFRAME : scattering directions given in Lab Frame              
 >REAPAR **** Specify Scattered Directions ****                                
->REAPAR     0.0    0.0  180.0 = phi, theta_min, theta_max for scatt. plane   1
->REAPAR   37 = number of scattering angles in this scattering plane           
+>REAPAR     0.0    0.0  360.0 = phi, theta_min, theta_max for scatt. plane   1
+>REAPAR   73 = number of scattering angles in this scattering plane           
 >REAPAR    90.0    0.0  180.0 = phi, theta_min, theta_max for scatt. plane   2
 >REAPAR   37 = number of scattering angles in this scattering plane           
  DDSCAT ckpt 5, NBETA,NPHI,NTHETA=           1           1           1
@@ -146,20 +146,20 @@
 >ZBCG2  IT=       2 f.err= 2.486E-04                                          
 >ZBCG2  IT=       3 f.err= 5.237E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.033 = CPU time (sec)                                            
+>TIMEIT     0.035 = CPU time (sec)                                            
 >GETFML Q_abs = 1.0995E-01 Q_ext=  6.9988E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.031 = CPU time (sec)                                            
+>TIMEIT     0.034 = CPU time (sec)                                            
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.1911                
 >ZBCG2  IT=       1 f.err= 1.787E-02                                          
 >ZBCG2  IT=       2 f.err= 2.499E-04                                          
 >ZBCG2  IT=       3 f.err= 5.231E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.021 = CPU time (sec)                                            
+>TIMEIT     0.020 = CPU time (sec)                                            
 >GETFML Q_abs = 1.0995E-01 Q_ext=  6.9988E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.026 = CPU time (sec)                                            
+>TIMEIT     0.028 = CPU time (sec)                                            
 >DDSCAT return from DDSCAT to calling program
 >DDSCAT normal termination, with no nearfield calculation                     
