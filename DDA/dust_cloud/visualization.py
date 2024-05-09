@@ -64,6 +64,33 @@ def plot_data(data_frames, labels):
     plt.legend()
     plt.show()
 
+import matplotlib.pyplot as plt
+import pandas as pd
+
+def plot_polar_data(data_frames, labels):
+    """
+    Plots data from multiple DataFrames on a polar plot, assuming 
+    each DataFrame contains 
+    'theta' and 'S_11' columns. Theta should be in degrees for plotting.
+
+    Parameters:
+    data_frames (list of pd.DataFrame): List of DataFrames to plot.
+    labels (list of str): Labels for each DataFrame plot.
+    """
+    plt.figure(figsize=(8, 8))                                           # Adjust the figure size as needed
+    ax = plt.subplot(111, polar=True)                                    # Create a polar subplot
+    for df, label in zip(data_frames, labels):                           # Convert degrees to radians for polar plotting
+        radians = np.deg2rad(df[df["phi"] == 0]["theta"])
+        ax.plot(radians, df[df["phi"] == 0]["S_11"], label=label, 
+                alpha=0.7, linestyle='-', linewidth=1)
+    ax.set_theta_zero_location('N')                                        # This sets the 0 degrees to the North
+    ax.set_theta_direction(-1)                                             # This sets the direction of degrees to clockwise
+    ax.set_xlabel('Theta (radians)')
+    ax.set_ylabel('S_11')
+    ax.set_title('Polar Comparison of S_11 Values')
+    ax.legend()
+    plt.show()
+
 def find_data_files(base_dir):
     """
     Finds all 'w000r000.avg' files within a specified base directory.

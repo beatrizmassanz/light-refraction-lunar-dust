@@ -83,6 +83,7 @@ def main(sim_id, base_dir, num_simulations):
         except Exception as e:
             logging.error(f"Failed to complete simulation {sim_id}: {repr(e)}")
     visualization.plot_data(data_frames, labels)   
+    visualization.plot_polar_data(data_frames, labels)
 
 
 # Testing script
