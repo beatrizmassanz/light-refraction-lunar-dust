@@ -6,43 +6,46 @@ def random_cloud_gen(num_dipoles, cube_size):
     Generate randomly distributed dipoles within a cubic volume.
 
     Parameters:
-    num_dipoles (int): Number of dipoles to generate.
-    cube_size (float): Side length of the cube within which dipoles are generated.
+        num_dipoles (int): Number of dipoles to generate.
+        cube_size (float): Side length of the cube within which dipoles 
+            are generated.
 
     Returns:
-    tuple: A tuple containing two numpy arrays; positions and orientations of the dipoles.
+        tuple: A tuple containing two numpy arrays; positions and 
+            orientations of the dipoles.
     """
-    positions = np.random.uniform(low=-cube_size/2, high=cube_size/2, size=(num_dipoles, 3))
-    orientations = np.random.uniform(low=-1.0, high=1.0, size=(num_dipoles, 3))
-    orientations /= np.linalg.norm(orientations, axis=1)[:, np.newaxis]  # Normalize to unit vectors
+    positions = np.random.uniform(low=-cube_size/2, high=cube_size/2, 
+                                  size=(num_dipoles, 3))
+    orientations = np.random.uniform(low=-1.0, high=1.0, 
+                                     size=(num_dipoles, 3))
+    orientations /= np.linalg.norm(orientations,                        # Normalize to unit vectors
+                                   axis=1)[:, np.newaxis] 
     return positions, orientations
 
 def generate_dust_cloud_data(num_dipoles, positions, orientations):
     """
-    Generates a formatted shape file content for a dust cloud with unique, 
-    non-duplicated positions.
+    Generates a formatted shape file content for a dust cloud with
+    unique, non-duplicated positions.
     
     Parameters:
-        num_dipoles (int): The number of dipoles initially intended to generate.
+        num_dipoles (int): The number of dipoles initially 
+            intended to generate.
         positions (np.ndarray): Array of positions for each dipole.
-        orientations (np.ndarray): Array of orientations for each dipole.
+        orientations (np.ndarray): Array of orientations for each 
+            dipole.
     
     Returns:
-        list: Formatted lines of a shape file representing the dust cloud.
+        list: Formatted lines of a shape file representing the 
+            dust cloud.
     """
-    # Ensure unique positions at the grid level by rounding
-    rounded_positions = np.round(positions).astype(int)
-
-    # Create a unique set of positions
-    unique_positions, indices = np.unique(rounded_positions, return_index=True, axis=0)
+    rounded_positions = np.round(positions).astype(int)                 # Ensure unique positions at the grid level by rounding
+    unique_positions, indices = np.unique(rounded_positions,            # Create a unique set of positions
+                                          return_index=True, axis=0)
     unique_orientations = orientations[indices]
-    num_dipoles = len(unique_positions)  # Update the number of dipoles based on unique entries
-
-    # Calculate the approximate bounding dimensions of the cloud
-    max_dimension = np.max(np.abs(unique_positions)) * 2  # The factor of 2 ensures full coverage
-
-    # Prepare the file content
-    shape_file_content = [
+    num_dipoles = len(unique_positions)                                 # Update the number of dipoles based on unique entries                                                               
+    max_dimension = np.max(np.abs(unique_positions)) * 2                # Calculate the approximate bounding dimensions of the cloud
+                                                                        # The factor of 2 ensures full coverage
+    shape_file_content = [                                              # Prepare the file content
         f">DUSTCLOUD   dust cloud; AX,AY,AZ= {max_dimension:.4f} {max_dimension:.4f} {max_dimension:.4f}",
         f"     {num_dipoles} = NAT ",
         "  1.000000  0.000000  0.000000 = A_1 vector",
@@ -53,40 +56,45 @@ def generate_dust_cloud_data(num_dipoles, positions, orientations):
         "     JA  IX  IY  IZ ICOMP(x,y,z)"
     ]
 
-    # Add each dipole's data to the content
-    for i, (pos, orient) in enumerate(zip(unique_positions, unique_orientations), start=1):
-        ix, iy, iz = pos.astype(int)  # Convert positions to integer for indices
-        icomp = "1 1 1"  # Default component setting
+    for i, (pos, orient) in enumerate(zip(unique_positions,             # Add each dipole's data to the content
+                                          unique_orientations), 
+                                          start=1):
+        ix, iy, iz = pos.astype(int)                                    # Convert positions to integer for indices
+        icomp = "1 1 1"                                                 # Default component setting
         shape_file_content.append(f"     {i}  {ix+1}  {iy+1}  {iz+1} {icomp}")
-    
     return shape_file_content
 
 
-def save_dust_cloud_info_to_file(shape_file_name, shape_file_content, simulation_directory):
+def save_dust_cloud_info_to_file(shape_file_name, shape_file_content, 
+                                 simulation_directory):
     """
-    Saves the generated shape file content for a dust cloud to a specified file.
+    Saves the generated shape file content for a dust cloud to a 
+    specified file. 
 
     Parameters:
         shape_file_name (str): The name of the file to create.
-        shape_file_content (list): The content of the shape file as a list of strings.
-        simulation_directory (str): The directory where the shape file will be saved.
+        shape_file_content (list): The content of the shape file as 
+            a list of strings.
+        simulation_directory (str): The directory where the shape 
+            file will be saved.
 
-    Writes the shape file content to a file in the specified directory.
+    Writes the shape file content to a file in 
+    the specified directory.
     """
-    # Create the full path by combining the directory and file name
-    full_file_path = os.path.join(simulation_directory, shape_file_name)
-
-    # Open the file in write mode and write the content
-    with open(full_file_path, "w") as file:
+    full_file_path = os.path.join(simulation_directory,                 # Create full path by combining directory and file name
+                                  shape_file_name)
+    with open(full_file_path, "w") as file:                             # Open the file in write mode and write the content
         file.write("\n".join(shape_file_content))
 
 
 def generate_par(params):
     """
-    Creates a .par file content for DDSCAT based on a dictionary of parameters.
+    Creates a .par file content for DDSCAT based on a dictionary of 
+    parameters.
     
     Parameters:
-        params (dict): A dictionary containing all necessary parameters to generate the file.
+        params (dict): A dictionary containing all necessary parameters 
+            to generate the file.
 
     Returns:
         list of str: Lines of the .par file as a list of strings.
@@ -154,23 +162,25 @@ def generate_par(params):
 
 def save_param_info_to_file(params, par_file_content, simulation_directory):
     """
-    Saves the parameter file content to two files in the specified directory.
+    Saves the parameter file content to two files in the 
+    specified directory.
 
     Parameters:
-        params (dict): Dictionary containing 'par_file_name' as a key with the name of the primary .par file.
-        par_file_content (list of str): The content of the parameter file to be saved.
-        simulation_directory (str): The directory where the parameter files will be saved.
+        params (dict): Dictionary containing 'par_file_name' as 
+            a key with the name of the primary .par file.
+        par_file_content (list of str): The content of the parameter 
+            file to be saved.
+        simulation_directory (str): The directory where the parameter 
+            files will be saved.
 
-    This function saves the parameter content to a .par file and a .par.sav file in the given directory.
+    This function saves the parameter content to a .par file and a 
+    .par.sav file in the given directory.
     """
-    # Create the full path by combining the directory and file name
-    par_full_file_path = os.path.join(simulation_directory, params["par_file_name"])
-    sav_full_file_path = os.path.join(simulation_directory, "ddscat.par.sav")
-
-    # Write the parameter content to the .par file
-    with open(par_full_file_path, "w") as file:
+    par_full_file_path = os.path.join(simulation_directory,             # Create full path by combining the directory and file name        
+                                      params["par_file_name"])
+    sav_full_file_path = os.path.join(simulation_directory, 
+                                      "ddscat.par.sav")
+    with open(par_full_file_path, "w") as file:                         # Write the parameter content to the .par file
         file.write("\n".join(par_file_content))
-
-    # Write the parameter content to the .sav file
-    with open(sav_full_file_path, "w") as file:
+    with open(sav_full_file_path, "w") as file:                         # Write the parameter content to the .sav file
         file.write("\n".join(par_file_content))
