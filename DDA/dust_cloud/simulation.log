@@ -1,0 +1,626 @@
+2024-05-06 18:55:49,372 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:55:49,372 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:55:49,446 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:55:49,446 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:55:49,446 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:55:49,485 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:55:49,485 - INFO - Successfully completed simulation 1
+2024-05-06 18:58:31,981 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:58:31,981 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:58:32,039 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 18:58:32,040 - INFO - Successfully completed simulation 1
+2024-05-06 19:13:52,611 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:13:52,611 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:13:52,616 - ERROR - Failed to complete simulation 1: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:13:52,617 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:13:52,617 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:13:52,619 - ERROR - Failed to complete simulation 2: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:13:52,619 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:13:52,619 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:13:52,621 - ERROR - Failed to complete simulation 3: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:13:52,621 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:13:52,621 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:13:52,624 - ERROR - Failed to complete simulation 4: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:13:52,624 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:13:52,624 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:13:52,626 - ERROR - Failed to complete simulation 5: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:22:27,712 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:22:27,721 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:22:27,725 - ERROR - Failed to complete simulation 1: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:22:27,726 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:22:27,726 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:22:27,728 - ERROR - Failed to complete simulation 2: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:22:27,728 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:22:27,728 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:22:27,730 - ERROR - Failed to complete simulation 3: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:22:27,731 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:22:27,731 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:22:27,733 - ERROR - Failed to complete simulation 4: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:22:27,733 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:22:27,733 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:22:27,735 - ERROR - Failed to complete simulation 5: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:23:09,131 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:23:09,131 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:23:09,133 - ERROR - Failed to complete simulation 1: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:23:09,133 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:23:09,133 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:23:09,135 - ERROR - Failed to complete simulation 2: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:23:09,135 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:23:09,136 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:23:09,137 - ERROR - Failed to complete simulation 3: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:23:09,138 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:23:09,138 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:23:09,140 - ERROR - Failed to complete simulation 4: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:23:09,140 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:23:09,140 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:23:09,143 - ERROR - Failed to complete simulation 5: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:12,548 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:27:12,548 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:27:12,552 - ERROR - Failed to complete simulation 1: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:12,552 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:27:12,552 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:27:12,554 - ERROR - Failed to complete simulation 2: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:12,554 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:27:12,554 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:27:12,556 - ERROR - Failed to complete simulation 3: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:12,556 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:27:12,557 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:27:12,559 - ERROR - Failed to complete simulation 4: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:12,559 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:27:12,559 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:27:12,562 - ERROR - Failed to complete simulation 5: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:59,512 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:27:59,512 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:27:59,517 - ERROR - Failed to complete simulation 1: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:59,517 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:27:59,517 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:27:59,519 - ERROR - Failed to complete simulation 2: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:59,519 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:27:59,519 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:27:59,521 - ERROR - Failed to complete simulation 3: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:59,521 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:27:59,521 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:27:59,523 - ERROR - Failed to complete simulation 4: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:27:59,523 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:27:59,523 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:27:59,526 - ERROR - Failed to complete simulation 5: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:33:03,159 - ERROR - Failed to complete simulation 1: TypeError("run_simulation() missing 1 required positional argument: 'base_dir'")
+2024-05-06 19:33:03,159 - ERROR - Failed to complete simulation 2: TypeError("run_simulation() missing 1 required positional argument: 'base_dir'")
+2024-05-06 19:33:03,159 - ERROR - Failed to complete simulation 3: TypeError("run_simulation() missing 1 required positional argument: 'base_dir'")
+2024-05-06 19:33:03,159 - ERROR - Failed to complete simulation 4: TypeError("run_simulation() missing 1 required positional argument: 'base_dir'")
+2024-05-06 19:33:03,159 - ERROR - Failed to complete simulation 5: TypeError("run_simulation() missing 1 required positional argument: 'base_dir'")
+2024-05-06 19:33:43,165 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:33:43,165 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1/sim_1
+2024-05-06 19:33:43,174 - ERROR - Failed to complete simulation 1: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:33:43,175 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:33:43,175 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2/sim_2
+2024-05-06 19:33:43,177 - ERROR - Failed to complete simulation 2: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:33:43,177 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:33:43,177 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3/sim_3
+2024-05-06 19:33:43,179 - ERROR - Failed to complete simulation 3: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:33:43,179 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:33:43,179 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4/sim_4
+2024-05-06 19:33:43,181 - ERROR - Failed to complete simulation 4: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:33:43,181 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:33:43,181 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5/sim_5
+2024-05-06 19:33:43,184 - ERROR - Failed to complete simulation 5: FileNotFoundError(2, 'No such file or directory')
+2024-05-06 19:42:31,247 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:42:31,247 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:42:31,298 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:42:31,298 - INFO - Successfully completed simulation 1
+2024-05-06 19:42:31,298 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:42:31,298 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:42:31,337 - INFO - Simulation 2 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:42:31,338 - INFO - Successfully completed simulation 2
+2024-05-06 19:42:31,338 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:42:31,338 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:42:31,377 - INFO - Simulation 3 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:42:31,377 - INFO - Successfully completed simulation 3
+2024-05-06 19:42:31,377 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:42:31,377 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:42:31,417 - INFO - Simulation 4 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:42:31,417 - INFO - Successfully completed simulation 4
+2024-05-06 19:42:31,417 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:42:31,417 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:42:31,467 - INFO - Simulation 5 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:42:31,467 - INFO - Successfully completed simulation 5
+2024-05-06 19:50:08,130 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:50:08,130 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:50:08,182 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:50:08,183 - INFO - Successfully completed simulation 1
+2024-05-06 19:50:08,183 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:50:08,183 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:50:08,225 - INFO - Simulation 2 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:50:08,225 - INFO - Successfully completed simulation 2
+2024-05-06 19:50:08,225 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:50:08,225 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:50:08,268 - INFO - Simulation 3 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:50:08,268 - INFO - Successfully completed simulation 3
+2024-05-06 19:50:08,268 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:50:08,268 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:50:08,309 - INFO - Simulation 4 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:50:08,309 - INFO - Successfully completed simulation 4
+2024-05-06 19:50:08,309 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:50:08,309 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:50:08,351 - INFO - Simulation 5 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:50:08,351 - INFO - Successfully completed simulation 5
+2024-05-06 19:50:55,137 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:50:55,137 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:50:55,188 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:50:55,188 - INFO - Successfully completed simulation 1
+2024-05-06 19:58:01,879 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:58:01,879 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:58:01,927 - INFO - Simulation 2 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 19:58:01,927 - INFO - Successfully completed simulation 2
+2024-05-06 19:58:03,759 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:58:03,759 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:58:03,808 - INFO - Simulation 3 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 19:58:03,809 - INFO - Successfully completed simulation 3
+2024-05-06 19:58:04,594 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:58:04,594 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:58:04,655 - INFO - Simulation 4 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 19:58:04,655 - INFO - Successfully completed simulation 4
+2024-05-06 19:58:05,280 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:58:05,280 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:58:05,340 - INFO - Simulation 5 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 19:58:05,341 - INFO - Successfully completed simulation 5
+2024-05-06 19:58:21,110 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:58:21,110 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:58:21,151 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 19:58:21,151 - INFO - Successfully completed simulation 1
+2024-05-06 20:02:52,977 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:02:52,977 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:02:53,040 - INFO - Simulation 2 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:02:53,040 - INFO - Successfully completed simulation 2
+2024-05-06 20:02:54,083 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:02:54,084 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:02:54,142 - INFO - Simulation 3 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:02:54,142 - INFO - Successfully completed simulation 3
+2024-05-06 20:02:54,761 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:02:54,761 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:02:54,829 - INFO - Simulation 4 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:02:54,829 - INFO - Successfully completed simulation 4
+2024-05-06 20:02:55,397 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:02:55,397 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:02:55,474 - INFO - Simulation 5 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:02:55,475 - INFO - Successfully completed simulation 5
+2024-05-06 20:03:50,526 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 20:03:50,526 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 20:03:50,567 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 20:03:50,567 - INFO - Successfully completed simulation 1
+2024-05-06 20:03:50,570 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:03:50,570 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:03:50,609 - INFO - Simulation 2 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:03:50,609 - INFO - Successfully completed simulation 2
+2024-05-06 20:03:50,612 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:03:50,612 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:03:50,653 - INFO - Simulation 3 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:03:50,653 - INFO - Successfully completed simulation 3
+2024-05-06 20:03:50,656 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:03:50,656 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:03:50,695 - INFO - Simulation 4 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:03:50,695 - INFO - Successfully completed simulation 4
+2024-05-06 20:03:50,698 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:03:50,698 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:03:50,738 - INFO - Simulation 5 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:03:50,738 - INFO - Successfully completed simulation 5
+2024-05-06 20:09:42,090 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 20:09:42,090 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 20:09:42,138 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-06 20:09:42,138 - INFO - Successfully completed simulation 1
+2024-05-06 20:09:42,142 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:09:42,142 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:09:42,183 - INFO - Simulation 2 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-06 20:09:42,183 - INFO - Successfully completed simulation 2
+2024-05-06 20:09:42,186 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:09:42,186 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:09:42,226 - INFO - Simulation 3 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-06 20:09:42,226 - INFO - Successfully completed simulation 3
+2024-05-06 20:09:42,229 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:09:42,229 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:09:42,269 - INFO - Simulation 4 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-06 20:09:42,269 - INFO - Successfully completed simulation 4
+2024-05-06 20:09:42,272 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:09:42,272 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:09:42,312 - INFO - Simulation 5 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-06 20:09:42,313 - INFO - Successfully completed simulation 5
+2024-05-06 20:09:42,315 - INFO - Starting simulation 6 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_6
+2024-05-06 20:09:42,316 - INFO - Simulation 6 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_6
+2024-05-06 20:09:42,356 - INFO - Simulation 6 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_6
+2024-05-06 20:09:42,356 - INFO - Successfully completed simulation 6
+2024-05-06 20:09:42,359 - INFO - Starting simulation 7 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_7
+2024-05-06 20:09:42,360 - INFO - Simulation 7 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_7
+2024-05-06 20:09:42,399 - INFO - Simulation 7 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_7
+2024-05-06 20:09:42,399 - INFO - Successfully completed simulation 7
+2024-05-06 20:09:42,403 - INFO - Starting simulation 8 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_8
+2024-05-06 20:09:42,403 - INFO - Simulation 8 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_8
+2024-05-06 20:09:42,442 - INFO - Simulation 8 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_8
+2024-05-06 20:09:42,443 - INFO - Successfully completed simulation 8
+2024-05-06 20:09:42,446 - INFO - Starting simulation 9 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_9
+2024-05-06 20:09:42,447 - INFO - Simulation 9 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_9
+2024-05-06 20:09:42,486 - INFO - Simulation 9 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_9
+2024-05-06 20:09:42,487 - INFO - Successfully completed simulation 9
+2024-05-06 20:09:42,491 - INFO - Starting simulation 10 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_10
+2024-05-06 20:09:42,491 - INFO - Simulation 10 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_10
+2024-05-06 20:09:42,531 - INFO - Simulation 10 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_10
+2024-05-06 20:09:42,531 - INFO - Successfully completed simulation 10
+2024-05-06 20:09:42,535 - INFO - Starting simulation 11 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_11
+2024-05-06 20:09:42,535 - INFO - Simulation 11 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_11
+2024-05-06 20:09:42,575 - INFO - Simulation 11 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_11
+2024-05-06 20:09:42,575 - INFO - Successfully completed simulation 11
+2024-05-06 20:09:42,580 - INFO - Starting simulation 12 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_12
+2024-05-06 20:09:42,580 - INFO - Simulation 12 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_12
+2024-05-06 20:09:42,620 - INFO - Simulation 12 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_12
+2024-05-06 20:09:42,620 - INFO - Successfully completed simulation 12
+2024-05-06 20:09:42,625 - INFO - Starting simulation 13 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_13
+2024-05-06 20:09:42,625 - INFO - Simulation 13 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_13
+2024-05-06 20:09:42,667 - INFO - Simulation 13 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_13
+2024-05-06 20:09:42,667 - INFO - Successfully completed simulation 13
+2024-05-06 20:09:42,672 - INFO - Starting simulation 14 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_14
+2024-05-06 20:09:42,672 - INFO - Simulation 14 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_14
+2024-05-06 20:09:42,714 - INFO - Simulation 14 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_14
+2024-05-06 20:09:42,714 - INFO - Successfully completed simulation 14
+2024-05-06 20:09:42,720 - INFO - Starting simulation 15 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_15
+2024-05-06 20:09:42,720 - INFO - Simulation 15 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_15
+2024-05-06 20:09:42,760 - INFO - Simulation 15 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_15
+2024-05-06 20:09:42,760 - INFO - Successfully completed simulation 15
+2024-05-06 20:09:42,766 - INFO - Starting simulation 16 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_16
+2024-05-06 20:09:42,766 - INFO - Simulation 16 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_16
+2024-05-06 20:09:42,813 - INFO - Simulation 16 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_16
+2024-05-06 20:09:42,813 - INFO - Successfully completed simulation 16
+2024-05-06 20:09:42,819 - INFO - Starting simulation 17 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_17
+2024-05-06 20:09:42,819 - INFO - Simulation 17 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_17
+2024-05-06 20:09:42,868 - INFO - Simulation 17 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_17
+2024-05-06 20:09:42,868 - INFO - Successfully completed simulation 17
+2024-05-06 20:09:42,874 - INFO - Starting simulation 18 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_18
+2024-05-06 20:09:42,874 - INFO - Simulation 18 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_18
+2024-05-06 20:09:42,913 - INFO - Simulation 18 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_18
+2024-05-06 20:09:42,914 - INFO - Successfully completed simulation 18
+2024-05-06 20:09:42,920 - INFO - Starting simulation 19 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_19
+2024-05-06 20:09:42,920 - INFO - Simulation 19 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_19
+2024-05-06 20:09:42,960 - INFO - Simulation 19 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_19
+2024-05-06 20:09:42,960 - INFO - Successfully completed simulation 19
+2024-05-06 20:09:42,968 - INFO - Starting simulation 20 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_20
+2024-05-06 20:09:42,968 - INFO - Simulation 20 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_20
+2024-05-06 20:09:43,009 - INFO - Simulation 20 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_20
+2024-05-06 20:09:43,009 - INFO - Successfully completed simulation 20
+2024-05-06 20:09:43,016 - INFO - Starting simulation 21 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_21
+2024-05-06 20:09:43,017 - INFO - Simulation 21 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_21
+2024-05-06 20:09:43,056 - INFO - Simulation 21 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_21
+2024-05-06 20:09:43,057 - INFO - Successfully completed simulation 21
+2024-05-06 20:09:43,064 - INFO - Starting simulation 22 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_22
+2024-05-06 20:09:43,064 - INFO - Simulation 22 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_22
+2024-05-06 20:09:43,104 - INFO - Simulation 22 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_22
+2024-05-06 20:09:43,104 - INFO - Successfully completed simulation 22
+2024-05-06 20:09:43,113 - INFO - Starting simulation 23 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_23
+2024-05-06 20:09:43,113 - INFO - Simulation 23 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_23
+2024-05-06 20:09:43,152 - INFO - Simulation 23 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_23
+2024-05-06 20:09:43,153 - INFO - Successfully completed simulation 23
+2024-05-06 20:09:43,161 - INFO - Starting simulation 24 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_24
+2024-05-06 20:09:43,161 - INFO - Simulation 24 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_24
+2024-05-06 20:09:43,201 - INFO - Simulation 24 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_24
+2024-05-06 20:09:43,201 - INFO - Successfully completed simulation 24
+2024-05-06 20:09:43,210 - INFO - Starting simulation 25 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_25
+2024-05-06 20:09:43,210 - INFO - Simulation 25 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_25
+2024-05-06 20:09:43,251 - INFO - Simulation 25 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_25
+2024-05-06 20:09:43,251 - INFO - Successfully completed simulation 25
+2024-05-06 20:09:43,260 - INFO - Starting simulation 26 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_26
+2024-05-06 20:09:43,260 - INFO - Simulation 26 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_26
+2024-05-06 20:09:43,300 - INFO - Simulation 26 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_26
+2024-05-06 20:09:43,300 - INFO - Successfully completed simulation 26
+2024-05-06 20:09:43,309 - INFO - Starting simulation 27 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_27
+2024-05-06 20:09:43,310 - INFO - Simulation 27 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_27
+2024-05-06 20:09:43,350 - INFO - Simulation 27 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_27
+2024-05-06 20:09:43,351 - INFO - Successfully completed simulation 27
+2024-05-06 20:09:43,360 - INFO - Starting simulation 28 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_28
+2024-05-06 20:09:43,360 - INFO - Simulation 28 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_28
+2024-05-06 20:09:43,400 - INFO - Simulation 28 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_28
+2024-05-06 20:09:43,400 - INFO - Successfully completed simulation 28
+2024-05-06 20:09:43,410 - INFO - Starting simulation 29 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_29
+2024-05-06 20:09:43,410 - INFO - Simulation 29 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_29
+2024-05-06 20:09:43,450 - INFO - Simulation 29 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_29
+2024-05-06 20:09:43,450 - INFO - Successfully completed simulation 29
+2024-05-06 20:09:43,460 - INFO - Starting simulation 30 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_30
+2024-05-06 20:09:43,460 - INFO - Simulation 30 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_30
+2024-05-06 20:09:43,501 - INFO - Simulation 30 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_30
+2024-05-06 20:09:43,501 - INFO - Successfully completed simulation 30
+2024-05-06 20:09:43,512 - INFO - Starting simulation 31 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_31
+2024-05-06 20:09:43,512 - INFO - Simulation 31 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_31
+2024-05-06 20:09:43,552 - INFO - Simulation 31 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_31
+2024-05-06 20:09:43,552 - INFO - Successfully completed simulation 31
+2024-05-06 20:09:43,563 - INFO - Starting simulation 32 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_32
+2024-05-06 20:09:43,563 - INFO - Simulation 32 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_32
+2024-05-06 20:09:43,604 - INFO - Simulation 32 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_32
+2024-05-06 20:09:43,605 - INFO - Successfully completed simulation 32
+2024-05-06 20:09:43,616 - INFO - Starting simulation 33 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_33
+2024-05-06 20:09:43,616 - INFO - Simulation 33 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_33
+2024-05-06 20:09:43,656 - INFO - Simulation 33 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_33
+2024-05-06 20:09:43,657 - INFO - Successfully completed simulation 33
+2024-05-06 20:09:43,667 - INFO - Starting simulation 34 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_34
+2024-05-06 20:09:43,668 - INFO - Simulation 34 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_34
+2024-05-06 20:09:43,708 - INFO - Simulation 34 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_34
+2024-05-06 20:09:43,708 - INFO - Successfully completed simulation 34
+2024-05-06 20:09:43,720 - INFO - Starting simulation 35 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_35
+2024-05-06 20:09:43,720 - INFO - Simulation 35 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_35
+2024-05-06 20:09:43,761 - INFO - Simulation 35 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_35
+2024-05-06 20:09:43,761 - INFO - Successfully completed simulation 35
+2024-05-06 20:09:43,773 - INFO - Starting simulation 36 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_36
+2024-05-06 20:09:43,773 - INFO - Simulation 36 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_36
+2024-05-06 20:09:43,813 - INFO - Simulation 36 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_36
+2024-05-06 20:09:43,813 - INFO - Successfully completed simulation 36
+2024-05-06 20:09:43,825 - INFO - Starting simulation 37 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_37
+2024-05-06 20:09:43,825 - INFO - Simulation 37 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_37
+2024-05-06 20:09:43,865 - INFO - Simulation 37 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_37
+2024-05-06 20:09:43,866 - INFO - Successfully completed simulation 37
+2024-05-06 20:09:43,877 - INFO - Starting simulation 38 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_38
+2024-05-06 20:09:43,878 - INFO - Simulation 38 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_38
+2024-05-06 20:09:43,918 - INFO - Simulation 38 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_38
+2024-05-06 20:09:43,918 - INFO - Successfully completed simulation 38
+2024-05-06 20:09:43,931 - INFO - Starting simulation 39 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_39
+2024-05-06 20:09:43,931 - INFO - Simulation 39 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_39
+2024-05-06 20:09:43,970 - INFO - Simulation 39 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_39
+2024-05-06 20:09:43,970 - INFO - Successfully completed simulation 39
+2024-05-06 20:09:43,983 - INFO - Starting simulation 40 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_40
+2024-05-06 20:09:43,983 - INFO - Simulation 40 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_40
+2024-05-06 20:09:44,023 - INFO - Simulation 40 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_40
+2024-05-06 20:09:44,024 - INFO - Successfully completed simulation 40
+2024-05-06 20:09:44,037 - INFO - Starting simulation 41 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_41
+2024-05-06 20:09:44,037 - INFO - Simulation 41 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_41
+2024-05-06 20:09:44,077 - INFO - Simulation 41 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_41
+2024-05-06 20:09:44,078 - INFO - Successfully completed simulation 41
+2024-05-06 20:09:44,091 - INFO - Starting simulation 42 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_42
+2024-05-06 20:09:44,091 - INFO - Simulation 42 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_42
+2024-05-06 20:09:44,131 - INFO - Simulation 42 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_42
+2024-05-06 20:09:44,131 - INFO - Successfully completed simulation 42
+2024-05-06 20:09:44,145 - INFO - Starting simulation 43 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_43
+2024-05-06 20:09:44,145 - INFO - Simulation 43 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_43
+2024-05-06 20:09:44,186 - INFO - Simulation 43 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_43
+2024-05-06 20:09:44,187 - INFO - Successfully completed simulation 43
+2024-05-06 20:09:44,200 - INFO - Starting simulation 44 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_44
+2024-05-06 20:09:44,200 - INFO - Simulation 44 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_44
+2024-05-06 20:09:44,248 - INFO - Simulation 44 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_44
+2024-05-06 20:09:44,248 - INFO - Successfully completed simulation 44
+2024-05-06 20:09:44,266 - INFO - Starting simulation 45 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_45
+2024-05-06 20:09:44,267 - INFO - Simulation 45 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_45
+2024-05-06 20:09:44,311 - INFO - Simulation 45 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_45
+2024-05-06 20:09:44,312 - INFO - Successfully completed simulation 45
+2024-05-06 20:09:44,326 - INFO - Starting simulation 46 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_46
+2024-05-06 20:09:44,327 - INFO - Simulation 46 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_46
+2024-05-06 20:09:44,368 - INFO - Simulation 46 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_46
+2024-05-06 20:09:44,368 - INFO - Successfully completed simulation 46
+2024-05-06 20:09:44,383 - INFO - Starting simulation 47 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_47
+2024-05-06 20:09:44,383 - INFO - Simulation 47 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_47
+2024-05-06 20:09:44,424 - INFO - Simulation 47 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_47
+2024-05-06 20:09:44,424 - INFO - Successfully completed simulation 47
+2024-05-06 20:09:44,439 - INFO - Starting simulation 48 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_48
+2024-05-06 20:09:44,439 - INFO - Simulation 48 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_48
+2024-05-06 20:09:44,480 - INFO - Simulation 48 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_48
+2024-05-06 20:09:44,480 - INFO - Successfully completed simulation 48
+2024-05-06 20:09:44,496 - INFO - Starting simulation 49 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_49
+2024-05-06 20:09:44,497 - INFO - Simulation 49 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_49
+2024-05-06 20:09:44,537 - INFO - Simulation 49 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_49
+2024-05-06 20:09:44,537 - INFO - Successfully completed simulation 49
+2024-05-06 20:09:44,554 - INFO - Starting simulation 50 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_50
+2024-05-06 20:09:44,554 - INFO - Simulation 50 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_50
+2024-05-06 20:09:44,594 - INFO - Simulation 50 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_50
+2024-05-06 20:09:44,594 - INFO - Successfully completed simulation 50
+2024-05-06 20:09:44,610 - INFO - Starting simulation 51 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_51
+2024-05-06 20:09:44,610 - INFO - Simulation 51 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_51
+2024-05-06 20:09:44,651 - INFO - Simulation 51 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_51
+2024-05-06 20:09:44,651 - INFO - Successfully completed simulation 51
+2024-05-06 20:09:44,667 - INFO - Starting simulation 52 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_52
+2024-05-06 20:09:44,668 - INFO - Simulation 52 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_52
+2024-05-06 20:09:44,707 - INFO - Simulation 52 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_52
+2024-05-06 20:09:44,707 - INFO - Successfully completed simulation 52
+2024-05-06 20:09:44,724 - INFO - Starting simulation 53 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_53
+2024-05-06 20:09:44,724 - INFO - Simulation 53 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_53
+2024-05-06 20:09:44,764 - INFO - Simulation 53 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_53
+2024-05-06 20:09:44,764 - INFO - Successfully completed simulation 53
+2024-05-06 20:09:44,781 - INFO - Starting simulation 54 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_54
+2024-05-06 20:09:44,781 - INFO - Simulation 54 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_54
+2024-05-06 20:09:44,821 - INFO - Simulation 54 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_54
+2024-05-06 20:09:44,821 - INFO - Successfully completed simulation 54
+2024-05-06 20:09:44,838 - INFO - Starting simulation 55 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_55
+2024-05-06 20:09:44,838 - INFO - Simulation 55 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_55
+2024-05-06 20:09:44,879 - INFO - Simulation 55 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_55
+2024-05-06 20:09:44,879 - INFO - Successfully completed simulation 55
+2024-05-06 20:09:44,897 - INFO - Starting simulation 56 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_56
+2024-05-06 20:09:44,897 - INFO - Simulation 56 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_56
+2024-05-06 20:09:44,936 - INFO - Simulation 56 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_56
+2024-05-06 20:09:44,937 - INFO - Successfully completed simulation 56
+2024-05-06 20:09:44,954 - INFO - Starting simulation 57 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_57
+2024-05-06 20:09:44,955 - INFO - Simulation 57 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_57
+2024-05-06 20:09:44,995 - INFO - Simulation 57 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_57
+2024-05-06 20:09:44,995 - INFO - Successfully completed simulation 57
+2024-05-06 20:09:45,014 - INFO - Starting simulation 58 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_58
+2024-05-06 20:09:45,014 - INFO - Simulation 58 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_58
+2024-05-06 20:09:45,053 - INFO - Simulation 58 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_58
+2024-05-06 20:09:45,053 - INFO - Successfully completed simulation 58
+2024-05-06 20:09:45,072 - INFO - Starting simulation 59 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_59
+2024-05-06 20:09:45,072 - INFO - Simulation 59 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_59
+2024-05-06 20:09:45,112 - INFO - Simulation 59 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_59
+2024-05-06 20:09:45,113 - INFO - Successfully completed simulation 59
+2024-05-06 20:09:45,132 - INFO - Starting simulation 60 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_60
+2024-05-06 20:09:45,132 - INFO - Simulation 60 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_60
+2024-05-06 20:09:45,172 - INFO - Simulation 60 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_60
+2024-05-06 20:09:45,172 - INFO - Successfully completed simulation 60
+2024-05-06 20:09:45,191 - INFO - Starting simulation 61 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_61
+2024-05-06 20:09:45,191 - INFO - Simulation 61 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_61
+2024-05-06 20:09:45,231 - INFO - Simulation 61 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_61
+2024-05-06 20:09:45,231 - INFO - Successfully completed simulation 61
+2024-05-06 20:09:45,251 - INFO - Starting simulation 62 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_62
+2024-05-06 20:09:45,251 - INFO - Simulation 62 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_62
+2024-05-06 20:09:45,293 - INFO - Simulation 62 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_62
+2024-05-06 20:09:45,293 - INFO - Successfully completed simulation 62
+2024-05-06 20:09:45,313 - INFO - Starting simulation 63 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_63
+2024-05-06 20:09:45,313 - INFO - Simulation 63 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_63
+2024-05-06 20:09:45,353 - INFO - Simulation 63 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_63
+2024-05-06 20:09:45,354 - INFO - Successfully completed simulation 63
+2024-05-06 20:09:45,374 - INFO - Starting simulation 64 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_64
+2024-05-06 20:09:45,374 - INFO - Simulation 64 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_64
+2024-05-06 20:09:45,415 - INFO - Simulation 64 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_64
+2024-05-06 20:09:45,415 - INFO - Successfully completed simulation 64
+2024-05-06 20:09:45,435 - INFO - Starting simulation 65 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_65
+2024-05-06 20:09:45,436 - INFO - Simulation 65 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_65
+2024-05-06 20:09:45,475 - INFO - Simulation 65 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_65
+2024-05-06 20:09:45,476 - INFO - Successfully completed simulation 65
+2024-05-06 20:09:45,497 - INFO - Starting simulation 66 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_66
+2024-05-06 20:09:45,497 - INFO - Simulation 66 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_66
+2024-05-06 20:09:45,537 - INFO - Simulation 66 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_66
+2024-05-06 20:09:45,537 - INFO - Successfully completed simulation 66
+2024-05-06 20:09:45,558 - INFO - Starting simulation 67 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_67
+2024-05-06 20:09:45,558 - INFO - Simulation 67 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_67
+2024-05-06 20:09:45,598 - INFO - Simulation 67 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_67
+2024-05-06 20:09:45,598 - INFO - Successfully completed simulation 67
+2024-05-06 20:09:45,620 - INFO - Starting simulation 68 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_68
+2024-05-06 20:09:45,620 - INFO - Simulation 68 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_68
+2024-05-06 20:09:45,660 - INFO - Simulation 68 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_68
+2024-05-06 20:09:45,660 - INFO - Successfully completed simulation 68
+2024-05-06 20:09:45,682 - INFO - Starting simulation 69 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_69
+2024-05-06 20:09:45,682 - INFO - Simulation 69 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_69
+2024-05-06 20:09:45,722 - INFO - Simulation 69 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_69
+2024-05-06 20:09:45,722 - INFO - Successfully completed simulation 69
+2024-05-06 20:09:45,744 - INFO - Starting simulation 70 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_70
+2024-05-06 20:09:45,744 - INFO - Simulation 70 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_70
+2024-05-06 20:09:45,799 - INFO - Simulation 70 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_70
+2024-05-06 20:09:45,799 - INFO - Successfully completed simulation 70
+2024-05-06 20:09:45,823 - INFO - Starting simulation 71 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_71
+2024-05-06 20:09:45,823 - INFO - Simulation 71 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_71
+2024-05-06 20:09:45,866 - INFO - Simulation 71 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_71
+2024-05-06 20:09:45,866 - INFO - Successfully completed simulation 71
+2024-05-06 20:09:45,889 - INFO - Starting simulation 72 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_72
+2024-05-06 20:09:45,889 - INFO - Simulation 72 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_72
+2024-05-06 20:09:45,928 - INFO - Simulation 72 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_72
+2024-05-06 20:09:45,929 - INFO - Successfully completed simulation 72
+2024-05-06 20:09:45,951 - INFO - Starting simulation 73 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_73
+2024-05-06 20:09:45,952 - INFO - Simulation 73 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_73
+2024-05-06 20:09:45,992 - INFO - Simulation 73 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_73
+2024-05-06 20:09:45,992 - INFO - Successfully completed simulation 73
+2024-05-06 20:09:46,015 - INFO - Starting simulation 74 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_74
+2024-05-06 20:09:46,015 - INFO - Simulation 74 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_74
+2024-05-06 20:09:46,055 - INFO - Simulation 74 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_74
+2024-05-06 20:09:46,055 - INFO - Successfully completed simulation 74
+2024-05-06 20:09:46,078 - INFO - Starting simulation 75 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_75
+2024-05-06 20:09:46,078 - INFO - Simulation 75 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_75
+2024-05-06 20:09:46,118 - INFO - Simulation 75 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_75
+2024-05-06 20:09:46,118 - INFO - Successfully completed simulation 75
+2024-05-06 20:09:46,141 - INFO - Starting simulation 76 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_76
+2024-05-06 20:09:46,142 - INFO - Simulation 76 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_76
+2024-05-06 20:09:46,181 - INFO - Simulation 76 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_76
+2024-05-06 20:09:46,182 - INFO - Successfully completed simulation 76
+2024-05-06 20:09:46,218 - INFO - Starting simulation 77 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_77
+2024-05-06 20:09:46,218 - INFO - Simulation 77 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_77
+2024-05-06 20:09:46,258 - INFO - Simulation 77 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_77
+2024-05-06 20:09:46,258 - INFO - Successfully completed simulation 77
+2024-05-06 20:09:46,283 - INFO - Starting simulation 78 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_78
+2024-05-06 20:09:46,283 - INFO - Simulation 78 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_78
+2024-05-06 20:09:46,325 - INFO - Simulation 78 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_78
+2024-05-06 20:09:46,325 - INFO - Successfully completed simulation 78
+2024-05-06 20:09:46,349 - INFO - Starting simulation 79 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_79
+2024-05-06 20:09:46,350 - INFO - Simulation 79 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_79
+2024-05-06 20:09:46,390 - INFO - Simulation 79 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_79
+2024-05-06 20:09:46,390 - INFO - Successfully completed simulation 79
+2024-05-06 20:09:46,415 - INFO - Starting simulation 80 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_80
+2024-05-06 20:09:46,415 - INFO - Simulation 80 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_80
+2024-05-06 20:09:46,454 - INFO - Simulation 80 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_80
+2024-05-06 20:09:46,455 - INFO - Successfully completed simulation 80
+2024-05-06 20:09:46,480 - INFO - Starting simulation 81 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_81
+2024-05-06 20:09:46,480 - INFO - Simulation 81 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_81
+2024-05-06 20:09:46,521 - INFO - Simulation 81 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_81
+2024-05-06 20:09:46,521 - INFO - Successfully completed simulation 81
+2024-05-06 20:09:46,547 - INFO - Starting simulation 82 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_82
+2024-05-06 20:09:46,547 - INFO - Simulation 82 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_82
+2024-05-06 20:09:46,586 - INFO - Simulation 82 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_82
+2024-05-06 20:09:46,586 - INFO - Successfully completed simulation 82
+2024-05-06 20:09:46,612 - INFO - Starting simulation 83 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_83
+2024-05-06 20:09:46,612 - INFO - Simulation 83 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_83
+2024-05-06 20:09:46,652 - INFO - Simulation 83 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_83
+2024-05-06 20:09:46,652 - INFO - Successfully completed simulation 83
+2024-05-06 20:09:46,678 - INFO - Starting simulation 84 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_84
+2024-05-06 20:09:46,678 - INFO - Simulation 84 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_84
+2024-05-06 20:09:46,718 - INFO - Simulation 84 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_84
+2024-05-06 20:09:46,718 - INFO - Successfully completed simulation 84
+2024-05-06 20:09:46,745 - INFO - Starting simulation 85 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_85
+2024-05-06 20:09:46,745 - INFO - Simulation 85 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_85
+2024-05-06 20:09:46,785 - INFO - Simulation 85 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_85
+2024-05-06 20:09:46,785 - INFO - Successfully completed simulation 85
+2024-05-06 20:09:46,812 - INFO - Starting simulation 86 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_86
+2024-05-06 20:09:46,812 - INFO - Simulation 86 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_86
+2024-05-06 20:09:46,854 - INFO - Simulation 86 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_86
+2024-05-06 20:09:46,854 - INFO - Successfully completed simulation 86
+2024-05-06 20:09:46,881 - INFO - Starting simulation 87 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_87
+2024-05-06 20:09:46,881 - INFO - Simulation 87 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_87
+2024-05-06 20:09:46,922 - INFO - Simulation 87 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_87
+2024-05-06 20:09:46,922 - INFO - Successfully completed simulation 87
+2024-05-06 20:09:46,950 - INFO - Starting simulation 88 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_88
+2024-05-06 20:09:46,950 - INFO - Simulation 88 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_88
+2024-05-06 20:09:46,990 - INFO - Simulation 88 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_88
+2024-05-06 20:09:46,990 - INFO - Successfully completed simulation 88
+2024-05-06 20:09:47,017 - INFO - Starting simulation 89 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_89
+2024-05-06 20:09:47,017 - INFO - Simulation 89 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_89
+2024-05-06 20:09:47,056 - INFO - Simulation 89 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_89
+2024-05-06 20:09:47,056 - INFO - Successfully completed simulation 89
+2024-05-06 20:09:47,083 - INFO - Starting simulation 90 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_90
+2024-05-06 20:09:47,083 - INFO - Simulation 90 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_90
+2024-05-06 20:09:47,123 - INFO - Simulation 90 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_90
+2024-05-06 20:09:47,123 - INFO - Successfully completed simulation 90
+2024-05-06 20:09:47,151 - INFO - Starting simulation 91 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_91
+2024-05-06 20:09:47,152 - INFO - Simulation 91 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_91
+2024-05-06 20:09:47,192 - INFO - Simulation 91 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_91
+2024-05-06 20:09:47,192 - INFO - Successfully completed simulation 91
+2024-05-06 20:09:47,221 - INFO - Starting simulation 92 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_92
+2024-05-06 20:09:47,221 - INFO - Simulation 92 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_92
+2024-05-06 20:09:47,260 - INFO - Simulation 92 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_92
+2024-05-06 20:09:47,261 - INFO - Successfully completed simulation 92
+2024-05-06 20:09:47,290 - INFO - Starting simulation 93 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_93
+2024-05-06 20:09:47,290 - INFO - Simulation 93 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_93
+2024-05-06 20:09:47,330 - INFO - Simulation 93 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_93
+2024-05-06 20:09:47,330 - INFO - Successfully completed simulation 93
+2024-05-06 20:09:47,359 - INFO - Starting simulation 94 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_94
+2024-05-06 20:09:47,359 - INFO - Simulation 94 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_94
+2024-05-06 20:09:47,400 - INFO - Simulation 94 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_94
+2024-05-06 20:09:47,400 - INFO - Successfully completed simulation 94
+2024-05-06 20:09:47,429 - INFO - Starting simulation 95 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_95
+2024-05-06 20:09:47,429 - INFO - Simulation 95 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_95
+2024-05-06 20:09:47,469 - INFO - Simulation 95 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_95
+2024-05-06 20:09:47,469 - INFO - Successfully completed simulation 95
+2024-05-06 20:09:47,498 - INFO - Starting simulation 96 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_96
+2024-05-06 20:09:47,498 - INFO - Simulation 96 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_96
+2024-05-06 20:09:47,537 - INFO - Simulation 96 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_96
+2024-05-06 20:09:47,538 - INFO - Successfully completed simulation 96
+2024-05-06 20:09:47,567 - INFO - Starting simulation 97 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_97
+2024-05-06 20:09:47,567 - INFO - Simulation 97 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_97
+2024-05-06 20:09:47,607 - INFO - Simulation 97 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_97
+2024-05-06 20:09:47,608 - INFO - Successfully completed simulation 97
+2024-05-06 20:09:47,638 - INFO - Starting simulation 98 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_98
+2024-05-06 20:09:47,638 - INFO - Simulation 98 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_98
+2024-05-06 20:09:47,677 - INFO - Simulation 98 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_98
+2024-05-06 20:09:47,678 - INFO - Successfully completed simulation 98
+2024-05-06 20:09:47,708 - INFO - Starting simulation 99 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_99
+2024-05-06 20:09:47,708 - INFO - Simulation 99 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_99
+2024-05-06 20:09:47,748 - INFO - Simulation 99 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_99
+2024-05-06 20:09:47,748 - INFO - Successfully completed simulation 99
+2024-05-06 20:09:47,779 - INFO - Starting simulation 100 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_100
+2024-05-06 20:09:47,779 - INFO - Simulation 100 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_100
+2024-05-06 20:09:47,818 - INFO - Simulation 100 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_100
+2024-05-06 20:09:47,818 - INFO - Successfully completed simulation 100
+2024-05-08 15:24:24,314 - INFO - Starting simulation 1 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-08 15:24:24,315 - INFO - Simulation 1 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-08 15:24:24,448 - INFO - Simulation 1 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_1
+2024-05-08 15:24:24,448 - INFO - Successfully completed simulation 1
+2024-05-08 15:24:24,450 - INFO - Starting simulation 2 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-08 15:24:24,450 - INFO - Simulation 2 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-08 15:24:24,490 - INFO - Simulation 2 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_2
+2024-05-08 15:24:24,490 - INFO - Successfully completed simulation 2
+2024-05-08 15:24:24,492 - INFO - Starting simulation 3 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-08 15:24:24,492 - INFO - Simulation 3 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-08 15:24:24,532 - INFO - Simulation 3 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_3
+2024-05-08 15:24:24,533 - INFO - Successfully completed simulation 3
+2024-05-08 15:24:24,535 - INFO - Starting simulation 4 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-08 15:24:24,535 - INFO - Simulation 4 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-08 15:24:24,576 - INFO - Simulation 4 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_4
+2024-05-08 15:24:24,576 - INFO - Successfully completed simulation 4
+2024-05-08 15:24:24,578 - INFO - Starting simulation 5 in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-08 15:24:24,578 - INFO - Simulation 5 data generated in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-08 15:24:24,619 - INFO - Simulation 5 data generated and processed in /Users/beatrizmassanz/Documents/GitHub/light-refraction-lunar-dust/DDA/dust_cloud/sim_5
+2024-05-08 15:24:24,619 - INFO - Successfully completed simulation 5
