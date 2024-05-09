@@ -1,4 +1,3 @@
-import random_cloud_gen as random_cloud_gen
 import input_generation as input_generation
 import visualization as visualization
 import run_ddscat as run_ddscat
@@ -39,7 +38,7 @@ def run_simulation(sim_id, base_dir):
     cube_size = 10.0
 
     # Generate dipole positions and orientations
-    positions, orientations = random_cloud_gen.random_cloud_gen(num_dipoles, cube_size)
+    positions, orientations = input_generation.random_cloud_gen(num_dipoles, cube_size)
 
     logging.info(f"Simulation {sim_id} data generated in {simulation_directory}")
 

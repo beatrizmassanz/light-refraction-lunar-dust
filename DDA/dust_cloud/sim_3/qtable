@@ -3,7 +3,7 @@
  GPFAFT --- method of solution 
  GKDLDR --- prescription for polarizabilities
  FROM_FILE --- shape 
-     677 = NAT0 = number of dipoles
+     669 = NAT0 = number of dipoles
  ../diel/astrosil                                            
    0.000   0.000 = beta_min, beta_max ;  NBETA = 1
    0.000   0.000 = theta_min, theta_max; NTHETA= 1
@@ -12,4 +12,4 @@
  Results averaged over    1 target orientations
                    and  2 incident polarizations
    aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
- 1.0000E-01 5.6000E-01 5.3297E-01 9.2592E-02 4.4037E-01  3.7151E-01 4.2927E-01 1.2625E-02   408
+ 1.0000E-01 5.6000E-01 5.2757E-01 9.2713E-02 4.3486E-01  3.7859E-01 4.2926E-01 1.1651E-02   408
