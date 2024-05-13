@@ -69,7 +69,7 @@
 >REASHP  requires  1 different refractive index files                         
 >REASHP  requires  1 different refractive index files                         
 >TARGET:>DUSTCLOUD   dust cloud; AX,AY,AZ= 10.0000 10.0000 10.0000         
-              677 = NAT0 = number of dipoles in target
+              681 = NAT0 = number of dipoles in target
 >TARGET  NCOMP_NEED=   1 compositions in target                               
 >DDSCAT returned from TARGET:                                                 
 >DDSCAT : dimensions of physical target                                       
@@ -120,11 +120,11 @@
 >DIELEC ../diel/astrosil                                            
 >DDSCAT m= (   1.69002 ,   0.02988), epsilon= (   2.85529 ,    0.10099) :material 1 1
 >DDSCAT    0.100000 = AEFF = effective radius (physical units)
->DDSCAT    0.183583 = d/aeff for this target
+>DDSCAT    0.183223 = d/aeff for this target
 >DDSCAT    0.560000 = WAVE = wavelength in vacuo (physical units)
 >DDSCAT    0.560000 = wavelength in ambient medium (phys. units)
 >DDSCAT    1.121997 = k_amb*aeff = 2*pi*aeff/lambda_amb
->DDSCAT    0.205980 = k_amb*d
+>DDSCAT    0.205576 = k_amb*d
 >ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
 >ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
 >ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
@@ -141,26 +141,26 @@
 >ROTATE    z_LF dot a_2=  0.00000000                                          
 >ROTATE    z_LF dot a_3=  1.00000000                                          
  DDSCAT ckpt 18.21: cflpol1=w000r000k000.pol1   
->ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.3482                
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.3475                
 >DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
 >DIRECT_CALC cputime is independent of gamma                                   
 >DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
->ZBCG2  IT=       1 f.err= 9.080E-03                                          
->ZBCG2  IT=       2 f.err= 1.141E-04                                          
->ZBCG2  IT=       3 f.err= 1.056E-06                                          
+>ZBCG2  IT=       1 f.err= 9.094E-03                                          
+>ZBCG2  IT=       2 f.err= 1.140E-04                                          
+>ZBCG2  IT=       3 f.err= 1.124E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
 >TIMEIT     0.006 = CPU time (sec)                                            
->GETFML Q_abs = 9.2184E-02 Q_ext=  5.3325E-01
+>GETFML Q_abs = 9.4519E-02 Q_ext=  5.5518E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
 >TIMEIT     0.006 = CPU time (sec)                                            
->ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.3482                
->ZBCG2  IT=       1 f.err= 8.691E-03                                          
->ZBCG2  IT=       2 f.err= 1.068E-04                                          
->ZBCG2  IT=       3 f.err= 1.004E-06                                          
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.3475                
+>ZBCG2  IT=       1 f.err= 9.023E-03                                          
+>ZBCG2  IT=       2 f.err= 1.203E-04                                          
+>ZBCG2  IT=       3 f.err= 1.265E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
 >TIMEIT     0.005 = CPU time (sec)                                            
->GETFML Q_abs = 9.1231E-02 Q_ext=  5.2702E-01
+>GETFML Q_abs = 9.0586E-02 Q_ext=  5.2672E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
 >TIMEIT     0.006 = CPU time (sec)                                            
