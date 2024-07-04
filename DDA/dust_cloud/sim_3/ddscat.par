@@ -24,11 +24,11 @@ no SHPAR parameters needed
 '**** Angular resolution for calculation of <cos>, etc. ****'
 0.5 = ETASCA (number of angles is proportional to [(3+x)/ETASCA]^2 )
 '**** Vacuum wavelengths (micron) ****'
-0.5600 0.5600 1 'LIN' = wavelengths (first, last, how many, how=LIN, INV, LOG)
+0.4793 0.4793 1 'LIN' = wavelengths (first, last, how many, how=LIN, INV, LOG)
 '**** Refractive index of ambient medium'
 1.000 = NAMBIENT
 '**** Effective Radii (micron) ****'
-0.1 0.1 1 'LIN' = aeff (first,last,how many,how=LIN,INV,LOG)
+0.11 0.11 1 'LIN' = aeff (first,last,how many,how=LIN,INV,LOG)
 '**** Define Incident Polarizations ****'
 (0,0) (1.,0.) (0.,0.) = Polarization state e01 (k along x axis)
 2 = IORTH  (=1 to do only pol. state e01; =2 to also do orth. pol. state)

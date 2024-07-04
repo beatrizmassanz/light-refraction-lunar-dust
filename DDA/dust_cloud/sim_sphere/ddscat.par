@@ -36,8 +36,8 @@ no SHPAR parameters needed
 1 = IWRKSC (=0 to suppress, =1 to write ".sca" file for each target orient.
 '**** Prescribe target Rotations ****'
 0.0    0.0   1  = BETAMI, BETAMX, NBETA  (beta=rotation around a1)
-0.0    0.0   1  = THETMI, THETMX, NTHETA (theta=angle between a1 and k)
-0.0    0.0   1  = PHIMIN, PHIMAX, NPHI (phi=rotation angle of a1 around k)
+0.0    0.0   1 = THETMI, THETMX, NTHETA (theta=angle between a1 and k)
+0.0    0.0   1  =  PHIMIN, PHIMAX, NPHI (phi=rotation angle of a1 around k)
 '**** Specify first IWAV, IRAD, IORI (normally 0 0 0) ****'
 0 0 0 = first IWAV, first IRAD, first IORI (0 0 0 to begin fresh)
 '**** Select Elements of S_ij Matrix to Print ****'

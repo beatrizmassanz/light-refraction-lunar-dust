@@ -27,12 +27,12 @@
 >  **** Angular resolution for calculation of <cos>, etc. ****           
 >REAPAR  0.5000 = ETASCA (parameter controlling number of scattering angles   
 >  **** Vacuum wavelengths (micron) ****                                 
->REAPAR   1 wavelengths from  0.5600 to  0.5600                               
+>REAPAR   1 wavelengths from  0.7419 to  0.7419                               
 >DIVIDE  Only one element initialized 
 >  **** Refractive index of ambient medium                               
 >REAPAR  1.0000 = NAMBIENT = refractive index of ambient medium               
 >  **** Effective Radii (micron) ****                                    
->REAPAR   1 eff. radii from  0.1000 to  0.1000                                
+>REAPAR   1 eff. radii from  0.2400 to  0.2400                                
 >DIVIDE  Only one element initialized 
 >  **** Define Incident Polarizations ****                               
 >REAPAR IORTH= 2                                                              
@@ -68,63 +68,63 @@
 >REASHP shape.dat                                                                       
 >REASHP  requires  1 different refractive index files                         
 >REASHP  requires  1 different refractive index files                         
->TARGET:>DUSTCLOUD   dust cloud; AX,AY,AZ= 10.0000 10.0000 10.0000         
-              674 = NAT0 = number of dipoles in target
+>TARGET:>GEOMETRY   rect_prism; AX,AY,AZ= 0.1000 0.1000 0.1000             
+               80 = NAT0 = number of dipoles in target
 >TARGET  NCOMP_NEED=   1 compositions in target                               
 >DDSCAT returned from TARGET:                                                 
 >DDSCAT : dimensions of physical target                                       
->DDSCAT     -4     6 = min, max values of JX                                  
->DDSCAT     -4     6 = min, max values of JY                                  
->DDSCAT     -4     6 = min, max values of JZ                                  
->DDSCAT   -5.00000  -5.00000  -5.00000 = X0(1-3)                              
+>DDSCAT      1     2 = min, max values of JX                                  
+>DDSCAT      1     4 = min, max values of JY                                  
+>DDSCAT      1    10 = min, max values of JZ                                  
+>DDSCAT   -0.00500  -0.01500  -0.04500 = X0(1-3)                              
 >DDSCAT  --- physical extent of target volume (occupied sites) ---            
->DDSCAT     -9.50000     1.50000 = min, max values of x/d                     
->DDSCAT     -9.50000     1.50000 = min, max values of y/d                     
->DDSCAT     -9.50000     1.50000 = min, max values of z/d                     
->EXTEND target extent in x,y,z directions =   11,   11,   11 (in Target Frame)
+>DDSCAT      0.49500     2.49500 = min, max values of x/d                     
+>DDSCAT      0.48500     4.48500 = min, max values of y/d                     
+>DDSCAT      0.45500    10.45500 = min, max values of z/d                     
+>EXTEND target extent in x,y,z directions =    2,    4,   10 (in Target Frame)
 >DDSCAT returned from EXTEND:                                                 
->DDSCAT      1    11 = min, max values of JX                                  
->DDSCAT      1    11 = min, max values of JY                                  
->DDSCAT      1    11 = min, max values of JZ                                  
+>DDSCAT      1     2 = min, max values of JX                                  
+>DDSCAT      1     4 = min, max values of JY                                  
+>DDSCAT      1    10 = min, max values of JZ                                  
 >DDSCAT  ------- physical extent of target volume -------                     
->DDSCAT     -9.50000     1.50000 = min, max values of x/d                     
->DDSCAT     -9.50000     1.50000 = min, max values of y/d                     
->DDSCAT     -9.50000     1.50000 = min, max values of z/d                     
+>DDSCAT      0.49500     2.49500 = min, max values of x/d                     
+>DDSCAT      0.48500     4.48500 = min, max values of y/d                     
+>DDSCAT      0.45500    10.45500 = min, max values of z/d                     
 >DDSCAT Allocate memory required for this problem...                          
->DDSCAT allocating     0.01 MB for ISCR1;  total=    35.87 MB                 
->DDSCAT allocating     0.01 MB for SCRRS2; total=    35.87 MB                 
->DDSCAT allocating     0.00 MB for IXYZ0;  total=    35.88 MB                 
->DDSCAT allocating     0.01 MB for ICOMP;  total=    35.89 MB                 
->DDSCAT allocating     0.00 MB for IOCC;   total=    35.89 MB                 
->DDSCAT allocating     0.00 MB for BETADF; total=    35.89 MB                 
->DDSCAT allocating     0.00 MB for PHIDF;  total=    35.90 MB                 
->DDSCAT allocating     0.00 MB for THETADF;total=    35.90 MB                 
->DDSCAT allocating     0.04 MB for CXADIA; total=    35.94 MB                 
->DDSCAT allocating     0.63 MB for CXZC;   total=    36.57 MB                 
->DDSCAT allocating     0.32 MB for CXZW;   total=    36.89 MB                 
->DDSCAT allocating     0.04 MB for CXAOFF; total=    36.93 MB                 
->DDSCAT allocating     0.04 MB for CXALOF; total=    36.97 MB                 
->DDSCAT allocating     0.04 MB for CXALPH; total=    37.01 MB                 
->DDSCAT allocating     0.04 MB for CXE_TF; total=    37.05 MB                 
->DDSCAT allocating     0.40 MB for CXSC  ; total=    37.44 MB                 
->DDSCAT allocating     0.04 MB for CXSCR1; total=    37.48 MB                 
->DDSCAT allocating     0.04 MB for CXXI;   total=    37.52 MB                 
->DDSCAT allocating     0.02 MB for SCRRS1; total=    37.54 MB                 
->DDSCAT                 Total memory allocation =    37.54 MB                 
-          1728 = NAT  = number of lattice sites in extended target
-         12  12  12 = x,y,z length of extended target (Targ. Frame)
+>DDSCAT allocating     0.00 MB for ISCR1;  total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for SCRRS2; total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for IXYZ0;  total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for ICOMP;  total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for IOCC;   total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for BETADF; total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for PHIDF;  total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for THETADF;total=    35.86 MB                 
+>DDSCAT allocating     0.00 MB for CXADIA; total=    35.86 MB                 
+>DDSCAT allocating     0.03 MB for CXZC;   total=    35.89 MB                 
+>DDSCAT allocating     0.01 MB for CXZW;   total=    35.91 MB                 
+>DDSCAT allocating     0.00 MB for CXAOFF; total=    35.91 MB                 
+>DDSCAT allocating     0.00 MB for CXALOF; total=    35.91 MB                 
+>DDSCAT allocating     0.00 MB for CXALPH; total=    35.91 MB                 
+>DDSCAT allocating     0.00 MB for CXE_TF; total=    35.91 MB                 
+>DDSCAT allocating     0.02 MB for CXSC  ; total=    35.93 MB                 
+>DDSCAT allocating     0.00 MB for CXSCR1; total=    35.93 MB                 
+>DDSCAT allocating     0.00 MB for CXXI;   total=    35.94 MB                 
+>DDSCAT allocating     0.00 MB for SCRRS1; total=    35.94 MB                 
+>DDSCAT                 Total memory allocation =    35.94 MB                 
+            80 = NAT  = number of lattice sites in extended target
+          2   4  10 = x,y,z length of extended target (Targ. Frame)
 >DIELEC about to read file =                                                  
 >DIELEC ../diel/astrosil                                            
 >DIELEC astrosilicate (Draine 2003, Astrophys J 598, 1026)                    
 >DIELEC  completed reading file =                                             
 >DIELEC ../diel/astrosil                                            
->DDSCAT m= (   1.69002 ,   0.02988), epsilon= (   2.85529 ,    0.10099) :material 1 1
->DDSCAT    0.100000 = AEFF = effective radius (physical units)
->DDSCAT    0.183855 = d/aeff for this target
->DDSCAT    0.560000 = WAVE = wavelength in vacuo (physical units)
->DDSCAT    0.560000 = wavelength in ambient medium (phys. units)
->DDSCAT    1.121997 = k_amb*aeff = 2*pi*aeff/lambda_amb
->DDSCAT    0.206285 = k_amb*d
+>DDSCAT m= (   1.68677 ,   0.03026), epsilon= (   2.84428 ,    0.10209) :material 1 1
+>DDSCAT    0.240000 = AEFF = effective radius (physical units)
+>DDSCAT    0.374110 = d/aeff for this target
+>DDSCAT    0.741900 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.741900 = wavelength in ambient medium (phys. units)
+>DDSCAT    2.032571 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.760406 = k_amb*d
 >ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
 >ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
 >ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
@@ -141,28 +141,31 @@
 >ROTATE    z_LF dot a_2=  0.00000000                                          
 >ROTATE    z_LF dot a_3=  1.00000000                                          
  DDSCAT ckpt 18.21: cflpol1=w000r000k000.pol1   
->ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.3487                
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 1.2828                
 >DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
 >DIRECT_CALC cputime is independent of gamma                                   
 >DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
->ZBCG2  IT=       1 f.err= 9.583E-03                                          
->ZBCG2  IT=       2 f.err= 1.185E-04                                          
->ZBCG2  IT=       3 f.err= 1.059E-06                                          
+>ZBCG2  IT=       1 f.err= 1.453E-01                                          
+>ZBCG2  IT=       2 f.err= 7.027E-03                                          
+>ZBCG2  IT=       3 f.err= 2.328E-04                                          
+>ZBCG2  IT=       4 f.err= 9.019E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.006 = CPU time (sec)                                            
->GETFML Q_abs = 9.3351E-02 Q_ext=  5.4145E-01
->SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT     0.000 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7243E-01 Q_ext=  1.7156E+00
+>SCAT      602 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.006 = CPU time (sec)                                            
->ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.3487                
->ZBCG2  IT=       1 f.err= 9.735E-03                                          
->ZBCG2  IT=       2 f.err= 1.182E-04                                          
->ZBCG2  IT=       3 f.err= 1.013E-06                                          
+>TIMEIT     0.001 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 1.2828                
+>ZBCG2  IT=       1 f.err= 8.977E-02                                          
+>ZBCG2  IT=       2 f.err= 2.324E-03                                          
+>ZBCG2  IT=       3 f.err= 2.172E-04                                          
+>ZBCG2  IT=       4 f.err= 1.532E-05                                          
+>ZBCG2  IT=       5 f.err= 6.705E-07                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.005 = CPU time (sec)                                            
->GETFML Q_abs = 9.3894E-02 Q_ext=  5.4260E-01
->SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT     0.000 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7505E-01 Q_ext=  2.0624E+00
+>SCAT      602 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.005 = CPU time (sec)                                            
+>TIMEIT     0.001 = CPU time (sec)                                            
 >DDSCAT return from DDSCAT to calling program
 >DDSCAT normal termination, with no nearfield calculation                     

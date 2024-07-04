@@ -1,9 +1,9 @@
  DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
- TARGET --->DUSTCLOUD   dust cloud; AX,AY,AZ= 10.0000 10.0000 10.0000         
+ TARGET --->GEOMETRY   rect_prism; AX,AY,AZ= 0.1000 0.1000 0.1000             
  GPFAFT --- method of solution 
  GKDLDR --- prescription for polarizabilities
  FROM_FILE --- shape 
-     674 = NAT0 = number of dipoles
+      80 = NAT0 = number of dipoles
  ../diel/astrosil                                            
    0.000   0.000 = beta_min, beta_max ;  NBETA = 1
    0.000   0.000 = theta_min, theta_max; NTHETA= 1
@@ -12,4 +12,4 @@
  Results averaged over    1 target orientations
                    and  2 incident polarizations
    aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
- 1.0000E-01 5.6000E-01 5.4202E-01 9.3622E-02 4.4840E-01  3.6419E-01 4.2848E-01 1.3777E-02   408
+ 2.4000E-01 7.4190E-01 1.8890E+00 1.7374E-01 1.7153E+00  3.5868E-01 5.7559E-01 2.6601E-01   602

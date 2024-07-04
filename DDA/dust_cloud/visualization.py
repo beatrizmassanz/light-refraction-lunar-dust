@@ -64,8 +64,6 @@ def plot_data(data_frames, labels):
     plt.legend()
     plt.show()
 
-import matplotlib.pyplot as plt
-import pandas as pd
 
 def plot_polar_data(data_frames, labels):
     """
@@ -112,4 +110,18 @@ def find_data_files(base_dir):
     return data_files, labels
 
 
+def plot_particle_positions(positions_all):
+    """
+    Plot 2D positions of particles around the Moon, color-coded by particle type.
 
+    Parameters:
+        positions_all (list): A list of tuples containing positions and labels.
+    """
+    fig, ax = plt.subplots()
+    for positions, label in positions_all:
+        ax.scatter(positions[:, 0], positions[:, 1], label=label, alpha=0.7)
+    ax.set_title('Particle Positions around the Moon')
+    ax.set_xlabel('X Position (km)')
+    ax.set_ylabel('Y Position (km)')
+    ax.legend()
+    plt.show()
