@@ -44,14 +44,15 @@ def generate_positions_in_rect_prism(shape_params):
     """
     radius = shape_params['radius']
     d = shape_params['d']
-    sphere_volume = (4/3) * np.pi * radius**3                   # Calculate the volume of the sphere
-    length = round(uniform.rvs(loc=0.01, scale=0.09), 2)        # Generate random length and width values with two decimal places
-    width = round(uniform.rvs(loc=0.01, scale=0.09), 2)
-    height = round(sphere_volume / (length * width),2)                 # Calculate the height to maintain the same volume
+    #sphere_volume = (4/3) * np.pi * radius**3                   # Calculate the volume of the sphere
+    length = round(uniform.rvs(loc=0.01, scale=0.34), 2)        # Generate random length and width values with two decimal places
+    width = round(uniform.rvs(loc=0.01, scale=0.34), 2)
+    height = round(uniform.rvs(loc=0.01, scale=0.34), 2)
+    #height = round(sphere_volume / (length * width),2)                 # Calculate the height to maintain the same volume
     print(f"Rectangular Prism Dimensions - Length: {length}, Width: {width}, Height: {height}")
     # Ensure height is within reasonable limits
-    if height > 0.1:
-        height = 0.1
+    #if height > 0.1:
+    #    height = 0.1
     max_dimension = max(length, width, height)
     grid_x = np.arange(0, length, d)                                   # Generate grid positions
     grid_y = np.arange(0, width, d)

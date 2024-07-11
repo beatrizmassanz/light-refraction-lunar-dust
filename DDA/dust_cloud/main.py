@@ -8,6 +8,8 @@ import logging
 import argparse
 from scipy.stats import norm, uniform
 import random
+import pandas as pd
+import json
 
 def setup_logging():
     """Configure the logging for the application."""
@@ -42,7 +44,6 @@ def sample_parameters(num_samples, random_seed=None):
         wavelength = uniform.rvs(loc=0.380, scale=0.370)                # Generate a single wavelength within the visible spectrum from 0.380 to 0.750
         wavelength = round(wavelength, 4)                               # Round to four decimal places
         #print({aeff})                                                   # Debug print
-        
         sample = {
             "shape": shape,
             "wavelength": wavelength,
@@ -50,8 +51,15 @@ def sample_parameters(num_samples, random_seed=None):
         }
         print(f"Generated sample: {sample}")
         samples.append(sample)
-    
+    with open("Generated_samples.json","w") as f:
+        json.dump(samples, f, indent=4)
     return samples
+
+def save_sample_parameters(simulation_directory, sample):
+    """Save the sample parameters to a file in the simulation directory."""
+    sample_file_path = os.path.join(simulation_directory, 'sample_parameters.json')
+    with open(sample_file_path, 'w') as f:
+        json.dump(sample, f, indent=4)
 
 def run_simulation(base_dir, samples):
     """
@@ -64,7 +72,7 @@ def run_simulation(base_dir, samples):
     """
     logging.basicConfig(level=logging.INFO)
     original_directory = os.getcwd()                                                    # Save the current directory to revert back to it later
-
+    results =[]
     for i, sample in enumerate(samples):
         shape = sample['shape']
         size = sample ['size']
@@ -73,6 +81,7 @@ def run_simulation(base_dir, samples):
         simulation_directory = os.path.join(base_dir, f"sim_{i+1}")
         os.makedirs(simulation_directory, exist_ok=True)
         logging.info(f"Starting simulation for {shape} in {simulation_directory}")
+        save_sample_parameters(simulation_directory, sample)  # Save sample parameters
 
         shape_file_name = "shape.dat"
         shape_params = {
@@ -110,37 +119,60 @@ def run_simulation(base_dir, samples):
         execution.convert_to_vtk(simulation_directory, target_file_name)
 
         logging.info(f"Simulation data generated and processed in {simulation_directory}")
-
+        visualization.process_single_result(simulation_directory,results,sample)
+        
     os.chdir(original_directory)
     logging.info("Simulation completed for all samples.")
+    return pd.concat(results, ignore_index=True)
 
-def main(base_dir):
+
+def main(base_dir, skip_simulation=False):
     """
     Execute multiple simulations based on predefined geometries and log the outcomes.
     
     Parameters:
         base_dir (str): Base directory where simulation data will be stored.
+        skip_simulation (bool): If True, skip running simulations and only perform data analysis.
     """
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
     base_dir = os.path.abspath(base_dir)
 
-    num_samples = 5  # Number of samples to generate
-    samples = sample_parameters(num_samples, random_seed=7)
+    if skip_simulation:
+        results_df = visualization.process_results(base_dir)
+    else:
+        num_samples = 10  # Number of samples to generate
+        samples = sample_parameters(num_samples, random_seed=2)
+        results_df = run_simulation(base_dir, samples)
 
-    run_simulation(base_dir, samples)
-
+    visualization.analyze_results(results_df)
     file_paths, labels = visualization.find_data_files(base_dir)
     data_frames = [visualization.extract_data(fp) for fp in file_paths]
-
     visualization.plot_data(data_frames, labels)
     visualization.plot_polar_data(data_frames, labels)
+    
+    # Save the results to a CSV file
+    results_df.to_csv(os.path.join(base_dir, 'simulation_results.csv'), index=False)
+    print(f"Results saved to {os.path.join(base_dir, 'simulation_results.csv')}")
+    return print(results_df)
 
+
+'''
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run a DDSCAT simulation.")
     parser.add_argument('--base_dir', type=str, default=os.getcwd(),
                         help="Base directory for simulation output")
     args = parser.parse_args()
     main(args.base_dir)
+'''
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Run a DDSCAT simulation.")
+    parser.add_argument('--base_dir', type=str, default=os.getcwd(),
+                        help="Base directory for simulation output")
+    parser.add_argument('--skip_simulation', action='store_true',
+                        help="Skip running simulations and only perform data analysis")
+    args = parser.parse_args()
+    main(args.base_dir, args.skip_simulation)
 
 '''
 def run_simulation(base_dir, geometry_settings):
