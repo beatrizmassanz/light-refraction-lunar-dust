@@ -111,7 +111,8 @@ def process_single_result(simulation_directory, results, sample):
         try:
             df = extract_data(result_file)
             df['shape'] = sample['shape']
-            df['size'] = sample['size']
+            df['size_param'] = sample['size_param']
+            df['radius'] = sample['radius']
             df['wavelength'] = sample['wavelength']
             results.append(df)
         except ValueError as e:
@@ -148,11 +149,11 @@ def process_results(base_dir):
     return pd.concat(results, ignore_index=True)
 
 def analyze_results(results_df):
-    sns.pairplot(results_df, vars=['S_11', 'size', 'wavelength', 'Qsca', 'Qbk', 'Qpol'], hue='shape')
+    sns.pairplot(results_df, vars=['S_11', 'size_param', 'wavelength', 'Qsca', 'Qbk', 'Qpol'], hue='shape')
     plt.suptitle('Pairplot of Parameters and Results')
     plt.show()
 
-    correlation_matrix = results_df[['S_11', 'size', 'wavelength', 'Qsca', 'Qbk', 'Qpol']].corr()
+    correlation_matrix = results_df[['S_11', 'size_param', 'wavelength', 'Qsca', 'Qbk', 'Qpol']].corr()
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
     plt.title('Correlation Matrix of Parameters and Results')
     plt.show()

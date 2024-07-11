@@ -1,5 +1,7 @@
 {
     "shape": "SPHERE",
-    "wavelength": 0.5411,
-    "size": 0.29
+    "radius": 0.2349,
+    "wavelength": 0.5434,
+    "size_param": 2.7161,
+    "volume": 0.0543
 }

@@ -3,7 +3,7 @@ import os
 from scipy.stats import norm, uniform
 import random
 
-def generate_positions_in_sphere(shape_params):
+def generate_positions_in_sphere(d, sample):
     """
     Generate positions on a grid within a sphere of given radius.
     
@@ -14,8 +14,7 @@ def generate_positions_in_sphere(shape_params):
     Returns:
         np.ndarray: Array of positions within the sphere.
     """
-    radius = shape_params['radius']
-    d = shape_params['d']
+    radius = sample['radius']
     num_dipoles_per_dimension = int(2 * radius / d)
     x = np.linspace(-radius, radius, 
                     num_dipoles_per_dimension)
@@ -29,7 +28,7 @@ def generate_positions_in_sphere(shape_params):
     unique_positions = np.unique(grid[mask], axis=0)                   # Ensure they are unique
     return unique_positions
 
-def generate_positions_in_rect_prism(shape_params):
+def generate_positions_in_rect_prism(d, sample):
     """
     Generate grid positions within a rectangular prism defined by its dimensions.
     
@@ -42,31 +41,46 @@ def generate_positions_in_rect_prism(shape_params):
     Returns:
         np.ndarray: Array of positions in a grid.
     """
-    radius = shape_params['radius']
-    d = shape_params['d']
-    #sphere_volume = (4/3) * np.pi * radius**3                   # Calculate the volume of the sphere
-    length = round(uniform.rvs(loc=0.01, scale=0.34), 2)        # Generate random length and width values with two decimal places
-    width = round(uniform.rvs(loc=0.01, scale=0.34), 2)
-    height = round(uniform.rvs(loc=0.01, scale=0.34), 2)
-    #height = round(sphere_volume / (length * width),2)                 # Calculate the height to maintain the same volume
-    print(f"Rectangular Prism Dimensions - Length: {length}, Width: {width}, Height: {height}")
-    # Ensure height is within reasonable limits
-    #if height > 0.1:
-    #    height = 0.1
-    max_dimension = max(length, width, height)
-    grid_x = np.arange(0, length, d)                                   # Generate grid positions
-    grid_y = np.arange(0, width, d)
-    grid_z = np.arange(0, height, d)
+    radius = sample['radius']
+    x_length = sample ['x_length']
+    y_length = sample ['y_length']      # Generate random length and width values with two decimal places
+    z_length = sample ['z_length']  
+    
+    max_dimension = 2*max(x_length, y_length, z_length)
+
+    # Calculate the number of dipoles that can fit in each dimension
+    num_dipoles_x = int(np.floor(x_length / d))
+    num_dipoles_y = int(np.floor(y_length / d))
+    num_dipoles_z = int(np.floor(z_length / d))
+    # Generate grid positions ensuring they fit within the dimensions
+    grid_x = np.linspace(0, x_length - d, num_dipoles_x)
+    grid_y = np.linspace(0, y_length - d, num_dipoles_y)
+    grid_z = np.linspace(0, z_length - d, num_dipoles_z)
+    
+    '''
+    grid_x = np.arange(0, x_length, d)                                   # Generate grid positions
+    grid_y = np.arange(0, y_length, d)
+    grid_z = np.arange(0, z_length, d)
+    grid = np.meshgrid(grid_x, grid_y, grid_z, indexing='ij')
+
+    '''
     grid = np.meshgrid(grid_x, grid_y, grid_z, indexing='ij')
     positions = np.column_stack([g.flatten() for g in grid])
     unique_positions = np.unique(positions, axis=0)
 
+    # Verify that there are no duplicates and log detailed information
+    if len(unique_positions) != len(positions):
+        duplicate_positions = len(positions) - len(unique_positions)
+        print(f"Duplicate positions detected: {duplicate_positions}")
+        print(f"Unique: {len(unique_positions)}, Total: {len(positions)}")
+        raise ValueError("Duplicate positions detected in the grid.")
+
     # Print dimensions for debugging
-    print(f"Rectangular Prism Dimensions - Length: {length}, Width: {width}, Height: {height}, Max Dimension: {max_dimension}")
+    print(f"Rectangular Prism Dimensions - Length: {x_length}, Width: {y_length}, Height: {z_length}, Max Dimension: {max_dimension}")
     return unique_positions, max_dimension
     
 
-def generate_shape_dat(geometry, **shape_params):
+def generate_shape_dat(geometry, d, sample):
     """
     Generates a formatted shape file content for a dust cloud with unique, non-duplicated positions
     within a specified geometry using given dipole spacing.
@@ -80,16 +94,15 @@ def generate_shape_dat(geometry, **shape_params):
         list: Formatted lines of a shape file representing the dust cloud.
     """
     if geometry == 'sphere':
-        unique_positions = generate_positions_in_sphere(shape_params)
-        max_dimension = 2 * shape_params['radius']
-        grid_center = (np.max(unique_positions, axis=0) - np.min(unique_positions, axis=0)) / 2 + np.min(unique_positions, axis=0)
+        unique_positions = generate_positions_in_sphere(d, sample)
+        max_dimension = 2 * sample['radius']
     elif geometry == 'rect_prism':
-        unique_positions, max_dimension = generate_positions_in_rect_prism(shape_params)
-        grid_center = (np.max(unique_positions, axis=0) - np.min(unique_positions, axis=0)) / 2 + np.min(unique_positions, axis=0)
+        unique_positions, max_dimension = generate_positions_in_rect_prism(d, sample)
     else:
         raise ValueError("Unsupported geometry type provided")
 
     num_dipoles = len(unique_positions)
+    grid_center = (np.max(unique_positions, axis=0) - np.min(unique_positions, axis=0)) / 2 + np.min(unique_positions, axis=0)
 
     shape_file_content = [
         f">GEOMETRY   {geometry}; AX,AY,AZ= {max_dimension:.4f} {max_dimension:.4f} {max_dimension:.4f}",
@@ -100,10 +113,16 @@ def generate_shape_dat(geometry, **shape_params):
         f" {-grid_center[0]:.5f} {-grid_center[1]:.5f} {-grid_center[2]:.5f} = lattice offset x0(1-3) = (x_TF, y_TF, z_TF)/d for dipole 0 0 0",
         "     JA  IX  IY  IZ ICOMP(x,y,z)"
     ]
-
+    dipole_positions = set()
+    min_pos = np.min(unique_positions, axis=0)
     for I, pos in enumerate(unique_positions, start=1):
-        ix, iy, iz = ((pos - np.min(unique_positions, axis=0)) / shape_params['d'] + 1).astype(int)
+        ix, iy, iz = ((pos - min_pos) / d + 1).astype(int)
         icomp = "1 1 1"  # Default component setting
+        dipole_position = (ix, iy, iz)
+        if dipole_position in dipole_positions:
+            print(f"Duplicate detected in shape file generation: {dipole_position}")
+            continue
+        dipole_positions.add(dipole_position)
         shape_file_content.append(f"     {I}  {ix}  {iy}  {iz} {icomp}")
 
     return shape_file_content

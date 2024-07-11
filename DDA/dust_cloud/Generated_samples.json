@@ -1,52 +1,46 @@
 [
     {
-        "shape": "SPHERE",
-        "wavelength": 0.5834,
-        "size": 0.26
+        "shape": "RCTGLPRSM",
+        "x_length": 0.3306,
+        "y_length": 0.01,
+        "z_length": 0.3405,
+        "wavelength": 0.4908,
+        "volume": 0.0011,
+        "radius": 0.064,
+        "size_param": 0.8193
     },
     {
         "shape": "SPHERE",
-        "wavelength": 0.5411,
-        "size": 0.29
+        "radius": 0.2349,
+        "wavelength": 0.5434,
+        "size_param": 2.7161,
+        "volume": 0.0543
     },
     {
         "shape": "SPHERE",
-        "wavelength": 0.4557,
-        "size": 0.12
+        "radius": 0.1725,
+        "wavelength": 0.6799,
+        "size_param": 1.5941,
+        "volume": 0.0215
     },
     {
         "shape": "RCTGLPRSM",
-        "wavelength": 0.6091,
-        "size": 0.22
-    },
-    {
-        "shape": "SPHERE",
-        "wavelength": 0.6098,
-        "size": 0.19
-    },
-    {
-        "shape": "RCTGLPRSM",
-        "wavelength": 0.5758,
-        "size": 0.21
+        "x_length": 0.1269,
+        "y_length": 0.1981,
+        "z_length": 0.1806,
+        "wavelength": 0.4978,
+        "volume": 0.0045,
+        "radius": 0.1024,
+        "size_param": 1.2925
     },
     {
         "shape": "RCTGLPRSM",
-        "wavelength": 0.4482,
-        "size": 0.3
-    },
-    {
-        "shape": "SPHERE",
-        "wavelength": 0.6706,
-        "size": 0.19
-    },
-    {
-        "shape": "SPHERE",
-        "wavelength": 0.6932,
-        "size": 0.3
-    },
-    {
-        "shape": "SPHERE",
-        "wavelength": 0.4095,
-        "size": 0.42
+        "x_length": 0.3904,
+        "y_length": 0.146,
+        "z_length": 0.2633,
+        "wavelength": 0.4852,
+        "volume": 0.015,
+        "radius": 0.153,
+        "size_param": 1.9813
     }
 ]

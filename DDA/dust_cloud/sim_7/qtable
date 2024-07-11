@@ -1,9 +1,9 @@
  DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
- TARGET --->GEOMETRY   rect_prism; AX,AY,AZ= 0.0900 0.0900 0.0900             
+ TARGET --->GEOMETRY   sphere; AX,AY,AZ= 0.3960 0.3960 0.3960                 
  GPFAFT --- method of solution 
  GKDLDR --- prescription for polarizabilities
  FROM_FILE --- shape 
-     360 = NAT0 = number of dipoles
+   28650 = NAT0 = number of dipoles
  ../diel/astrosil                                            
    0.000   0.000 = beta_min, beta_max ;  NBETA = 1
    0.000   0.000 = theta_min, theta_max; NTHETA= 1
@@ -12,4 +12,4 @@
  Results averaged over    1 target orientations
                    and  2 incident polarizations
    aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
- 1.5000E-01 4.4820E-01 3.6024E+00 3.5445E-01 3.2480E+00  6.6750E-01 5.8460E-01 3.8335E-02   656
+ 2.0000E-01 5.5550E-01 3.2428E+00 2.9011E-01 2.9527E+00  6.6751E-01 6.1432E-01 5.5716E-02   656

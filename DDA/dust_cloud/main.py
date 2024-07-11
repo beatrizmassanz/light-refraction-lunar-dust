@@ -19,7 +19,6 @@ def setup_logging():
                         format=
                         '%(asctime)s - %(levelname)s - %(message)s')
 
-
 def sample_parameters(num_samples, random_seed=None):
     """
     Generate sampled parameters for Monte Carlo simulations.
@@ -37,22 +36,63 @@ def sample_parameters(num_samples, random_seed=None):
     shapes = ["SPHERE", "RCTGLPRSM"]
     samples = []
     for _ in range(num_samples):
-        shape = random.choice(shapes)                                   # Randomly select a shape
-        size = norm.rvs(loc=0.3, scale=0.1)                             # Generate a single particle size based on a normal distribution
-        size = np.clip(size, 0.01, 0.7)                                 # Clip the value to be within the specified range
-        size = round(size, 2)                                           # Round to two decimal places
-        wavelength = uniform.rvs(loc=0.380, scale=0.370)                # Generate a single wavelength within the visible spectrum from 0.380 to 0.750
-        wavelength = round(wavelength, 4)                               # Round to four decimal places
-        #print({aeff})                                                   # Debug print
-        sample = {
-            "shape": shape,
-            "wavelength": wavelength,
-            "size": size,
-        }
+        shape = random.choice(shapes)  # Randomly select a shape
+        wavelength = uniform.rvs(loc=0.380, scale=0.370)  # Generate a single wavelength within the visible spectrum from 0.380 to 0.750
+        wavelength = round(wavelength, 4)  # Round to four decimal places
+
+        if shape == "SPHERE":
+            radius = norm.rvs(loc=0.15, scale=0.05)  # Generate radius based on a normal distribution
+            radius = np.clip(radius, 0.005, 0.35)  # Clip the value to be within the specified range
+            radius = round(radius, 4)  # Round to four decimal places
+            volume = (4/3) * np.pi * radius**3  # Calculate volume of the sphere
+            volume = round(volume, 4)  # Round to four decimal places
+            size_param = (2 * np.pi * radius) / wavelength  # Calculate size parameter
+            size_param = round(size_param, 4)  # Round to four decimal places
+            sample = {
+                "shape": shape,
+                "radius": radius,
+                "wavelength": wavelength,
+                "size_param": size_param,
+                "volume": volume
+            }
+        
+        elif shape == "RCTGLPRSM":
+            x_length = norm.rvs(loc=0.24, scale=0.11)  # Generate x_length based on a normal distribution
+            x_length = np.clip(x_length, 0.01, 0.56)  # Clip the value to be within the specified range
+            x_length = round(x_length, 4)  # Round to four decimal places
+
+            y_length = norm.rvs(loc=0.24, scale=0.11)  # Generate y_length based on a normal distribution
+            y_length = np.clip(y_length, 0.01, 0.56)  # Clip the value to be within the specified range
+            y_length = round(y_length, 4)  # Round to four decimal places
+
+            z_length = norm.rvs(loc=0.24, scale=0.11)  # Generate z_length based on a normal distribution
+            z_length = np.clip(z_length, 0.01, 0.56)  # Clip the value to be within the specified range
+            z_length = round(z_length, 4)  # Round to four decimal places
+
+            volume = x_length * y_length * z_length  # Calculate volume of the rectangular prism
+            volume = round(volume, 4)  # Round to four decimal places
+            radius = ((volume * 3) / (4 * np.pi))**(1/3)  # Calculate radius equivalent for the volume
+            radius = round(radius, 4)  # Round to four decimal places
+            size_param = (2 * np.pi * radius) / wavelength  # Calculate size parameter
+            size_param = round(size_param, 4)  # Round to four decimal places
+
+            sample = {
+                "shape": shape,
+                "x_length": x_length,
+                "y_length": y_length,
+                "z_length": z_length,
+                "wavelength": wavelength,
+                "volume": volume,
+                "radius": radius,
+                "size_param": size_param
+            }
+
         print(f"Generated sample: {sample}")
         samples.append(sample)
-    with open("Generated_samples.json","w") as f:
+
+    with open("Generated_samples.json", "w") as f:
         json.dump(samples, f, indent=4)
+    
     return samples
 
 def save_sample_parameters(simulation_directory, sample):
@@ -75,8 +115,7 @@ def run_simulation(base_dir, samples):
     results =[]
     for i, sample in enumerate(samples):
         shape = sample['shape']
-        size = sample ['size']
-        aeff = size/2                                                                   #aeff is half the particle size                    
+        aeff = sample ['radius']                                                                   #aeff is half the particle size                    
         aeff = round(aeff, 2)   
         simulation_directory = os.path.join(base_dir, f"sim_{i+1}")
         os.makedirs(simulation_directory, exist_ok=True)
@@ -84,14 +123,16 @@ def run_simulation(base_dir, samples):
         save_sample_parameters(simulation_directory, sample)  # Save sample parameters
 
         shape_file_name = "shape.dat"
-        shape_params = {
-                'radius': aeff,  # Use the sampled particle size
-                'd': 0.01  # Assuming a constant dipole spacing
-            }
+        d = 0.01
+
         if shape == "SPHERE":
-            shape_file_content = simulation_env.generate_shape_dat('sphere', **shape_params)
+            shape_file_content = simulation_env.generate_shape_dat('sphere', d, sample)
         elif shape == "RCTGLPRSM":
-            shape_file_content = simulation_env.generate_shape_dat('rect_prism', **shape_params)
+            try:
+                shape_file_content = simulation_env.generate_shape_dat('rect_prism', d, sample)
+            except ValueError as e:
+                logging.error(f"Error generating shape for {shape} in {simulation_directory}: {e}")
+                continue
         else:
             logging.error(f"Unsupported shape type: {shape}")
             continue
@@ -140,8 +181,8 @@ def main(base_dir, skip_simulation=False):
     if skip_simulation:
         results_df = visualization.process_results(base_dir)
     else:
-        num_samples = 10  # Number of samples to generate
-        samples = sample_parameters(num_samples, random_seed=2)
+        num_samples = 5  # Number of samples to generate
+        samples = sample_parameters(num_samples, random_seed=299)
         results_df = run_simulation(base_dir, samples)
 
     visualization.analyze_results(results_df)
