@@ -19,7 +19,7 @@ def setup_logging():
                         format=
                         '%(asctime)s - %(levelname)s - %(message)s')
 
-def sample_parameters(num_samples, random_seed=None):
+def sample_parameters(num_samples, random_seed=None, only_spheres=False):
     """
     Generate sampled parameters for Monte Carlo simulations.
     
@@ -33,7 +33,8 @@ def sample_parameters(num_samples, random_seed=None):
         np.random.seed(random_seed)
         random.seed(random_seed)
 
-    shapes = ["SPHERE", "RCTGLPRSM"]
+    shapes = ["SPHERE"] if only_spheres else ["SPHERE", "RCTGLPRSM"]
+    #shapes = ["SPHERE", "RCTGLPRSM"]
     samples = []
     for _ in range(num_samples):
         shape = random.choice(shapes)  # Randomly select a shape
