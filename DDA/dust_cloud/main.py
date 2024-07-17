@@ -161,14 +161,14 @@ def run_simulation(base_dir, samples):
         execution.convert_to_vtk(simulation_directory, target_file_name)
 
         logging.info(f"Simulation data generated and processed in {simulation_directory}")
-        visualization.process_single_result(simulation_directory,results,sample)
+        visualization.process_ddscat_result(simulation_directory,results,sample)
         
     os.chdir(original_directory)
     logging.info("Simulation completed for all samples.")
     return pd.concat(results, ignore_index=True)
 
 
-def main(base_dir, skip_simulation=False):
+def main(base_dir, skip_simulation=False, only_spheres=False):
     """
     Execute multiple simulations based on predefined geometries and log the outcomes.
     
@@ -182,16 +182,29 @@ def main(base_dir, skip_simulation=False):
     if skip_simulation:
         results_df = visualization.process_results(base_dir)
     else:
-        num_samples = 5  # Number of samples to generate
-        samples = sample_parameters(num_samples, random_seed=299)
+        num_samples = 10  # Number of samples to generate
+        samples = sample_parameters(num_samples, random_seed=299, only_spheres=only_spheres)
         results_df = run_simulation(base_dir, samples)
+    
+    mie_df = None
+    if only_spheres:
+        mie_df = execution.mie_calculation(samples)
 
+    results = results_df.to_dict('records')
+    if mie_df is not None:
+        results = visualization.process_mie_result(mie_df, results, samples)
+
+    results_df = pd.DataFrame(results)
+    
     visualization.analyze_results(results_df)
     file_paths, labels = visualization.find_data_files(base_dir)
     data_frames = [visualization.extract_data(fp) for fp in file_paths]
     visualization.plot_data(data_frames, labels)
     visualization.plot_polar_data(data_frames, labels)
-    
+
+    if mie_df is not None:
+        visualization.plot_mie_ddscat_comparison(results_df, mie_df)
+
     # Save the results to a CSV file
     results_df.to_csv(os.path.join(base_dir, 'simulation_results.csv'), index=False)
     print(f"Results saved to {os.path.join(base_dir, 'simulation_results.csv')}")
@@ -208,13 +221,13 @@ if __name__ == "__main__":
 '''
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run a DDSCAT simulation.")
-    parser.add_argument('--base_dir', type=str, default=os.getcwd(),
-                        help="Base directory for simulation output")
-    parser.add_argument('--skip_simulation', action='store_true',
-                        help="Skip running simulations and only perform data analysis")
+    parser = argparse.ArgumentParser(description='Run DDSCAT simulations and optionally Mie calculations.')
+    parser.add_argument('base_dir', type=str, nargs='?', default=os.getcwd(), help='Base directory where simulation data will be stored.')
+    parser.add_argument('--skip_simulation', action='store_true', help='Skip running simulations and only perform data analysis.')
+    parser.add_argument('--only_spheres', action='store_true', help='Only generate spherical samples and perform Mie calculations.')
+
     args = parser.parse_args()
-    main(args.base_dir, args.skip_simulation)
+    main(args.base_dir, skip_simulation=args.skip_simulation, only_spheres=args.only_spheres)
 
 '''
 def run_simulation(base_dir, geometry_settings):

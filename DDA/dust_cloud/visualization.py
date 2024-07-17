@@ -6,6 +6,7 @@ import seaborn as sns
 import glob
 import json
 import logging
+import subprocess
 
 def find_data_files(base_dir):
     """
@@ -104,7 +105,7 @@ def extract_data(file_path):
     df['Qpol'] = qpol
     return df
 
-def process_single_result(simulation_directory, results, sample):
+def process_ddscat_result(simulation_directory, results, sample):
     """Process a single result file and append it to the results list."""
     result_file = os.path.join(simulation_directory, 'w000r000.avg')
     if os.path.exists(result_file):
@@ -118,7 +119,45 @@ def process_single_result(simulation_directory, results, sample):
         except ValueError as e:
             logging.error(f"Error processing file {result_file}: {e}")
 
-def process_results(base_dir):
+def process_mie_result(mie_results, results, samples):
+    """
+    Process the Mie results and match them with the DDSCAT results.
+
+    Parameters:
+        mie_results (DataFrame): DataFrame containing the Mie calculation results.
+        results (list): List to store the final processed results.
+        samples (list): List of sample parameters used in the simulations.
+    """
+    for sample in samples:
+        if sample["shape"] != "SPHERE":
+            continue
+        
+        mie_sample_results = mie_results[(mie_results['radius'] == sample['radius']) & 
+                                         (mie_results['wavelength'] == sample['wavelength'])]
+        for _, mie_result in mie_sample_results.iterrows():
+            result = {
+                "theta": mie_result['angle'],
+                "phi": 0,  # Assuming phi = 0 for simplicity
+                "Pol.": 0,  # Assuming unpolarized light for simplicity
+                "S_11": mie_result['S_11'],
+                "S_12": None,  # Not calculated in this example
+                "S_21": None,  # Not calculated in this example
+                "S_22": None,  # Not calculated in this example
+                "S_31": None,  # Not calculated in this example
+                "S_41": None,  # Not calculated in this example
+                "Qsca": mie_result['Qsca'],
+                "Qbk": mie_result['Qback'],
+                "Qpol": None,  # Not calculated in this example
+                "shape": sample['shape'],
+                "size_param": sample['size_param'],
+                "radius": sample['radius'],
+                "wavelength": sample['wavelength']
+            }
+            results.append(result)
+
+    return results
+
+def process_results(base_dir,mie_df=None):
     """
     Process the results from the simulation directories.
 
@@ -138,10 +177,9 @@ def process_results(base_dir):
 
         sample = load_sample_parameters(simulation_directory)
         samples.append(sample)  # Collect the sample
-        process_single_result(simulation_directory, results, sample)  # Process the result
+        process_ddscat_result(simulation_directory, results, sample)  # Process the result
 
     os.chdir(original_directory)
-
     # Save the collected samples back to Generated_samples.json
     with open("Generated_samples.json", "w") as f:
         json.dump(samples, f, indent=4)
@@ -203,6 +241,41 @@ def plot_polar_data(data_frames, labels):
     ax.legend()
     plt.show()
 
+def plot_mie_ddscat_comparison(ddscat_df, mie_df):
+    plt.figure(figsize=(10, 6))
+    for label, group in ddscat_df.groupby('shape'):
+        plt.plot(group['theta'], group['S_11'], label=f'DDSCAT {label}', alpha=0.7, linestyle='-', linewidth=1)
+    
+    for label, group in mie_df.groupby(['radius', 'wavelength']):
+        plt.plot(group['angle'], group['S_11'], label=f'Mie: r={label[0]}, λ={label[1]}', alpha=0.7, linestyle='--', linewidth=1)
+    
+    plt.xlabel('Theta (degrees)')
+    plt.ylabel('S_11 / Phase Function')
+    plt.title('Comparison of S_11 Values and Phase Function')
+    plt.legend()
+    plt.show()
+
+    plt.figure(figsize=(10, 6))
+    for label, group in mie_df.groupby(['radius', 'wavelength']):
+        interpolated_ddscat = np.interp(group['angle'], ddscat_df['theta'], ddscat_df['S_11'])
+        error = interpolated_ddscat - group['S_11']
+        plt.plot(group['angle'], error, label=f'Error: r={label[0]}, λ={label[1]}', alpha=0.7, linestyle='-', linewidth=1)
+    
+    plt.xlabel('Theta (degrees)')
+    plt.ylabel('Error')
+    plt.title('Error between DDSCAT S_11 and Mie Phase Function')
+    plt.legend()
+    plt.show()
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(ddscat_df['radius'], ddscat_df['Qsca'], 'o', label='DDSCAT', alpha=0.7)
+    plt.plot(mie_df['radius'], mie_df['Qsca'], 'x', label='Mie', alpha=0.7)
+    
+    plt.xlabel('Radius')
+    plt.ylabel('Qsca')
+    plt.title('Comparison of Qsca Values')
+    plt.legend()
+    plt.show()
 '''
 def extract_data(file_path):
     """

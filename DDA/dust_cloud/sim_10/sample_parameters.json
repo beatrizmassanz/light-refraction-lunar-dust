@@ -1,10 +1,7 @@
 {
-    "shape": "RCTGLPRSM",
-    "x_length": 0.383,
-    "y_length": 0.1013,
-    "z_length": 0.1274,
-    "wavelength": 0.5718,
-    "volume": 0.0049,
-    "radius": 0.1054,
-    "size_param": 1.1582
+    "shape": "SPHERE",
+    "radius": 0.1606,
+    "wavelength": 0.7357,
+    "size_param": 1.3716,
+    "volume": 0.0174
 }

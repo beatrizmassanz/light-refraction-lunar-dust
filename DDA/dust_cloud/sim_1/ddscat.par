@@ -28,7 +28,7 @@ no SHPAR parameters needed
 '**** Refractive index of ambient medium'
 1.000 = NAMBIENT
 '**** Effective Radii (micron) ****'
-0.06 0.06 1 'LIN' = aeff (first,last,how many,how=LIN,INV,LOG)
+0.19 0.19 1 'LIN' = aeff (first,last,how many,how=LIN,INV,LOG)
 '**** Define Incident Polarizations ****'
 (0,0) (1.,0.) (0.,0.) = Polarization state e01 (k along x axis)
 2 = IORTH  (=1 to do only pol. state e01; =2 to also do orth. pol. state)
