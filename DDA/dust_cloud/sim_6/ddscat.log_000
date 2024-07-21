@@ -142,7 +142,7 @@
 >ROTATE    z_LF dot a_3=  1.00000000                                          
  DDSCAT ckpt 18.21: cflpol1=w000r000k000.pol1   
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.2390                
->DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.02 cpu-sec  
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
 >DIRECT_CALC cputime is independent of gamma                                   
 >DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
 >ZBCG2  IT=       1 f.err= 3.352E-02                                          
@@ -153,7 +153,7 @@
 >GETFML Q_abs = 1.1070E-01 Q_ext=  8.0046E-01
 >SCAT      407 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.025 = CPU time (sec)                                            
+>TIMEIT     0.027 = CPU time (sec)                                            
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.2390                
 >ZBCG2  IT=       1 f.err= 3.334E-02                                          
 >ZBCG2  IT=       2 f.err= 2.138E-04                                          
@@ -163,6 +163,6 @@
 >GETFML Q_abs = 1.1098E-01 Q_ext=  8.0294E-01
 >SCAT      407 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.026 = CPU time (sec)                                            
+>TIMEIT     0.024 = CPU time (sec)                                            
 >DDSCAT return from DDSCAT to calling program
 >DDSCAT normal termination, with no nearfield calculation                     

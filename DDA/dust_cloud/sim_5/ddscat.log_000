@@ -150,11 +150,11 @@
 >ZBCG2  IT=       3 f.err= 2.881E-05                                          
 >ZBCG2  IT=       4 f.err= 1.820E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.272 = CPU time (sec)                                            
+>TIMEIT     0.268 = CPU time (sec)                                            
 >GETFML Q_abs = 1.9987E-01 Q_ext=  1.7170E+00
 >SCAT      501 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.183 = CPU time (sec)                                            
+>TIMEIT     0.177 = CPU time (sec)                                            
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.1612                
 >ZBCG2  IT=       1 f.err= 1.024E-01                                          
 >ZBCG2  IT=       2 f.err= 1.391E-03                                          
@@ -165,6 +165,6 @@
 >GETFML Q_abs = 1.9987E-01 Q_ext=  1.7170E+00
 >SCAT      501 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.183 = CPU time (sec)                                            
+>TIMEIT     0.177 = CPU time (sec)                                            
 >DDSCAT return from DDSCAT to calling program
 >DDSCAT normal termination, with no nearfield calculation                     
