@@ -11,7 +11,7 @@
 'FROM_FILE = CSHAPE*9 shape directive'
 no SHPAR parameters needed
 1 = NCOMP = number of dielectric materials
-'../diel/astrosil' = file with refractive index 1
+'../diel/custom' = file with refractive index 1
 '**** Additional Nearfield calculation? ****'
 0 = NRFLD (=0 to skip nearfield calc., =1 to calculate nearfield E)
 0.0 0.0 0.0 0.0 0.0 0.0 (fract. extens. of calc. vol. in -x,+x,-y,+y,-z,+z)
@@ -24,11 +24,11 @@ no SHPAR parameters needed
 '**** Angular resolution for calculation of <cos>, etc. ****'
 0.5 = ETASCA (number of angles is proportional to [(3+x)/ETASCA]^2 )
 '**** Vacuum wavelengths (micron) ****'
-0.7417 0.7417 1 'LIN' = wavelengths (first, last, how many, how=LIN, INV, LOG)
+0.4179 0.4179 1 'LIN' = wavelengths (first, last, how many, how=LIN, INV, LOG)
 '**** Refractive index of ambient medium'
 1.000 = NAMBIENT
 '**** Effective Radii (micron) ****'
-0.2 0.2 1 'LIN' = aeff (first,last,how many,how=LIN,INV,LOG)
+0.11 0.11 1 'LIN' = aeff (first,last,how many,how=LIN,INV,LOG)
 '**** Define Incident Polarizations ****'
 (0,0) (1.,0.) (0.,0.) = Polarization state e01 (k along x axis)
 2 = IORTH  (=1 to do only pol. state e01; =2 to also do orth. pol. state)

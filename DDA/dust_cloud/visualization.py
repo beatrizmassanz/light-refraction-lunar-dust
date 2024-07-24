@@ -41,6 +41,42 @@ def load_samples(file_path):
         samples = json.load(f)
     return samples
 
+def normalize_s11(df, size_param, method='qsca'):
+    """
+    Normalize the S_11 values in the DataFrame using the specified normalization method.
+    
+    Parameters:
+        df (pd.DataFrame): The DataFrame containing the S_11 values.
+        method (str): The normalization method. Options are 'albedo', 'one', '4pi', 'qsca', 'qext', 'bohren', 'wiscombe'.
+        
+    Returns:
+        pd.DataFrame: The DataFrame with normalized S_11 values.
+    """
+    normalization_constant = None
+    x = size_param
+
+    if method == 'albedo':
+        normalization_constant = x * np.sqrt(np.pi * df['Qbk'].iloc[0])
+    elif method == 'one':
+        normalization_constant = x * np.sqrt(df['Qsca'].iloc[0] * np.pi)
+    elif method == '4pi':
+        normalization_constant = x * np.sqrt(df['Qsca'].iloc[0] / 4)
+    elif method == 'qsca':
+        normalization_constant = x * np.sqrt(np.pi)
+    elif method == 'qext':
+        normalization_constant = x * np.sqrt(df['Qsca'].iloc[0] * np.pi / df['Qbk'].iloc[0])
+    elif method == 'bohren':
+        normalization_constant = 0.5
+    elif method == 'wiscombe':
+        normalization_constant = 1
+    else:
+        raise ValueError("Invalid normalization method. Choose from 'albedo', 'one', '4pi', 'qsca', 'qext', 'bohren', 'wiscombe'.")
+
+    df['S_11'] /= normalization_constant**2
+    print(f"Size parameter (x): {x}")
+    print(f"Size parameter (x): {x}, Qsca: {df['Qsca'].iloc[0]}, Norm factor ddscat: {normalization_constant}")
+    return df
+
 def extract_data(file_path):
     """
     Extracts data from a file that matches a specific data structure 
@@ -115,6 +151,7 @@ def process_ddscat_result(simulation_directory, results, sample):
             df['size_param'] = sample['size_param']
             df['radius'] = sample['radius']
             df['wavelength'] = sample['wavelength']
+            df = normalize_s11(df, sample['size_param'], method='qsca')  # Normalize using size parameter
             results.append(df)
         except ValueError as e:
             logging.error(f"Error processing file {result_file}: {e}")
@@ -157,7 +194,7 @@ def process_mie_result(mie_results, results, samples):
 
     return results
 
-def process_results(base_dir,mie_df=None):
+def process_results(base_dir):
     """
     Process the results from the simulation directories.
 

@@ -143,7 +143,7 @@ def run_simulation(base_dir, samples):
         params = {
             "par_file_name": "ddscat.par",
             "shape": "FROM_FILE",
-            "material_file": "astrosil",
+            "material_file": "custom",
             "vacuum_wavelengths": (sample['wavelength'], sample['wavelength']),
             "wavelengths_count": 1,
             "aeff_range": (aeff, aeff),
@@ -183,7 +183,7 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
         results_df = visualization.process_results(base_dir)
     else:
         num_samples = 10  # Number of samples to generate
-        samples = sample_parameters(num_samples, random_seed=299, only_spheres=only_spheres)
+        samples = sample_parameters(num_samples, random_seed=298, only_spheres=only_spheres)
         results_df = run_simulation(base_dir, samples)
     
     mie_df = None

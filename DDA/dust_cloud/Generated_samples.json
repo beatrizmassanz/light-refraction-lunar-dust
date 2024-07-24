@@ -1,72 +1,72 @@
 [
     {
         "shape": "SPHERE",
-        "radius": 0.1912,
-        "wavelength": 0.4908,
-        "size_param": 2.4477,
-        "volume": 0.0293
+        "radius": 0.2359,
+        "wavelength": 0.6344,
+        "size_param": 2.3364,
+        "volume": 0.055
     },
     {
         "shape": "SPHERE",
-        "radius": 0.0222,
-        "wavelength": 0.736,
-        "size_param": 0.1895,
-        "volume": 0.0
+        "radius": 0.1796,
+        "wavelength": 0.4621,
+        "size_param": 2.442,
+        "volume": 0.0243
     },
     {
         "shape": "SPHERE",
-        "radius": 0.1957,
-        "wavelength": 0.7417,
-        "size_param": 1.6578,
-        "volume": 0.0314
+        "radius": 0.1054,
+        "wavelength": 0.4179,
+        "size_param": 1.5847,
+        "volume": 0.0049
     },
     {
         "shape": "SPHERE",
-        "radius": 0.2349,
-        "wavelength": 0.5434,
-        "size_param": 2.7161,
-        "volume": 0.0543
+        "radius": 0.1031,
+        "wavelength": 0.7026,
+        "size_param": 0.922,
+        "volume": 0.0046
     },
     {
         "shape": "SPHERE",
-        "radius": 0.1725,
+        "radius": 0.0552,
+        "wavelength": 0.5496,
+        "size_param": 0.6311,
+        "volume": 0.0007
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1318,
+        "wavelength": 0.5889,
+        "size_param": 1.4062,
+        "volume": 0.0096
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1235,
+        "wavelength": 0.6158,
+        "size_param": 1.2601,
+        "volume": 0.0079
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1684,
+        "wavelength": 0.5831,
+        "size_param": 1.8146,
+        "volume": 0.02
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1009,
+        "wavelength": 0.7262,
+        "size_param": 0.873,
+        "volume": 0.0043
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1601,
         "wavelength": 0.6799,
-        "size_param": 1.5941,
-        "volume": 0.0215
-    },
-    {
-        "shape": "SPHERE",
-        "radius": 0.0986,
-        "wavelength": 0.4978,
-        "size_param": 1.2445,
-        "volume": 0.004
-    },
-    {
-        "shape": "SPHERE",
-        "radius": 0.1097,
-        "wavelength": 0.4607,
-        "size_param": 1.4961,
-        "volume": 0.0055
-    },
-    {
-        "shape": "SPHERE",
-        "radius": 0.1017,
-        "wavelength": 0.5138,
-        "size_param": 1.2437,
-        "volume": 0.0044
-    },
-    {
-        "shape": "SPHERE",
-        "radius": 0.1606,
-        "wavelength": 0.6469,
-        "size_param": 1.5599,
-        "volume": 0.0174
-    },
-    {
-        "shape": "SPHERE",
-        "radius": 0.1606,
-        "wavelength": 0.7357,
-        "size_param": 1.3716,
-        "volume": 0.0174
+        "size_param": 1.4795,
+        "volume": 0.0172
     }
 ]
