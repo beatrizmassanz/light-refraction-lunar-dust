@@ -181,8 +181,12 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
 
     if skip_simulation:
         results_df = visualization.process_results(base_dir)
+         # Filter sample information if only_spheres is True
+        if only_spheres:
+            samples = visualization.load_samples("Generated_samples.json")
+            samples = [sample for sample in samples if sample['shape'].lower() == 'sphere']
     else:
-        num_samples = 10  # Number of samples to generate
+        num_samples = 1000  # Number of samples to generate
         samples = sample_parameters(num_samples, random_seed=298, only_spheres=only_spheres)
         results_df = run_simulation(base_dir, samples)
     
