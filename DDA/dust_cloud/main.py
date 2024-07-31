@@ -21,34 +21,35 @@ def setup_logging():
 
 def sample_parameters(num_samples, random_seed=None, only_spheres=False):
     """
-    Generate sampled parameters for Monte Carlo simulations.
+    Generate sampled parameters for simulations.
     
     Parameters:
         num_samples (int): Number of samples to generate.
-    
+        random_seed (Optional[int]): Seed for random number generators.
+        only_spheres (bool): If True, only generate spherical samples.
+
     Returns:
         List[Dict[str, Any]]: List of parameter dictionaries.
     """
-    if random_seed is not None:
+    if random_seed is not None:                                             # Set random seed if not given                    
         np.random.seed(random_seed)
         random.seed(random_seed)
 
-    shapes = ["SPHERE"] if only_spheres else ["SPHERE", "RCTGLPRSM"]
-    #shapes = ["SPHERE", "RCTGLPRSM"]
+    shapes = ["SPHERE"] if only_spheres else ["SPHERE", "RCTGLPRSM"]        # Shape selection based on flag
     samples = []
     for _ in range(num_samples):
-        shape = random.choice(shapes)  # Randomly select a shape
-        wavelength = uniform.rvs(loc=0.380, scale=0.370)  # Generate a single wavelength within the visible spectrum from 0.380 to 0.750
-        wavelength = round(wavelength, 4)  # Round to four decimal places
+        shape = random.choice(shapes)                                       # Randomly select a shape
+        wavelength = uniform.rvs(loc=0.380, scale=0.370)                    # Generate a single wavelength within visible range
+        wavelength = round(wavelength, 4)                                   # Round to four decimal places
 
-        if shape == "SPHERE":
-            radius = norm.rvs(loc=0.15, scale=0.05)  # Generate radius based on a normal distribution
-            radius = np.clip(radius, 0.005, 0.35)  # Clip the value to be within the specified range
-            radius = round(radius, 4)  # Round to four decimal places
-            volume = (4/3) * np.pi * radius**3  # Calculate volume of the sphere
-            volume = round(volume, 4)  # Round to four decimal places
-            size_param = (2 * np.pi * radius) / wavelength  # Calculate size parameter
-            size_param = round(size_param, 4)  # Round to four decimal places
+        if shape == "SPHERE":                                               # Generate spherical particle sample
+            radius = norm.rvs(loc=0.15, scale=0.05)                         # Generate particle radius based on a normal distribution
+            radius = np.clip(radius, 0.005, 0.35)                           # Clip the value to be within the specified range
+            radius = round(radius, 4)                                       # Round to four decimal places
+            volume = (4/3) * np.pi * radius**3                              # Calculate volume of the sphere
+            volume = round(volume, 4)                                       # Round to four decimal places
+            size_param = (2 * np.pi * radius) / wavelength                  # Calculate size parameter
+            size_param = round(size_param, 4)                               # Round to four decimal places
             sample = {
                 "shape": shape,
                 "radius": radius,
@@ -57,25 +58,25 @@ def sample_parameters(num_samples, random_seed=None, only_spheres=False):
                 "volume": volume
             }
         
-        elif shape == "RCTGLPRSM":
-            x_length = norm.rvs(loc=0.24, scale=0.11)  # Generate x_length based on a normal distribution
-            x_length = np.clip(x_length, 0.01, 0.56)  # Clip the value to be within the specified range
-            x_length = round(x_length, 4)  # Round to four decimal places
+        elif shape == "RCTGLPRSM":                                          # Generate prism particle sample
+            x_length = norm.rvs(loc=0.24, scale=0.11)                       # Generate x_length based on a normal distribution
+            x_length = np.clip(x_length, 0.01, 0.56)                        # Clip the value to be within the specified range
+            x_length = round(x_length, 4)                                   # Round to four decimal places
 
-            y_length = norm.rvs(loc=0.24, scale=0.11)  # Generate y_length based on a normal distribution
-            y_length = np.clip(y_length, 0.01, 0.56)  # Clip the value to be within the specified range
-            y_length = round(y_length, 4)  # Round to four decimal places
+            y_length = norm.rvs(loc=0.24, scale=0.11)                       # Generate y_length based on a normal distribution
+            y_length = np.clip(y_length, 0.01, 0.56)                        # Clip the value to be within the specified range
+            y_length = round(y_length, 4)                                   # Round to four decimal places
 
-            z_length = norm.rvs(loc=0.24, scale=0.11)  # Generate z_length based on a normal distribution
-            z_length = np.clip(z_length, 0.01, 0.56)  # Clip the value to be within the specified range
-            z_length = round(z_length, 4)  # Round to four decimal places
+            z_length = norm.rvs(loc=0.24, scale=0.11)                       # Generate z_length based on a normal distribution
+            z_length = np.clip(z_length, 0.01, 0.56)                        # Clip the value to be within the specified range
+            z_length = round(z_length, 4)                                   # Round to four decimal places
 
-            volume = x_length * y_length * z_length  # Calculate volume of the rectangular prism
-            volume = round(volume, 4)  # Round to four decimal places
-            radius = ((volume * 3) / (4 * np.pi))**(1/3)  # Calculate radius equivalent for the volume
-            radius = round(radius, 4)  # Round to four decimal places
-            size_param = (2 * np.pi * radius) / wavelength  # Calculate size parameter
-            size_param = round(size_param, 4)  # Round to four decimal places
+            volume = x_length * y_length * z_length                         # Calculate volume of the rectangular prism
+            volume = round(volume, 4)                                       # Round to four decimal places
+            radius = ((volume * 3) / (4 * np.pi))**(1/3)                    # Calculate radius equivalent for the volume
+            radius = round(radius, 4)                                       # Round to four decimal places
+            size_param = (2 * np.pi * radius) / wavelength                  # Calculate size parameter
+            size_param = round(size_param, 4)                               # Round to four decimal places
 
             sample = {
                 "shape": shape,
@@ -91,46 +92,61 @@ def sample_parameters(num_samples, random_seed=None, only_spheres=False):
         print(f"Generated sample: {sample}")
         samples.append(sample)
 
-    with open("Generated_samples.json", "w") as f:
+    with open("Generated_samples.json", "w") as f:                          # Generate .json file with all generated samples
         json.dump(samples, f, indent=4)
     
     return samples
 
 def save_sample_parameters(simulation_directory, sample):
-    """Save the sample parameters to a file in the simulation directory."""
-    sample_file_path = os.path.join(simulation_directory, 'sample_parameters.json')
+    """
+    Save the sample parameters to a JSON file in the specified simulation 
+    directory.
+
+    Parameters:
+        simulation_directory (str): The directory where the sample 
+        parameters will be saved.
+        sample (dict): The sample parameters to be saved.
+    """
+    sample_file_path = os.path.join(simulation_directory, 
+                                    'sample_parameters.json')
     with open(sample_file_path, 'w') as f:
         json.dump(sample, f, indent=4)
 
 def run_simulation(base_dir, samples):
     """
     Run multiple simulations given a list of samples and a base directory.
-    Each simulation uses different particle geometry (sphere, rectangular prism, irregular).
+    Each simulation uses different particle geometry (sphere, rectangular 
+    prism, irregular (when included)).
 
     Parameters:
         base_dir (str): Directory where simulation outputs will be stored.
-        samples (List[Dict[str, Any]]): List of sample parameter dictionaries.
+        samples (List[Dict[str, Any]]): List of sample parameter 
+        dictionaries.
     """
     logging.basicConfig(level=logging.INFO)
-    original_directory = os.getcwd()                                                    # Save the current directory to revert back to it later
+    original_directory = os.getcwd()                                        # Save the current directory to revert back to it later
     results =[]
+
     for i, sample in enumerate(samples):
         shape = sample['shape']
-        aeff = sample ['radius']                                                                   #aeff is half the particle size                    
+        aeff = sample ['radius']                                            # aeff is half the particle size                    
         aeff = round(aeff, 2)   
         simulation_directory = os.path.join(base_dir, f"sim_{i+1}")
         os.makedirs(simulation_directory, exist_ok=True)
-        logging.info(f"Starting simulation for {shape} in {simulation_directory}")
-        save_sample_parameters(simulation_directory, sample)  # Save sample parameters
+        logging.info(
+            f"Starting simulation for {shape} in {simulation_directory}")
+        save_sample_parameters(simulation_directory, sample)                # Save sample parameters
 
         shape_file_name = "shape.dat"
         d = 0.01
 
         if shape == "SPHERE":
-            shape_file_content = simulation_env.generate_shape_dat('sphere', d, sample)
+            shape_file_content = simulation_env.generate_shape_dat(
+                'sphere', d, sample)
         elif shape == "RCTGLPRSM":
             try:
-                shape_file_content = simulation_env.generate_shape_dat('rect_prism', d, sample)
+                shape_file_content = simulation_env.generate_shape_dat(
+                    'rect_prism', d, sample)
             except ValueError as e:
                 logging.error(f"Error generating shape for {shape} in {simulation_directory}: {e}")
                 continue
@@ -186,7 +202,7 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
             samples = visualization.load_samples("Generated_samples.json")
             samples = [sample for sample in samples if sample['shape'].lower() == 'sphere']
     else:
-        num_samples = 1000  # Number of samples to generate
+        num_samples = 2 # Number of samples to generate
         samples = sample_parameters(num_samples, random_seed=298, only_spheres=only_spheres)
         results_df = run_simulation(base_dir, samples)
     
@@ -214,15 +230,6 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     print(f"Results saved to {os.path.join(base_dir, 'simulation_results.csv')}")
     return print(results_df)
 
-
-'''
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run a DDSCAT simulation.")
-    parser.add_argument('--base_dir', type=str, default=os.getcwd(),
-                        help="Base directory for simulation output")
-    args = parser.parse_args()
-    main(args.base_dir)
-'''
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run DDSCAT simulations and optionally Mie calculations.')

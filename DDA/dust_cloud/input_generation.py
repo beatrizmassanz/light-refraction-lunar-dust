@@ -22,8 +22,8 @@ def save_shape_info_to_file(shape_file_name, shape_file_content,
     with open(full_file_path, "w") as file:                             # Open the file in write mode and write the content
         file.write("\n".join(shape_file_content))
     
-    # Print first few lines of the shape file for debugging
-    print("\n".join(shape_file_content[:10]))  # Adjust the number of lines to print as needed
+                                                                        # Print first few lines of the shape file for debugging
+    print("\n".join(shape_file_content[:10]))                           # Adjust the number of lines to print as needed
     
 def generate_par(params):
     """
