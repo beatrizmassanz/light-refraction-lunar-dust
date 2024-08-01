@@ -1,16 +1,24 @@
 [
     {
-        "shape": "SPHERE",
-        "radius": 0.2359,
-        "wavelength": 0.6344,
-        "size_param": 2.3364,
-        "volume": 0.055
+        "shape": "RCTGLPRSM",
+        "x_length": 0.2297,
+        "y_length": 0.1739,
+        "z_length": 0.2491,
+        "wavelength": 0.7314,
+        "volume": 0.01,
+        "radius": 0.1337,
+        "size_param": 1.1486,
+        "mat_file": "astrosil"
     },
     {
-        "shape": "SPHERE",
-        "radius": 0.1796,
-        "wavelength": 0.4621,
-        "size_param": 2.442,
-        "volume": 0.0243
+        "shape": "RCTGLPRSM",
+        "x_length": 0.2321,
+        "y_length": 0.1702,
+        "z_length": 0.1236,
+        "wavelength": 0.4101,
+        "volume": 0.0049,
+        "radius": 0.1054,
+        "size_param": 1.6148,
+        "mat_file": "astrosil"
     }
 ]
