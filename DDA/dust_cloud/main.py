@@ -1,8 +1,6 @@
 import gen_input as gen_input
 import run_ddscat as run_ddscat
 import run_mie as run_mie
-import proc_output_ddscat as proc_output_ddscat
-import proc_output_mie as proc_output_mie
 import visualization as visualization
 import os
 import logging
@@ -41,9 +39,9 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     base_dir = os.path.abspath(base_dir)                                    # Convert base_dir to an absolute path
 
     if skip_simulation:                                                     # If skipping simulation, process the existing results
-        results_df = visualization.process_results(base_dir)
+        results_df = run_ddscat.process_existing_results(base_dir)
         if only_spheres:                                                    # If only analyzing spherical samples, load/ filter them
-            samples = visualization.load_samples("Generated_samples.json")
+            samples = gen_input.load_samples("Generated_samples.json")
             samples = [
                 sample for sample in samples 
                 if sample['shape'].lower() == 'sphere'
@@ -51,7 +49,7 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     else:                                                                   # Generate sample parameters for simulations
         num_samples = 2                                                     # SET NUMBER OF SAMPLES TO GENERATE
         samples = gen_input.sample_parameters(num_samples, 
-                                          random_seed=297, 
+                                          random_seed=296, 
                                           only_spheres=only_spheres)
         results_df = run_ddscat.run_simulations(base_dir, samples)
     
@@ -63,27 +61,25 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     results = results_df.to_dict('records')                                 # Convert results DataFrame to a list of dictionaries
 
     if mie_df is not None:                                                  # Process Mie results if available
-        results = proc_output_mie.process_mie_result(mie_df, 
+        results = run_mie.process_mie_result(mie_df, 
                                                    results, 
                                                    samples)
 
     results_df = pd.DataFrame(results)                                      # Convert the processed results back to a DataFrame
+    results_df.to_csv(os.path.join(base_dir, 'simulation_results.csv'),     # Save the results to a CSV file
+                      index=False)
+    print(f"Results saved to {os.path.join(base_dir, 
+                                           'simulation_results.csv')}")
     
-    visualization.analyze_results(results_df)                               # Analyze and visualize the results
-    file_paths, labels = proc_output_ddscat.find_data_files(base_dir)
-    data_frames = [
-        proc_output_ddscat.extract_data(fp) for fp in file_paths
-        ]
+    data_frames, labels = run_ddscat.extract_simulation_data (base_dir)
+
+    visualization.plot_ddscat_correlation_results(results_df)                               # Analyze and visualize the results
     visualization.plot_data(data_frames, labels)
     visualization.plot_polar_data(data_frames, labels)
 
     if mie_df is not None:                                                  # Plot comparison Mie and DDSCAT if Mie Data available
         visualization.plot_mie_ddscat_comparison(results_df, mie_df)
 
-    results_df.to_csv(os.path.join(base_dir, 'simulation_results.csv'),     # Save the results to a CSV file
-                      index=False)
-    print(f"Results saved to {os.path.join(base_dir, 
-                                           'simulation_results.csv')}")
     return print(results_df)
 
 

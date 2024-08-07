@@ -89,3 +89,9 @@ def sample_parameters(num_samples, random_seed=None, only_spheres=False):
         json.dump(samples, f, indent=4)
     
     return samples
+
+def load_samples(file_path):
+    """Load samples from a file."""
+    with open(file_path, "r") as f:
+        samples = json.load(f)
+    return samples

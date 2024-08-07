@@ -1,60 +1,9 @@
-import os
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 import seaborn as sns
-import json
-import proc_output_ddscat as proc_output_ddscat
 
-def load_sample_parameters(simulation_directory):
-    """
-    Load the sample parameters from a file in the simulation 
-    directory.
-    
-    """
-    sample_file_path = os.path.join(
-        simulation_directory, 'sample_parameters.json'
-        )
-    with open(sample_file_path, 'r') as f:
-        sample = json.load(f)
-    return sample
 
-def load_samples(file_path):
-    """Load samples from a file."""
-    with open(file_path, "r") as f:
-        samples = json.load(f)
-    return samples
-
-def process_results(base_dir):
-    """
-    Process the results from the simulation directories.
-
-    Parameters:
-        base_dir (str): Base directory where simulation data is stored.
-
-    Returns:
-        pd.DataFrame: A DataFrame containing the aggregated results.
-    """
-    original_directory = os.getcwd()  # Save the current directory to revert back to it later
-    results = []
-    samples = []  # To store loaded samples
-    for i in range(1, 1000):  # Assuming 100 samples as in the original setup
-        simulation_directory = os.path.join(base_dir, f"sim_{i}")
-        if not os.path.exists(simulation_directory):
-            continue
-
-        sample = load_sample_parameters(simulation_directory)
-        samples.append(sample)  # Collect the sample
-        proc_output_ddscat.process_ddscat_result(simulation_directory, results, sample)  # Process the result
-
-    os.chdir(original_directory)
-    # Save the collected samples back to Generated_samples.json
-    with open("Generated_samples.json", "w") as f:
-        json.dump(samples, f, indent=4)
-
-    return pd.concat(results, ignore_index=True)
-
-def analyze_results(results_df):
+def plot_ddscat_correlation_results(results_df):
     sns.pairplot(results_df, vars=['S_11', 'size_param', 'wavelength', 'Qsca', 'Qbk', 'Qpol'], hue='shape')
     plt.suptitle('Pairplot of Parameters and Results')
     plt.show()
