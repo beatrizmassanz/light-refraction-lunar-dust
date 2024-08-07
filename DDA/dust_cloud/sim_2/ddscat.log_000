@@ -151,18 +151,18 @@
 >ZBCG2  IT=       4 f.err= 1.687E-05                                          
 >ZBCG2  IT=       5 f.err= 1.425E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.030 = CPU time (sec)                                            
+>TIMEIT     0.031 = CPU time (sec)                                            
 >GETFML Q_abs = 3.0841E-01 Q_ext=  2.9928E+00
 >SCAT      552 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.049 = CPU time (sec)                                            
+>TIMEIT     0.050 = CPU time (sec)                                            
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.2761                
 >ZBCG2  IT=       1 f.err= 5.592E-02                                          
 >ZBCG2  IT=       2 f.err= 3.035E-03                                          
 >ZBCG2  IT=       3 f.err= 1.168E-04                                          
 >ZBCG2  IT=       4 f.err= 5.702E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.025 = CPU time (sec)                                            
+>TIMEIT     0.024 = CPU time (sec)                                            
 >GETFML Q_abs = 2.3855E-01 Q_ext=  2.1796E+00
 >SCAT      552 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
