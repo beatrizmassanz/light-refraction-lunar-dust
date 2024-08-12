@@ -8,11 +8,228 @@
         "mat_file": "astrosil"
     },
     {
-        "shape": "SPHERE",
-        "radius": 0.1613,
+        "shape": "RCTGLPRSM",
+        "x_length": 0.2649,
+        "y_length": 0.2286,
+        "z_length": 0.2409,
         "wavelength": 0.4259,
-        "size_param": 2.3796,
-        "volume": 0.0176,
+        "volume": 0.0146,
+        "radius": 0.1516,
+        "size_param": 2.2365,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.4264,
+        "y_length": 0.3196,
+        "z_length": 0.4701,
+        "wavelength": 0.5845,
+        "volume": 0.0641,
+        "radius": 0.2483,
+        "size_param": 2.6691,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.143,
+        "wavelength": 0.5663,
+        "size_param": 1.5866,
+        "volume": 0.0122,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.0737,
+        "y_length": 0.3655,
+        "z_length": 0.01,
+        "wavelength": 0.3875,
+        "volume": 0.0003,
+        "radius": 0.0415,
+        "size_param": 0.6729,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1055,
+        "wavelength": 0.5655,
+        "size_param": 1.1722,
+        "volume": 0.0049,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1198,
+        "wavelength": 0.6494,
+        "size_param": 1.1591,
+        "volume": 0.0072,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1378,
+        "wavelength": 0.3817,
+        "size_param": 2.2683,
+        "volume": 0.011,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.3297,
+        "y_length": 0.2328,
+        "z_length": 0.2385,
+        "wavelength": 0.622,
+        "volume": 0.0183,
+        "radius": 0.1635,
+        "size_param": 1.6516,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1778,
+        "wavelength": 0.5223,
+        "size_param": 2.1389,
+        "volume": 0.0235,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.257,
+        "wavelength": 0.6574,
+        "size_param": 2.4563,
+        "volume": 0.0711,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.2027,
+        "wavelength": 0.5859,
+        "size_param": 2.1738,
+        "volume": 0.0349,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.3338,
+        "y_length": 0.3911,
+        "z_length": 0.2295,
+        "wavelength": 0.7462,
+        "volume": 0.03,
+        "radius": 0.1928,
+        "size_param": 1.6234,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.13,
+        "y_length": 0.268,
+        "z_length": 0.3338,
+        "wavelength": 0.7012,
+        "volume": 0.0116,
+        "radius": 0.1404,
+        "size_param": 1.2581,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.2317,
+        "wavelength": 0.5762,
+        "size_param": 2.5266,
+        "volume": 0.0521,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.0832,
+        "wavelength": 0.7459,
+        "size_param": 0.7008,
+        "volume": 0.0024,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1944,
+        "wavelength": 0.5685,
+        "size_param": 2.1486,
+        "volume": 0.0308,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1432,
+        "wavelength": 0.4331,
+        "size_param": 2.0775,
+        "volume": 0.0123,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.1337,
+        "wavelength": 0.5214,
+        "size_param": 1.6112,
+        "volume": 0.01,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.2211,
+        "y_length": 0.2291,
+        "z_length": 0.0386,
+        "wavelength": 0.4191,
+        "volume": 0.002,
+        "radius": 0.0782,
+        "size_param": 1.1724,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.4607,
+        "y_length": 0.2023,
+        "z_length": 0.1692,
+        "wavelength": 0.6364,
+        "volume": 0.0158,
+        "radius": 0.1557,
+        "size_param": 1.5372,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.2749,
+        "y_length": 0.0796,
+        "z_length": 0.2779,
+        "wavelength": 0.4484,
+        "volume": 0.0061,
+        "radius": 0.1133,
+        "size_param": 1.5876,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "SPHERE",
+        "radius": 0.2261,
+        "wavelength": 0.3868,
+        "size_param": 3.6728,
+        "volume": 0.0484,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.233,
+        "y_length": 0.1456,
+        "z_length": 0.278,
+        "wavelength": 0.7154,
+        "volume": 0.0094,
+        "radius": 0.1309,
+        "size_param": 1.1497,
+        "mat_file": "astrosil"
+    },
+    {
+        "shape": "RCTGLPRSM",
+        "x_length": 0.1019,
+        "y_length": 0.2067,
+        "z_length": 0.384,
+        "wavelength": 0.558,
+        "volume": 0.0081,
+        "radius": 0.1246,
+        "size_param": 1.403,
         "mat_file": "astrosil"
     }
 ]
