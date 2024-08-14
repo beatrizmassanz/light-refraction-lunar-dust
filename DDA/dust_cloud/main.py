@@ -1,6 +1,7 @@
 import gen_input as gen_input
 import run_ddscat as run_ddscat
 import run_mie as run_mie
+import proc_results as proc_results
 import visualization as visualization
 import os
 import logging
@@ -65,15 +66,12 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
                                                    results, 
                                                    samples)
 
-    results_df = pd.DataFrame(results)                                      # Convert the processed results back to a DataFrame
-    results_df.to_csv(os.path.join(base_dir, 'simulation_results.csv'),     # Save the results to a CSV file
-                      index=False)
-    print(f"Results saved to {os.path.join(base_dir, 
-                                           'simulation_results.csv')}")
+    proc_results.save_results_to_csv(results, base_dir)                     # Save results to CSV file
+
     
     data_frames, labels = run_ddscat.extract_simulation_data (base_dir)
 
-    visualization.plot_ddscat_correlation_results(results_df)                               # Analyze and visualize the results
+    visualization.plot_ddscat_correlation_results(results_df)               # Analyze and visualize the results
     visualization.plot_data(data_frames, labels)
     visualization.plot_polar_data(data_frames, labels)
 
