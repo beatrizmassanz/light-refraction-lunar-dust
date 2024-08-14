@@ -63,4 +63,3 @@ You can install these libraries using `pip`:
 
 ```bash
 pip install numpy scipy pandas matplotlib seaborn miepython
-pip install numpy scipy pandas matplotlib seaborn miepython

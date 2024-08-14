@@ -154,14 +154,14 @@
 >GETFML Q_abs = 1.8072E-01 Q_ext=  1.5848E+00
 >SCAT      501 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.081 = CPU time (sec)                                            
+>TIMEIT     0.080 = CPU time (sec)                                            
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.2124                
 >ZBCG2  IT=       1 f.err= 7.454E-02                                          
 >ZBCG2  IT=       2 f.err= 1.145E-03                                          
 >ZBCG2  IT=       3 f.err= 2.000E-05                                          
 >ZBCG2  IT=       4 f.err= 1.034E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.084 = CPU time (sec)                                            
+>TIMEIT     0.085 = CPU time (sec)                                            
 >GETFML Q_abs = 1.8072E-01 Q_ext=  1.5848E+00
 >SCAT      501 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            

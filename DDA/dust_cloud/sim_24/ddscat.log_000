@@ -149,7 +149,7 @@
 >ZBCG2  IT=       2 f.err= 1.654E-04                                          
 >ZBCG2  IT=       3 f.err= 2.696E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.042 = CPU time (sec)                                            
+>TIMEIT     0.041 = CPU time (sec)                                            
 >GETFML Q_abs = 8.0330E-02 Q_ext=  4.4281E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
@@ -159,10 +159,10 @@
 >ZBCG2  IT=       2 f.err= 5.114E-04                                          
 >ZBCG2  IT=       3 f.err= 7.301E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.039 = CPU time (sec)                                            
+>TIMEIT     0.038 = CPU time (sec)                                            
 >GETFML Q_abs = 1.4919E-01 Q_ext=  9.3050E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.073 = CPU time (sec)                                            
+>TIMEIT     0.071 = CPU time (sec)                                            
 >DDSCAT return from DDSCAT to calling program
 >DDSCAT normal termination, with no nearfield calculation                     
