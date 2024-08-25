@@ -164,6 +164,6 @@
 >GETFML Q_abs = 3.8030E-02 Q_ext=  1.6159E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.012 = CPU time (sec)                                            
+>TIMEIT     0.013 = CPU time (sec)                                            
 >DDSCAT return from DDSCAT to calling program
 >DDSCAT normal termination, with no nearfield calculation                     

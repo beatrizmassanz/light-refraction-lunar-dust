@@ -150,7 +150,7 @@
 >ZBCG2  IT=       3 f.err= 8.234E-04                                          
 >ZBCG2  IT=       4 f.err= 3.471E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.111 = CPU time (sec)                                            
+>TIMEIT     0.112 = CPU time (sec)                                            
 >GETFML Q_abs = 2.6417E-01 Q_ext=  2.2489E+00
 >SCAT      500 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
@@ -161,7 +161,7 @@
 >ZBCG2  IT=       3 f.err= 8.227E-04                                          
 >ZBCG2  IT=       4 f.err= 3.484E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.105 = CPU time (sec)                                            
+>TIMEIT     0.108 = CPU time (sec)                                            
 >GETFML Q_abs = 2.6417E-01 Q_ext=  2.2489E+00
 >SCAT      500 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            

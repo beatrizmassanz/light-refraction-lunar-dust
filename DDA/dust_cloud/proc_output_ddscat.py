@@ -67,7 +67,7 @@ def find_data_files(base_dir):
     return data_files, labels
 
 
-def process_ddscat_result(simulation_directory, results, sample):
+def process_ddscat_result(simulation_directory, results, sample, only_spheres= False):
     """Process a single result file and append it to the results list."""
     result_file = os.path.join(simulation_directory, 'w000r000.avg')
     if os.path.exists(result_file):
@@ -77,7 +77,8 @@ def process_ddscat_result(simulation_directory, results, sample):
             df['size_param'] = sample['size_param']
             df['radius'] = sample['radius']
             df['wavelength'] = sample['wavelength']
-            df = normalize_s11(df, sample['size_param'], method='qsca')  # Normalize using size parameter
+            if only_spheres:
+                df = normalize_s11(df, sample['size_param'], method='qsca')  # Normalize using size parameter
             results.append(df)
         except ValueError as e:
             logging.error(f"Error processing file {result_file}: {e}")

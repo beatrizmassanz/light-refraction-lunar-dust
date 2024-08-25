@@ -142,7 +142,7 @@
 >ROTATE    z_LF dot a_3=  1.00000000                                          
  DDSCAT ckpt 18.21: cflpol1=w000r000k000.pol1   
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.2569                
->DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.06 cpu-sec  
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.02 cpu-sec  
 >DIRECT_CALC cputime is independent of gamma                                   
 >DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
 >ZBCG2  IT=       1 f.err= 1.032E-01                                          
@@ -151,11 +151,11 @@
 >ZBCG2  IT=       4 f.err= 6.060E-05                                          
 >ZBCG2  IT=       5 f.err= 8.935E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.141 = CPU time (sec)                                            
+>TIMEIT     0.150 = CPU time (sec)                                            
 >GETFML Q_abs = 2.2858E-01 Q_ext=  2.7596E+00
 >SCAT      602 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.120 = CPU time (sec)                                            
+>TIMEIT     0.118 = CPU time (sec)                                            
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.2569                
 >ZBCG2  IT=       1 f.err= 1.032E-01                                          
 >ZBCG2  IT=       2 f.err= 3.472E-02                                          
@@ -163,7 +163,7 @@
 >ZBCG2  IT=       4 f.err= 6.061E-05                                          
 >ZBCG2  IT=       5 f.err= 8.939E-06                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.135 = CPU time (sec)                                            
+>TIMEIT     0.141 = CPU time (sec)                                            
 >GETFML Q_abs = 2.2858E-01 Q_ext=  2.7596E+00
 >SCAT      602 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
