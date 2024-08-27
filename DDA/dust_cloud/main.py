@@ -48,9 +48,9 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
                 if sample['shape'].lower() == 'sphere'
                 ]
     else:                                                                   # Generate sample parameters for simulations
-        num_samples = 1                                                    # SET NUMBER OF SAMPLES TO GENERATE
+        num_samples = 1000                                                  # SET NUMBER OF SAMPLES TO GENERATE
         samples = gen_input.sample_parameters(num_samples, 
-                                          random_seed=293, 
+                                          random_seed=292, 
                                           only_spheres=only_spheres)
         results_df = run_ddscat.run_simulations(base_dir, samples)
     
@@ -71,9 +71,15 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     
     data_frames, labels = run_ddscat.extract_simulation_data (base_dir)
 
-    visualization.plot_ddscat_correlation_results(results_df)               # Analyze and visualize the results
-    visualization.plot_data(data_frames, labels)
-    visualization.plot_polar_data(data_frames, labels)
+    #visualization.plot_ddscat_correlation_results(results_df)               # Analyze and visualize the results
+    #visualization.plot_data(data_frames, labels)
+    #visualization.plot_polar_data(data_frames, labels)
+    visualization.plot_qsca_by_size (results_df)
+    visualization.plot_qbk_by_size (results_df)
+    visualization.plot_qpol_by_size (results_df)
+    visualization.plot_s11_forward_scattering (results_df)
+    visualization.plot_s11_back_scattering (results_df)
+    visualization.plot_pol_vs_theta (results_df,labels)
 
     if mie_df is not None:                                                  # Plot comparison Mie and DDSCAT if Mie Data available
         visualization.plot_mie_ddscat_comparison(results_df, mie_df)

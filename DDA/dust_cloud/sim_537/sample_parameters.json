@@ -1,0 +1,11 @@
+{
+    "shape": "RCTGLPRSM",
+    "x_length": 0.223,
+    "y_length": 0.1902,
+    "z_length": 0.0829,
+    "wavelength": 0.7192,
+    "volume": 0.0035,
+    "radius": 0.0942,
+    "size_param": 0.823,
+    "mat_file": "astrosil"
+}

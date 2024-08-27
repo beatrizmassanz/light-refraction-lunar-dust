@@ -1,0 +1,9 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --->GEOMETRY   sphere; AX,AY,AZ= 0.1588 0.1588 0.1588                 
+ PBCGS2 --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ FROM_FILE --- shape 
+    1419 = NAT0 = number of dipoles
+ ../diel/astrosil                                            
+  wave(um)   f(cm-1)     Re(m)     Im(m)     Re(eps)   Im(eps)
+ 4.7050E-01 2.1254E+04 1.695E+00 2.970E-02  2.873E+00 1.007E-01

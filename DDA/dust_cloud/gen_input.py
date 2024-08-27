@@ -31,7 +31,7 @@ def sample_parameters(num_samples, random_seed=None, only_spheres=False):
 
         if shape == "SPHERE":                                               # Generate spherical particle sample
             radius = norm.rvs(loc=0.15, scale=0.05)                         # SELECT PARTICLE SIZE RANGE AND DISTRIBUTION
-            radius = np.clip(radius, 0.005, 0.35)
+            radius = np.clip(radius, 0.02, 0.35)
             # radius = 0.1                                                  # To set a fixed value comment two lines before                    
             radius = round(radius, 4)                                       
             volume = (4/3) * np.pi * radius**3                              # Calculate volume of the sphere

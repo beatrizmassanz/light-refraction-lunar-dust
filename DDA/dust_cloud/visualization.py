@@ -1,7 +1,153 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+import pandas as pd
 
+# Function for plotting Q_sca for individual size parameters
+def plot_qsca_by_size(results_df):
+    plt.figure(figsize=(10, 6))
+    # Plot spheres with orange circles
+    plt.scatter(
+        results_df[results_df['shape'] == 'SPHERE']['size_param'],
+        results_df[results_df['shape'] == 'SPHERE']['Qsca'],
+        color='orange', marker='o', s=10, label='Spheres'
+    )
+    # Plot rectangular prisms with blue squares
+    plt.scatter(
+        results_df[results_df['shape'] == 'RCTGLPRSM']['size_param'],
+        results_df[results_df['shape'] == 'RCTGLPRSM']['Qsca'],
+        color='blue', marker='s', s=10, label='Rectangular Prisms'
+    )
+    plt.xlabel(r'Size Parameter $x$', fontsize=14)
+    plt.ylabel(r'$Q_{sca}$', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+# Similar plots for Q_bk and Q_pol
+def plot_qbk_by_size(results_df):
+    plt.figure(figsize=(10, 6))
+    # Plot spheres with orange circles
+    plt.scatter(
+        results_df[results_df['shape'] == 'SPHERE']['size_param'],
+        results_df[results_df['shape'] == 'SPHERE']['Qbk'],
+        color='orange', marker='o', s=10, label='Spheres'
+    )
+    # Plot rectangular prisms with blue squares
+    plt.scatter(
+        results_df[results_df['shape'] == 'RCTGLPRSM']['size_param'],
+        results_df[results_df['shape'] == 'RCTGLPRSM']['Qbk'],
+        color='blue', marker='s', s=10, label='Rectangular Prisms'
+    )
+    plt.xlabel(r'Size Parameter $x$', fontsize=14)
+    plt.ylabel(r'$Q_{bk}$', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+def plot_qpol_by_size(results_df):
+    plt.figure(figsize=(10, 6))
+    # Plot spheres with orange circles
+    plt.scatter(
+        results_df[results_df['shape'] == 'SPHERE']['size_param'],
+        results_df[results_df['shape'] == 'SPHERE']['Qpol'],
+        color='orange', marker='o', s=10, label='Spheres'
+    )
+    # Plot rectangular prisms with blue squares
+    plt.scatter(
+        results_df[results_df['shape'] == 'RCTGLPRSM']['size_param'],
+        results_df[results_df['shape'] == 'RCTGLPRSM']['Qpol'],
+        color='blue', marker='s', s=10, label='Rectangular Prisms'
+    )
+    plt.xlabel(r'Size Parameter $x$', fontsize=14)
+    plt.ylabel(r'$Q_{pol}$', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+def plot_s11_forward_scattering(results_df):
+    """
+    Plot S_11 values for forward scattering (θ = 0 degrees and φ = 0 degrees) across size parameters.
+    
+    Parameters:
+    results_df (pd.DataFrame): DataFrame containing 'size_param', 'S_11', 'theta', 'phi', and 'shape' columns.
+    """
+    plt.figure(figsize=(10, 6))
+
+    # Filter DataFrame for forward scattering where theta = 0 degrees and phi = 0 degrees
+    forward_df = results_df[(results_df['theta'] == 0) & (results_df['phi'] == 0)]
+
+    # Plot spherical particles with orange circles
+    sph_df = forward_df[forward_df['shape'] == 'SPHERE']
+    plt.scatter(sph_df['size_param'], sph_df['S_11'], color='darkorange', label='Sphere', marker='o', s=10)
+
+    # Plot rectangular prisms with blue boxes
+    rect_df = forward_df[forward_df['shape'] == 'RCTGLPRSM']
+    plt.scatter(rect_df['size_param'], rect_df['S_11'], color='royalblue', label='Rectangular Prism', marker='s', s=10)
+
+    plt.xlabel(r'Size Parameter $x$', fontsize=16, fontweight='bold')
+    plt.ylabel(r'$S_{11}$ (Forward Scattering, $\theta=0^\circ$)', fontsize=16, fontweight='bold')
+    plt.legend(fontsize=12, title='Shape', title_fontsize=14)
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+def plot_s11_back_scattering(results_df):
+    """
+    Plot S_11 values for backscattering (θ = 180 degrees and φ = 0 degrees) across size parameters.
+    
+    Parameters:
+    results_df (pd.DataFrame): DataFrame containing 'size_param', 'S_11', 'theta', 'phi', and 'shape' columns.
+    """
+    plt.figure(figsize=(10, 6))
+
+    # Filter DataFrame for backscattering where theta = 180 degrees and phi = 0 degrees
+    back_df = results_df[(results_df['theta'] == 180) & (results_df['phi'] == 0)]
+
+    # Plot spherical particles with orange circles
+    sph_df = back_df[back_df['shape'] == 'SPHERE']
+    plt.scatter(sph_df['size_param'], sph_df['S_11'], color='darkorange', label='Sphere', marker='o', s=10)
+
+    # Plot rectangular prisms with blue boxes
+    rect_df = back_df[back_df['shape'] == 'RCTGLPRSM']
+    plt.scatter(rect_df['size_param'], rect_df['S_11'], color='royalblue', label='Rectangular Prism', marker='s', s=10)
+
+    plt.xlabel(r'Size Parameter $x$', fontsize=16, fontweight='bold')
+    plt.ylabel(r'$S_{11}$ (Back Scattering, $\theta=180^\circ$)', fontsize=16, fontweight='bold')
+    plt.legend(fontsize=12, title='Shape', title_fontsize=14)
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+def plot_pol_vs_theta(results_df, labels):
+    """
+    Plots Polarization (Pol) as a function of theta for selected particles.
+
+    Parameters:
+    data_frames (list of pd.DataFrame): List of DataFrames containing 'theta' and 'Pol'.
+    labels (list of str): Labels for each particle.
+    """
+    plt.figure(figsize=(10, 6))
+
+    for df, label in zip(results_df, labels):
+        # Ensure df is a DataFrame and contains the correct columns
+        if isinstance(df, pd.DataFrame) and 'theta' in df.columns and 'Pol.' in df.columns:
+            plt.plot(
+                df['theta'], df['Pol.'], label=label, linestyle='-', marker='o',
+                markersize=5, alpha=0.8
+            )
+        else:
+            raise ValueError(f"DataFrame {label} does not have the required 'theta' and 'Pol' columns.")
+
+    plt.xlabel(r'$\theta$ (degrees)', fontsize=16)
+    plt.ylabel(r'Polarization $Pol$', fontsize=16)
+    plt.legend(loc='best', fontsize=12, title='Particles', title_fontsize=14)
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
 
 def plot_ddscat_correlation_results(results_df):
     sns.pairplot(results_df, vars=['S_11', 'size_param', 'wavelength', 'Qsca', 'Qbk', 'Qpol'], hue='shape')

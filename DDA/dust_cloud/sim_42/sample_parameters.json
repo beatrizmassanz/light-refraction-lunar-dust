@@ -1,0 +1,8 @@
+{
+    "shape": "SPHERE",
+    "radius": 0.1506,
+    "wavelength": 0.6339,
+    "size_param": 1.4927,
+    "volume": 0.0143,
+    "mat_file": "astrosil"
+}
