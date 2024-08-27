@@ -48,9 +48,9 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
                 if sample['shape'].lower() == 'sphere'
                 ]
     else:                                                                   # Generate sample parameters for simulations
-        num_samples = 25                                                    # SET NUMBER OF SAMPLES TO GENERATE
+        num_samples = 1                                                    # SET NUMBER OF SAMPLES TO GENERATE
         samples = gen_input.sample_parameters(num_samples, 
-                                          random_seed=296, 
+                                          random_seed=293, 
                                           only_spheres=only_spheres)
         results_df = run_ddscat.run_simulations(base_dir, samples)
     

@@ -50,10 +50,10 @@
 >  **** Select Elements of S_ij Matrix to Print ****                     
 >REAPAR CMDFRM=LFRAME : scattering directions given in Lab Frame              
 >REAPAR **** Specify Scattered Directions ****                                
->REAPAR     0.0    0.0  180.0 = phi, theta_min, theta_max for scatt. plane   1
->REAPAR   37 = number of scattering angles in this scattering plane           
->REAPAR    90.0    0.0  180.0 = phi, theta_min, theta_max for scatt. plane   2
->REAPAR   37 = number of scattering angles in this scattering plane           
+>REAPAR     0.0    0.0  360.0 = phi, theta_min, theta_max for scatt. plane   1
+>REAPAR   73 = number of scattering angles in this scattering plane           
+>REAPAR    90.0    0.0  360.0 = phi, theta_min, theta_max for scatt. plane   2
+>REAPAR   73 = number of scattering angles in this scattering plane           
  DDSCAT ckpt 5, NBETA,NPHI,NTHETA=           1           1           1
                 NORICHAR=           3  NRFLD=           0
 >DDSCAT Allocate memory for first call to TARGET...                           
@@ -139,18 +139,18 @@
 >ROTATE    z_LF dot a_3=  1.00000000                                          
  DDSCAT ckpt 18.21: cflpol1=w000r000k000.pol1   
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.1895                
->DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.02 cpu-sec  
 >DIRECT_CALC cputime is independent of gamma                                   
 >DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
 >ZBCG2  IT=       1 f.err= 8.633E-03                                          
 >ZBCG2  IT=       2 f.err= 8.728E-05                                          
 >ZBCG2  IT=       3 f.err= 9.688E-07                                          
 >TIMEIT  Timing results for: PBCGS2                                           
->TIMEIT     0.026 = CPU time (sec)                                            
+>TIMEIT     0.023 = CPU time (sec)                                            
 >GETFML Q_abs = 6.1852E-02 Q_ext=  3.1646E-01
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.033 = CPU time (sec)                                            
+>TIMEIT     0.036 = CPU time (sec)                                            
 >ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.1895                
 >ZBCG2  IT=       1 f.err= 1.260E-02                                          
 >ZBCG2  IT=       2 f.err= 3.694E-04                                          
@@ -160,6 +160,6 @@
 >GETFML Q_abs = 1.7607E-01 Q_ext=  1.3188E+00
 >SCAT      408 scattering directions used to calculate <cos>, etc.          
 >TIMEIT  Timing results for:  SCAT                                            
->TIMEIT     0.028 = CPU time (sec)                                            
+>TIMEIT     0.034 = CPU time (sec)                                            
 >DDSCAT return from DDSCAT to calling program
 >DDSCAT normal termination, with no nearfield calculation                     

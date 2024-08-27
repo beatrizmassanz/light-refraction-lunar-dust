@@ -21,6 +21,88 @@ def plot_data(data_frames, labels):
     data_frames (list of pd.DataFrame): List of DataFrames to plot.
     labels (list of str): Labels for each DataFrame plot.
     """
+    # Set plot style for better aesthetics
+    sns.set(style="whitegrid")
+
+    # Create the figure
+    plt.figure(figsize=(10, 6))
+
+    # Loop over the data frames and plot them in orange
+    for df, label in zip(data_frames, labels):
+        plt.plot(df[df["phi"] == 0]["theta"], 
+                 df[df["phi"] == 0]["S_11"], 
+                 label=label, color='orange', 
+                 alpha=0.8, linestyle='-', linewidth=2)
+
+    # Set the title, labels, and legend
+    plt.xlabel('Theta (degrees)', fontsize=14)
+    plt.ylabel(r'S$_{11}$', fontsize=14)
+    plt.legend(title="Samples", fontsize=11, title_fontsize=13)
+
+    # Display the plot
+    plt.tight_layout()
+    plt.show()
+
+
+
+def plot_polar_data(data_frames, labels):
+    """
+    Plots data from multiple DataFrames on a polar plot, assuming 
+    each DataFrame contains 'theta' and 'S_11' columns.
+    Theta should be in degrees for plotting.
+
+    Parameters:
+    data_frames (list of pd.DataFrame): List of DataFrames to plot.
+    labels (list of str): Labels for each DataFrame plot.
+    """
+    # Set plot style for better aesthetics
+    sns.set(style="whitegrid")
+
+    # Create a larger polar plot
+    plt.figure(figsize=(10, 10))
+
+    # Create a polar subplot
+    ax = plt.subplot(111, polar=True)
+    
+    # Loop over the data frames and plot them in orange
+    for df, label in zip(data_frames, labels):
+        # Convert theta from degrees to radians for polar plotting
+        radians = np.deg2rad(df[df["phi"] == 0]["theta"])
+        ax.plot(radians, df[df["phi"] == 0]["S_11"], 
+                label=label, color='orange', 
+                alpha=0.8, linestyle='-', linewidth=2)
+
+    # Set 0 degrees to be at the top (north) and direction to clockwise
+    ax.set_theta_zero_location('N')
+    ax.set_theta_direction(-1)
+
+    # Set the radial limits to focus on the central values and improve readability
+    ax.set_ylim(0, np.percentile([df["S_11"].max() for df in data_frames], 95))  # Focus on the central 95% of the data
+
+    # Customize grid and ticks for better readability
+    ax.grid(True, linestyle='--', alpha=0.5)
+    ax.xaxis.set_tick_params(labelsize=12)
+    ax.yaxis.set_tick_params(labelsize=12)
+
+    # Adjust the position and appearance of the legend
+    ax.legend(title="Samples", title_fontsize='13', fontsize='11', 
+              loc='upper right', bbox_to_anchor=(1.2, 1.05))
+
+    # Display the plot with a tight layout for better spacing
+    plt.tight_layout()
+    plt.show()
+
+'''
+
+def plot_data(data_frames, labels):
+    """
+    Plots data from multiple DataFrames, assuming each DataFrame contains 
+    'theta' and 'S_11' columns.
+
+    Parameters:
+    data_frames (list of pd.DataFrame): List of DataFrames to plot.
+    labels (list of str): Labels for each DataFrame plot.
+    """
     plt.figure(figsize=(10, 6))
     for df, label in zip(data_frames, labels):
         plt.plot(df[df["phi"] == 0]["theta"], df[df["phi"] == 0]["S_11"], 
@@ -56,7 +138,7 @@ def plot_polar_data(data_frames, labels):
     ax.set_title('Polar Comparison of S_11 Values')
     ax.legend()
     plt.show()
-
+'''
 def plot_mie_ddscat_comparison(ddscat_df, mie_df):
     plt.figure(figsize=(10, 6))
     for label, group in ddscat_df.groupby('shape'):

@@ -46,6 +46,6 @@
 '**** Specify Scattered Directions ****'
 'LFRAME' = CMDFRM (LFRAME, TFRAME for Lab Frame or Target Frame)
 2 = NPLANES = number of scattering planes
-0.   0. 180.  5 = phi, thetan_min, thetan_max, dtheta (in deg) for plane 1
-90.  0. 180.  5 = phi, thetan_min, thetan_max, dtheta (in deg) for plane 2
+0.   0. 360.  5 = phi, thetan_min, thetan_max, dtheta (in deg) for plane 1
+90.  0. 360.  5 = phi, thetan_min, thetan_max, dtheta (in deg) for plane 2
 

@@ -1,8 +1,11 @@
 {
-    "shape": "SPHERE",
-    "radius": 0.1711,
-    "wavelength": 0.4927,
-    "size_param": 2.182,
-    "volume": 0.021,
+    "shape": "RCTGLPRSM",
+    "x_length": 0.3603,
+    "y_length": 0.3755,
+    "z_length": 0.3984,
+    "wavelength": 0.6818,
+    "volume": 0.0539,
+    "radius": 0.2343,
+    "size_param": 2.1592,
     "mat_file": "astrosil"
 }
