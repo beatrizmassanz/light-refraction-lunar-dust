@@ -74,12 +74,22 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     #visualization.plot_ddscat_correlation_results(results_df)               # Analyze and visualize the results
     #visualization.plot_data(data_frames, labels)
     #visualization.plot_polar_data(data_frames, labels)
+    visualization.plot_shape_counts (results_df)
+    visualization.plot_size_param_distribution (results_df)
+    visualization.plot_wavelength_distribution (results_df)
+    visualization.plot_radius_distribution (results_df)
+    visualization.plot_qsca_vs_size (results_df)
+    visualization.plot_qsca_vs_wavelength (results_df)
+    visualization.plot_s11_vs_size_forward_scattering (results_df)
+    visualization.plot_s11_vs_wavelength_forward_scattering (results_df)
     visualization.plot_qsca_by_size (results_df)
     visualization.plot_qbk_by_size (results_df)
     visualization.plot_qpol_by_size (results_df)
     visualization.plot_s11_forward_scattering (results_df)
     visualization.plot_s11_back_scattering (results_df)
-    visualization.plot_pol_vs_theta (results_df,labels)
+    #visualization.plot_pol_vs_theta (results_df)
+    visualization.plot_average_pol_vs_theta (results_df)
+    visualization.plot_average_s11_vs_theta (results_df)
 
     if mie_df is not None:                                                  # Plot comparison Mie and DDSCAT if Mie Data available
         visualization.plot_mie_ddscat_comparison(results_df, mie_df)

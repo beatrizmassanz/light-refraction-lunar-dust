@@ -3,6 +3,195 @@ import numpy as np
 import seaborn as sns
 import pandas as pd
 
+def plot_shape_counts(results_df):
+    # Remove duplicates based on shape and size_param
+    unique_samples_df = results_df.drop_duplicates(subset=['shape', 'size_param'])
+
+    # Count the number of unique spheres and rectangular prisms
+    shape_counts = unique_samples_df['shape'].value_counts()
+
+    # Plot the counts
+    plt.figure(figsize=(8, 6))
+    plt.bar(shape_counts.index, shape_counts.values, color=['orange', 'blue'])
+    
+    plt.xlabel('Shape', fontsize=14)
+    plt.ylabel('Count', fontsize=14)
+    plt.title('Count of Unique Spheres and Rectangular Prisms', fontsize=16)
+    plt.xticks(ticks=[0, 1], labels=['Spheres', 'Rectangular Prisms'], fontsize=12)
+    plt.tight_layout()
+    plt.show()
+
+def plot_size_param_distribution(results_df):
+    """
+    Plot the distribution of unique size parameters from the simulation input data.
+    Mark the mean of the distribution with a vertical line.
+    
+    Parameters:
+    results_df (pd.DataFrame): DataFrame containing the 'size_param' column.
+    """
+    unique_size_params = results_df['size_param'].unique()
+    mean_size_param = unique_size_params.mean()  # Calculate the mean of the unique size parameters
+
+    plt.figure(figsize=(10, 6))
+    sns.histplot(unique_size_params, kde=True, color='purple', bins=30)
+    plt.axvline(mean_size_param, color='orange', linestyle='--', linewidth=2, label=f'Mean: {mean_size_param:.2f}')
+    plt.xlabel('Size Parameter x', fontsize=14)
+    plt.ylabel('Number of Samples', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+def plot_wavelength_distribution(results_df):
+    """
+    Plot the distribution of unique wavelengths from the simulation input data.
+    
+    Parameters:
+    results_df (pd.DataFrame): DataFrame containing the 'wavelength' column.
+    """
+    unique_wavelengths = results_df['wavelength'].unique()
+    plt.figure(figsize=(10, 6))
+    sns.histplot(unique_wavelengths, kde=True, color='green', bins=30)
+    plt.xlabel('Wavelength (µm)', fontsize=14)
+    plt.ylabel('Number of Samples', fontsize=14)
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+def plot_radius_distribution(results_df):
+    """
+    Plot the distribution of unique particle radii from the simulation input data.
+    Mark the mean of the distribution with a vertical line.
+    
+    Parameters:
+    results_df (pd.DataFrame): DataFrame containing the 'radius' column.
+    """
+    unique_radii = results_df['radius'].unique()
+    mean_radius = unique_radii.mean()  # Calculate the mean of the unique radii
+
+    plt.figure(figsize=(10, 6))
+    sns.histplot(unique_radii, kde=True, color='blue', bins=30)
+    plt.axvline(mean_radius, color='orange', linestyle='--', linewidth=2, label=f'Mean: {mean_radius:.2f} µm')
+    plt.xlabel('Particle Radius (µm)', fontsize=14)
+    plt.ylabel('Number of Samples', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+def plot_qsca_vs_size(results_df):
+    plt.figure(figsize=(10, 6))
+
+    # Combine data from both shapes into a single scatter plot
+    sns.regplot(
+        x=results_df['radius'],
+        y=results_df['Qsca'],
+        scatter_kws={'s': 20, 'alpha': 0.7, 'color': 'gray'},
+        line_kws={'color': 'black'}
+    )
+
+    # Plot spheres with orange circles
+    plt.scatter(
+        results_df[results_df['shape'] == 'SPHERE']['radius'],
+        results_df[results_df['shape'] == 'SPHERE']['Qsca'],
+        color='orange', marker='o', s=20, label='Spheres', alpha=0.7
+    )
+    
+    # Plot rectangular prisms with blue squares
+    plt.scatter(
+        results_df[results_df['shape'] == 'RCTGLPRSM']['radius'],
+        results_df[results_df['shape'] == 'RCTGLPRSM']['Qsca'],
+        color='blue', marker='s', s=20, label='Rectangular Prisms', alpha=0.7
+    )
+
+    plt.xlabel('Particle Size (radius)', fontsize=14)
+    plt.ylabel(r'Q$_{sca}$', fontsize=14)  # Sca as subscript
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+# Function to plot Qsca vs Wavelength with distinction between shapes
+def plot_qsca_vs_wavelength(results_df):
+    plt.figure(figsize=(10, 6))
+
+    # Plot spheres with orange circles
+    plt.scatter(
+        results_df[results_df['shape'] == 'SPHERE']['wavelength'],
+        results_df[results_df['shape'] == 'SPHERE']['Qsca'],
+        color='orange', marker='o', s=20, label='Spheres', alpha=0.7
+    )
+    
+    # Plot rectangular prisms with blue squares
+    plt.scatter(
+        results_df[results_df['shape'] == 'RCTGLPRSM']['wavelength'],
+        results_df[results_df['shape'] == 'RCTGLPRSM']['Qsca'],
+        color='blue', marker='s', s=20, label='Rectangular Prisms', alpha=0.7
+    )
+
+    plt.xlabel('Wavelength', fontsize=14)
+    plt.ylabel(r'Q$_{sca}$', fontsize=14)  # Sca as subscript
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+# Function to plot S11 (Forward Scattering) vs Particle Size
+def plot_s11_vs_size_forward_scattering(results_df):
+    plt.figure(figsize=(10, 6))
+
+    # Filter DataFrame for forward scattering where theta = 0 degrees and phi = 0 degrees
+    forward_df = results_df[(results_df['theta'] == 0) & (results_df['phi'] == 0)]
+
+    # Plot spheres with orange circles
+    plt.scatter(
+        forward_df[forward_df['shape'] == 'SPHERE']['radius'],
+        forward_df[forward_df['shape'] == 'SPHERE']['S_11'],
+        color='orange', marker='o', s=20, label='Spheres', alpha=0.7
+    )
+    
+    # Plot rectangular prisms with blue squares
+    plt.scatter(
+        forward_df[forward_df['shape'] == 'RCTGLPRSM']['radius'],
+        forward_df[forward_df['shape'] == 'RCTGLPRSM']['S_11'],
+        color='blue', marker='s', s=20, label='Rectangular Prisms', alpha=0.7
+    )
+
+    plt.xlabel('Particle Size (radius)', fontsize=14)
+    plt.ylabel('S₁₁ (Forward Scattering, θ=0°)', fontsize=14, fontweight='normal')
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+# Function to plot S11 (Forward Scattering) vs Wavelength
+def plot_s11_vs_wavelength_forward_scattering(results_df):
+    plt.figure(figsize=(10, 6))
+
+    # Filter DataFrame for forward scattering where theta = 0 degrees and phi = 0 degrees
+    forward_df = results_df[(results_df['theta'] == 0) & (results_df['phi'] == 0)]
+
+    # Plot spheres with orange circles
+    plt.scatter(
+        forward_df[forward_df['shape'] == 'SPHERE']['wavelength'],
+        forward_df[forward_df['shape'] == 'SPHERE']['S_11'],
+        color='orange', marker='o', s=20, label='Spheres', alpha=0.7
+    )
+    
+    # Plot rectangular prisms with blue squares
+    plt.scatter(
+        forward_df[forward_df['shape'] == 'RCTGLPRSM']['wavelength'],
+        forward_df[forward_df['shape'] == 'RCTGLPRSM']['S_11'],
+        color='blue', marker='s', s=20, label='Rectangular Prisms', alpha=0.7
+    )
+
+    plt.xlabel('Wavelength', fontsize=14)
+    plt.ylabel('S₁₁ (Forward Scattering, θ=0°)', fontsize=14, fontweight='normal')  # Subscript for S_11
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
 # Function for plotting Q_sca for individual size parameters
 def plot_qsca_by_size(results_df):
     plt.figure(figsize=(10, 6))
@@ -88,8 +277,8 @@ def plot_s11_forward_scattering(results_df):
     rect_df = forward_df[forward_df['shape'] == 'RCTGLPRSM']
     plt.scatter(rect_df['size_param'], rect_df['S_11'], color='royalblue', label='Rectangular Prism', marker='s', s=10)
 
-    plt.xlabel(r'Size Parameter $x$', fontsize=16, fontweight='bold')
-    plt.ylabel(r'$S_{11}$ (Forward Scattering, $\theta=0^\circ$)', fontsize=16, fontweight='bold')
+    plt.xlabel(r'Size Parameter $x$', fontsize=16, fontweight='normal')
+    plt.ylabel(r'$S_{11}$ (Forward Scattering, $\theta=0^\circ$)', fontsize=16, fontweight='normal')
     plt.legend(fontsize=12, title='Shape', title_fontsize=14)
     plt.grid(True, linestyle='--', alpha=0.7)
     plt.tight_layout()
@@ -115,39 +304,97 @@ def plot_s11_back_scattering(results_df):
     rect_df = back_df[back_df['shape'] == 'RCTGLPRSM']
     plt.scatter(rect_df['size_param'], rect_df['S_11'], color='royalblue', label='Rectangular Prism', marker='s', s=10)
 
-    plt.xlabel(r'Size Parameter $x$', fontsize=16, fontweight='bold')
-    plt.ylabel(r'$S_{11}$ (Back Scattering, $\theta=180^\circ$)', fontsize=16, fontweight='bold')
+    plt.xlabel(r'Size Parameter $x$', fontsize=16, fontweight='normal')
+    plt.ylabel(r'$S_{11}$ (Back Scattering, $\theta=180^\circ$)', fontsize=16, fontweight='normal')
     plt.legend(fontsize=12, title='Shape', title_fontsize=14)
     plt.grid(True, linestyle='--', alpha=0.7)
     plt.tight_layout()
     plt.show()
 
-def plot_pol_vs_theta(results_df, labels):
+def plot_pol_vs_theta(results_df):
     """
-    Plots Polarization (Pol) as a function of theta for selected particles.
-
+    Plot the Pol. values against theta angles for different shapes.
+    
     Parameters:
-    data_frames (list of pd.DataFrame): List of DataFrames containing 'theta' and 'Pol'.
-    labels (list of str): Labels for each particle.
+    results_df (pd.DataFrame): DataFrame containing 'theta', 'Pol.', and 'shape' columns.
     """
     plt.figure(figsize=(10, 6))
 
-    for df, label in zip(results_df, labels):
-        # Ensure df is a DataFrame and contains the correct columns
-        if isinstance(df, pd.DataFrame) and 'theta' in df.columns and 'Pol.' in df.columns:
-            plt.plot(
-                df['theta'], df['Pol.'], label=label, linestyle='-', marker='o',
-                markersize=5, alpha=0.8
-            )
-        else:
-            raise ValueError(f"DataFrame {label} does not have the required 'theta' and 'Pol' columns.")
+    # Plot spherical particles with orange circles
+    sph_df = results_df[results_df['shape'] == 'SPHERE']
+    plt.plot(sph_df['theta'], sph_df['Pol.'], color='orange', marker='o', linestyle='-', markersize=5, label='Sphere')
 
-    plt.xlabel(r'$\theta$ (degrees)', fontsize=16)
-    plt.ylabel(r'Polarization $Pol$', fontsize=16)
-    plt.legend(loc='best', fontsize=12, title='Particles', title_fontsize=14)
-    plt.grid(True, linestyle='--', alpha=0.7)
+    # Plot rectangular prisms with blue squares
+    rect_df = results_df[results_df['shape'] == 'RCTGLPRSM']
+    plt.plot(rect_df['theta'], rect_df['Pol.'], color='blue', marker='s', linestyle='-', markersize=5, label='Rectangular Prism')
+
+    # Add labels and legend
+    plt.xlabel(r'$\theta$ (degrees)', fontsize=14)
+    plt.ylabel(r'Pol.', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)  # Add grid with dashed lines and transparency
     plt.tight_layout()
     plt.show()
+
+def plot_average_pol_vs_theta(results_df):
+    """
+    Plot the average Pol. values against theta angles for different shapes.
+    
+    Parameters:
+    results_df (pd.DataFrame): DataFrame containing 'theta', 'Pol.', and 'shape' columns.
+    """
+    # Group by 'theta' and 'shape' and calculate the mean of 'Pol.'
+    grouped_df = results_df.groupby(['theta', 'shape']).mean().reset_index()
+
+    plt.figure(figsize=(10, 6))
+
+    # Plot average Pol. for spherical particles with orange circles
+    sph_df = grouped_df[grouped_df['shape'] == 'SPHERE']
+    plt.plot(sph_df['theta'], sph_df['Pol.'], color='orange', marker='o', linestyle='-', markersize=5, label='Sphere')
+
+    # Plot average Pol. for rectangular prisms with blue squares
+    rect_df = grouped_df[grouped_df['shape'] == 'RCTGLPRSM']
+    plt.plot(rect_df['theta'], rect_df['Pol.'], color='blue', marker='s', linestyle='-', markersize=5, label='Rectangular Prism')
+
+    # Add labels and legend
+    plt.xlabel(r'$\theta$ (degrees)', fontsize=14)
+    plt.ylabel(r'Pol.', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)  # Add grid with dashed lines and transparency
+    plt.tight_layout()
+    plt.show()
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+def plot_average_s11_vs_theta(results_df):
+    """
+    Plot the average S_11 values against theta angles for different shapes.
+    
+    Parameters:
+    results_df (pd.DataFrame): DataFrame containing 'theta', 'S_11', and 'shape' columns.
+    """
+    # Group by 'theta' and 'shape' and calculate the mean of 'S_11'
+    grouped_df = results_df.groupby(['theta', 'shape']).mean().reset_index()
+
+    plt.figure(figsize=(10, 6))
+
+    # Plot average S_11 for spherical particles with orange circles
+    sph_df = grouped_df[grouped_df['shape'] == 'SPHERE']
+    plt.plot(sph_df['theta'], sph_df['S_11'], color='orange', marker='o', linestyle='-', markersize=5, label='Sphere')
+
+    # Plot average S_11 for rectangular prisms with blue squares
+    rect_df = grouped_df[grouped_df['shape'] == 'RCTGLPRSM']
+    plt.plot(rect_df['theta'], rect_df['S_11'], color='blue', marker='s', linestyle='-', markersize=5, label='Rectangular Prism')
+
+    # Add labels and legend
+    plt.xlabel(r'$\theta$ (degrees)', fontsize=14)
+    plt.ylabel(r'S$_{11}$', fontsize=14)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)  # Add grid with dashed lines and transparency
+    plt.tight_layout()
+    plt.show()
+
 
 def plot_ddscat_correlation_results(results_df):
     sns.pairplot(results_df, vars=['S_11', 'size_param', 'wavelength', 'Qsca', 'Qbk', 'Qpol'], hue='shape')
