@@ -5,7 +5,7 @@ import os
 import pandas as pd
 import logging
 
-def process_existing_results(base_dir):
+def process_existing_results(base_dir, only_spheres):
     """
     Process the existing results using proc_output_ddscat's function.
 
@@ -15,7 +15,7 @@ def process_existing_results(base_dir):
     Returns:
         pd.DataFrame: A DataFrame containing the aggregated results.
     """
-    return proc_output_ddscat.process_existing_results(base_dir)
+    return proc_output_ddscat.process_existing_results(base_dir, only_spheres)
 
 def run_simulations(base_dir, samples):
     """

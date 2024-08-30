@@ -52,6 +52,8 @@ def mie_calculation(samples):
             mie_results.append(mie_result)
     
     mie_df = pd.DataFrame(mie_results)
+    mie_df.rename(columns={'angle': 'theta'}, inplace=True)
+    mie_df['size_param'] = 2 * np.pi * mie_df['radius'] / mie_df['wavelength']
     return mie_df
 
 
@@ -76,7 +78,7 @@ def process_mie_result(mie_results, results, samples):
             ]
         for _, mie_result in mie_sample_results.iterrows():
             result = {
-                "theta": mie_result['angle'],
+                "theta": mie_result['theta'],
                 "phi": 0,                                               # Assuming phi = 0 for comparison with DDSCAT
                 "Pol.": 0,                                              # Assuming unpolarized light
                 "S_11": mie_result['S_11'],

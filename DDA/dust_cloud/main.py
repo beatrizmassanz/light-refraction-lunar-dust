@@ -40,7 +40,7 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     base_dir = os.path.abspath(base_dir)                                    # Convert base_dir to an absolute path
 
     if skip_simulation:                                                     # If skipping simulation, process the existing results
-        results_df = run_ddscat.process_existing_results(base_dir)
+        results_df = run_ddscat.process_existing_results(base_dir, only_spheres)
         if only_spheres:                                                    # If only analyzing spherical samples, load/ filter them
             samples = gen_input.load_samples("Generated_samples.json")
             samples = [
@@ -50,7 +50,7 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     else:                                                                   # Generate sample parameters for simulations
         num_samples = 1000                                                  # SET NUMBER OF SAMPLES TO GENERATE
         samples = gen_input.sample_parameters(num_samples, 
-                                          random_seed=292, 
+                                          random_seed=291, 
                                           only_spheres=only_spheres)
         results_df = run_ddscat.run_simulations(base_dir, samples)
     
@@ -70,10 +70,9 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
 
     
     data_frames, labels = run_ddscat.extract_simulation_data (base_dir)
-
-    #visualization.plot_ddscat_correlation_results(results_df)               # Analyze and visualize the results
-    #visualization.plot_data(data_frames, labels)
-    #visualization.plot_polar_data(data_frames, labels)
+    
+    visualization.plot_ddscat_correlation_results(results_df)               # Analyze and visualize the results
+ 
     visualization.plot_shape_counts (results_df)
     visualization.plot_size_param_distribution (results_df)
     visualization.plot_wavelength_distribution (results_df)
@@ -87,12 +86,25 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     visualization.plot_qpol_by_size (results_df)
     visualization.plot_s11_forward_scattering (results_df)
     visualization.plot_s11_back_scattering (results_df)
-    #visualization.plot_pol_vs_theta (results_df)
+
     visualization.plot_average_pol_vs_theta (results_df)
     visualization.plot_average_s11_vs_theta (results_df)
 
+    visualization.plot_s11_for_selected_size_params(results_df)
+    visualization.plot_pol_for_selected_size_params(results_df)
+    visualization.plot_s11_for_selected_wavelengths(results_df)
+    visualization.plot_pol_for_selected_wavelengths(results_df)
+
+    #visualization.plot_data(data_frames, labels)
+    #visualization.plot_polar_data(data_frames, labels)
+    #visualization.plot_s11_vs_yz_area_forward_scattering (results_df, base_dir)
+    #visualization.plot_surface_area_to_volume_vs_s11_qsca (results_df, base_dir)
+    #visualization.plot_max_pol_angle_vs_size_param(results_df)
+    #visualization.plot_s11_for_selected_size_params_polar(results_df)
+    #visualization.plot_pol_vs_theta (results_df)
+
     if mie_df is not None:                                                  # Plot comparison Mie and DDSCAT if Mie Data available
-        visualization.plot_mie_ddscat_comparison(results_df, mie_df)
+        visualization.plot_qsca_ratio_ddscat_mie(results_df, mie_df)
 
     return print(results_df)
 

@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import json
 
-def process_existing_results(base_dir):
+def process_existing_results(base_dir, only_spheres=False):
     """
     Process the results from the simulation directories.
 
@@ -24,7 +24,7 @@ def process_existing_results(base_dir):
 
         sample = load_sample_parameters(simulation_directory)
         samples.append(sample)  # Collect the sample
-        process_ddscat_result(simulation_directory, results, sample)  # Process the result
+        process_ddscat_result(simulation_directory, results, sample, only_spheres)  # Process the result
 
     os.chdir(original_directory)
     # Save the collected samples back to Generated_samples.json
@@ -67,7 +67,7 @@ def find_data_files(base_dir):
     return data_files, labels
 
 
-def process_ddscat_result(simulation_directory, results, sample, only_spheres= False):
+def process_ddscat_result(simulation_directory, results, sample, only_spheres=False):
     """Process a single result file and append it to the results list."""
     result_file = os.path.join(simulation_directory, 'w000r000.avg')
     if os.path.exists(result_file):
