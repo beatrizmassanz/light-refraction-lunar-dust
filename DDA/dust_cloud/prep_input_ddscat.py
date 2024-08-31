@@ -1,5 +1,4 @@
 import os
-from scipy.stats import norm, uniform
 import numpy as np
 import json
 
@@ -20,14 +19,16 @@ def save_sample_parameters(simulation_directory, sample):
 
 def gen_pos_in_sphere(d, sample):
     """
-    Generate positions on a grid within a sphere of given radius.
-    
+    Generate positions within a sphere of a given radius, 
+    based on a grid with a specified spacing between dipoles.
+
     Parameters:
-        radius (float): The radius of the sphere.
         d (float): Spacing between dipoles.
+        sample (dict): Dictionary containing sample parameters, 
+                       including the 'radius' of the sphere.
     
     Returns:
-        np.ndarray: Array of positions within the sphere.    
+        np.ndarray: Array of unique positions within the sphere. 
     """
     radius = sample['radius']
     num_dipoles_per_dimension = int(2 * radius / d)
@@ -47,15 +48,16 @@ def gen_pos_in_rect_prism(d, sample):
     """
     Generate grid positions within a rectangular prism defined by its 
     dimensions.
-    
+
     Parameters:
-        length (float): Length of the rectangular prism.
-        width (float): Width of the rectangular prism.
-        height (float): Height of the rectangular prism.
         d (float): Spacing between dipoles.
+        sample (dict): Dictionary containing sample parameters, 
+            including 'x_length', 'y_length', and 'z_length'
+            representing the dimensions of the rectangular prism.
     
     Returns:
-        np.ndarray: Array of positions in a grid.
+        np.ndarray: Array of positions in a grid within the 
+            rectangular prism.
     """
     radius = sample['radius']
     x_length = sample ['x_length']                                          # Generate random length and width values
@@ -78,8 +80,6 @@ def gen_pos_in_rect_prism(d, sample):
 
     if len(unique_positions) != len(positions):                             # Verify that there are no duplicates
         duplicate_positions = len(positions) - len(unique_positions)
-        #print(f"Duplicate positions detected: {duplicate_positions}")      # Optional debugging pring
-        #print(f"Unique: {len(unique_positions)}, Total: {len(positions)}")
         raise ValueError("Duplicate positions detected in the grid.")
 
     print(                                                                  # Print dimensions for debugging
@@ -109,8 +109,8 @@ def generate_shape_dat(geometry, d, sample):
                 prism.
 
     Returns:
-        list: Formatted lines representing the shape file content, including
-        metadata and dipole positions.
+        list: Formatted lines representing the shape file content, 
+        including metadata and dipole positions.
     
     Raises:
         ValueError: If an unsupported geometry type is provided.

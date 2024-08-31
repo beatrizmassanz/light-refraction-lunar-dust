@@ -49,9 +49,9 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
                 if sample['shape'].lower() == 'sphere'
                 ]
     else:                                                                   # Generate sample parameters for simulations
-        num_samples = 1000                                                  # SET NUMBER OF SAMPLES TO GENERATE
+        num_samples = 10                                                  # SET NUMBER OF SAMPLES TO GENERATE
         samples = gen_input.sample_parameters(num_samples, 
-                                          random_seed=291, 
+                                          random_seed=292,                  # Set random seed if necessary
                                           only_spheres=only_spheres)
         results_df = run_ddscat.run_simulations(base_dir, samples)
     
@@ -74,12 +74,12 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     
     visualization.plot_ddscat_correlation_results(results_df)               # Pairplot and correlation matrix
  
-    visualization.plot_shape_counts (results_df)                            # Input visualization
+    visualization.plot_shape_counts (results_df)                            # Visualization of all input parameters
     visualization.plot_size_param_distribution (results_df)
     visualization.plot_wavelength_distribution (results_df)
     visualization.plot_radius_distribution (results_df)
 
-    visualization.plot_qsca_vs_size (results_df)                            #
+    visualization.plot_qsca_vs_size (results_df)                            # Outputs visualization
     visualization.plot_qsca_vs_wavelength (results_df)
     visualization.plot_s11_vs_size_forward_scattering (results_df)
     visualization.plot_s11_vs_wavelength_forward_scattering (results_df)
@@ -92,18 +92,10 @@ def main(base_dir, skip_simulation=False, only_spheres=False):
     visualization.plot_average_pol_vs_theta (results_df)
     visualization.plot_average_s11_vs_theta (results_df)
 
-    visualization.plot_s11_for_selected_size_params(results_df)
+    visualization.plot_s11_for_selected_size_params(results_df)             # Visualization for selected samples
     visualization.plot_pol_for_selected_size_params(results_df)
     visualization.plot_s11_for_selected_wavelengths(results_df)
     visualization.plot_pol_for_selected_wavelengths(results_df)
-
-    #visualization.plot_data(data_frames, labels)
-    #visualization.plot_polar_data(data_frames, labels)
-    #visualization.plot_s11_vs_yz_area_forward_scattering (results_df, base_dir)
-    #visualization.plot_surface_area_to_volume_vs_s11_qsca (results_df, base_dir)
-    #visualization.plot_max_pol_angle_vs_size_param(results_df)
-    #visualization.plot_s11_for_selected_size_params_polar(results_df)
-    #visualization.plot_pol_vs_theta (results_df)
 
     if mie_df is not None:                                                  # Plot comparison Mie and DDSCAT if Mie Data available
         visualization.plot_qsca_ratio_ddscat_mie(results_df, mie_df)

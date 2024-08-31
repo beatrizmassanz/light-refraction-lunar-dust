@@ -7,13 +7,15 @@ import logging
 
 def process_existing_results(base_dir, only_spheres):
     """
-    Process the existing results using proc_output_ddscat's function.
+    Process the existing DDSCAT simulation results.
 
     Parameters:
         base_dir (str): Base directory where simulation data is stored.
+        only_spheres (bool): Flag indicating whether to process only 
+                             spherical particle results.
     
     Returns:
-        pd.DataFrame: A DataFrame containing the aggregated results.
+        pd.DataFrame: A DataFrame containing the aggregated and processed results.
     """
     return proc_output_ddscat.process_existing_results(base_dir, only_spheres)
 
@@ -62,7 +64,7 @@ def run_simulations(base_dir, samples):
             logging.error(f"Unsupported shape type: {shape}")
             continue
 
-        prep_input_ddscat.save_shape_info_to_file(shape_file_name,           # Save the generated shape information to file
+        prep_input_ddscat.save_shape_info_to_file(shape_file_name,          # Save the generated shape information to file
                                                  shape_file_content, 
                                                  simulation_directory)
 
@@ -81,19 +83,19 @@ def run_simulations(base_dir, samples):
             "plane2": (90, 0, 360, 5)                                       # phi, theta_min, theta_max, dtheta
             }
 
-        par_file_content = prep_input_ddscat.generate_par(params)                  # Generate and save the parameter information file
+        par_file_content = prep_input_ddscat.generate_par(params)           # Generate and save the parameter information file
         prep_input_ddscat.save_param_info_to_file(params, 
                                                  par_file_content, 
                                                  simulation_directory)
         
-        exec_ddscat.run_ddscat(simulation_directory)                          # Run the ddscat simulation
+        exec_ddscat.run_ddscat(simulation_directory)                        # Run the ddscat simulation
         target_file_name = "output"
-        exec_ddscat.convert_to_vtk(simulation_directory,                      # Convert the output to VTK format
+        exec_ddscat.convert_to_vtk(simulation_directory,                    # Convert the output to VTK format
                                  target_file_name)
 
         logging.info(f"Simulation data generated and processed \
                      in {simulation_directory}")
-        proc_output_ddscat.process_ddscat_result(simulation_directory,           # Process the simulation results
+        proc_output_ddscat.process_ddscat_result(simulation_directory,      # Process the simulation results
                                             results,
                                             sample)
         
@@ -105,14 +107,18 @@ def run_simulations(base_dir, samples):
 
 def extract_simulation_data(base_dir):
     """
-    Extract data from the simulation results and return DataFrames and labels.
+    Extract data from the simulation results and return DataFrames
+    and labels.
 
     Parameters:
-        base_dir (str): Base directory where simulation data is stored.
+        base_dir (str): Base directory where simulation data 
+            is stored.
 
     Returns:
         tuple: (List of DataFrames, List of labels)
     """
     file_paths, labels = proc_output_ddscat.find_data_files(base_dir)
-    data_frames = [proc_output_ddscat.extract_data(fp) for fp in file_paths]
+    data_frames = [
+        proc_output_ddscat.extract_data(fp) for fp in file_paths
+        ]
     return data_frames, labels

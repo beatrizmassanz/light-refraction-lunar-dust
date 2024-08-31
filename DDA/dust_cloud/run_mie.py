@@ -15,14 +15,14 @@ def mie_calculation(samples):
         DataFrame: A DataFrame with Mie calculation results.
     """
     mie_results = []
-    angles_degrees = np.arange(0, 360, 5)                              # Generate angles from 0 to 355 degrees in 5 degree steps
+    angles_degrees = np.arange(0, 360, 5)                              # Generate angles from 0 to 360 degrees in 5 degree steps
     angles_cosine = np.cos(np.radians(angles_degrees))
 
     for sample in samples:
         if sample["shape"] != "SPHERE":
             continue
         
-        m_particle = 1.56 + 0.003j                                     # Assuming a constant complex refractive index for simplicity
+        m_particle = 1.56 + 0.003j                                     # Set complex refractive index for calculations
         wavelength = sample["wavelength"]
         radius = sample["radius"]
         
@@ -53,7 +53,9 @@ def mie_calculation(samples):
     
     mie_df = pd.DataFrame(mie_results)
     mie_df.rename(columns={'angle': 'theta'}, inplace=True)
-    mie_df['size_param'] = 2 * np.pi * mie_df['radius'] / mie_df['wavelength']
+    mie_df['size_param'] = (
+        2 * np.pi * mie_df['radius'] / mie_df['wavelength']
+    )
     return mie_df
 
 
